@@ -64,13 +64,13 @@ jobs:
                 "Automation Test Lead",
                 "Senior QA Engineer"
               ],
-              "experience_years": 3,
-              "min_match_score": 60,
+              "experience_years": 5,
+              "min_match_score": 40,
               "excluded_keywords": ["unpaid", "internship", "fresher only"],
               "preferred_salary_usd_min": 30000
             },
             "search_settings": {
-              "max_jobs_per_source": 30,
+              "max_jobs_per_source": 50,
               "days_old_max": 3,
               "dedup_window_days": 30
             }

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>QA Job Hunt Bot — Setup Guide</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; background: #f8fafc; color: #1f2937; line-height: 1.6; }
+  .header { background: linear-gradient(135deg, #1e40af 0%, #7c3aed 100%); color: #fff; padding: 40px; text-align: center; }
+  .header h1 { font-size: 32px; margin-bottom: 8px; }
+  .header p { opacity: 0.85; font-size: 16px; }
+  .container { max-width: 900px; margin: 0 auto; padding: 30px 20px; }
+  .step-card { background: #fff; border-radius: 12px; padding: 28px; margin: 20px 0; box-shadow: 0 1px 4px rgba(0,0,0,0.08); border-left: 5px solid #2563eb; }
+  .step-card.warning { border-left-color: #f59e0b; }
+  .step-card.success { border-left-color: #16a34a; }
+  .step-num { display: inline-block; background: #2563eb; color: #fff; border-radius: 50%; width: 32px; height: 32px; text-align: center; line-height: 32px; font-weight: bold; margin-right: 10px; font-size: 14px; }
+  h2 { font-size: 20px; color: #1f2937; margin-bottom: 14px; display: flex; align-items: center; }
+  h3 { font-size: 16px; color: #374151; margin: 16px 0 8px 0; }
+  pre { background: #1e293b; color: #e2e8f0; padding: 16px 20px; border-radius: 8px; font-size: 13px; overflow-x: auto; margin: 10px 0; font-family: 'Courier New', monospace; }
+  code { background: #f1f5f9; color: #be185d; padding: 2px 6px; border-radius: 4px; font-size: 13px; }
+  .badge { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; margin: 3px; }
+  .badge.green { background: #dcfce7; color: #166534; }
+  .badge.blue { background: #dbeafe; color: #1d4ed8; }
+  .badge.purple { background: #f5f3ff; color: #6d28d9; }
+  .badge.amber { background: #fef3c7; color: #92400e; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin: 16px 0; }
+  .card { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 10px; padding: 18px; }
+  .card h4 { color: #2563eb; margin-bottom: 8px; font-size: 15px; }
+  .card p { font-size: 13px; color: #6b7280; }
+  .card ul { font-size: 13px; color: #374151; padding-left: 18px; }
+  .card ul li { margin: 4px 0; }
+  .tip { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 14px; margin: 12px 0; font-size: 14px; }
+  .tip strong { color: #1d4ed8; }
+  .warn { background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 14px; margin: 12px 0; font-size: 14px; }
+  .warn strong { color: #b45309; }
+  a { color: #2563eb; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th { background: #f9fafb; padding: 10px; text-align: left; border-bottom: 2px solid #e5e7eb; }
+  td { padding: 10px; border-bottom: 1px solid #e5e7eb; }
+  .flow { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+  .flow-item { background: #f3f4f6; border-radius: 8px; padding: 10px 16px; font-size: 13px; font-weight: 600; }
+  .flow-arrow { color: #9ca3af; font-size: 20px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🤖 QA Job Hunt Bot</h1>
+  <p>Complete Setup Guide for QA Automation Engineers</p>
+  <p style="margin-top:8px; opacity:0.7; font-size:13px;">Worldwide Job Search · Daily 9AM IST Reports · Claude AI Matching</p>
+</div>
+
+<div class="container">
+
+  <!-- Architecture -->
+  <div class="step-card" style="border-left-color:#7c3aed;">
+    <h2>🏗️ How It Works</h2>
+    <div class="flow">
+      <div class="flow-item">📡 Scrape Jobs<br><small>LinkedIn, Remotive,<br>WWR, Naukri, Relocate.me</small></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-item">🔄 Deduplicate<br><small>Skip already-seen<br>jobs (30-day window)</small></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-item">🤖 AI Match<br><small>Claude scores each<br>job vs your resume</small></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-item">📝 Auto-Apply<br><small>LinkedIn Easy Apply<br>(optional)</small></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-item">📧 Email Report<br><small>9:00 AM IST daily<br>with skill gap analysis</small></div>
+    </div>
+
+    <h3>Job Categories Covered</h3>
+    <div class="grid">
+      <div class="card">
+        <h4>✈️ Outside India (Sponsorship)</h4>
+        <ul>
+          <li>LinkedIn with visa sponsorship filter</li>
+          <li>Relocate.me (relocation jobs)</li>
+          <li>US, UK, Germany, Canada, Australia, Netherlands, Singapore, UAE</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>🇮🇳 India Remote Only</h4>
+        <ul>
+          <li>Naukri.com (Work from Home filter)</li>
+          <li>LinkedIn India Remote</li>
+          <li>Instahyre, Hirist.tech</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>🌍 Remote Worldwide</h4>
+        <ul>
+          <li>Remotive.io (free API)</li>
+          <li>We Work Remotely</li>
+          <li>Himalayas.app</li>
+          <li>LinkedIn worldwide remote</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 1: Prerequisites -->
+  <div class="step-card">
+    <h2><span class="step-num">1</span> Install Prerequisites</h2>
+    <pre>
+# Python 3.9+ required
+python --version
+
+# Create virtual environment (recommended)
+python -m venv qa-job-env
+source qa-job-env/bin/activate  # Linux/Mac
+# OR: qa-job-env\Scripts\activate  # Windows
+
+# Install all dependencies
+pip install -r requirements.txt
+
+# Install Playwright browser
+playwright install chromium</pre>
+    <div class="tip"><strong>💡 Tip:</strong> Use a dedicated venv to avoid dependency conflicts.</div>
+  </div>
+
+  <!-- Step 2: API Keys -->
+  <div class="step-card warning">
+    <h2><span class="step-num" style="background:#f59e0b;">2</span> Configure API Keys</h2>
+    <p>Edit <code>config/config.json</code> with your credentials:</p>
+
+    <h3>Required Keys</h3>
+    <table>
+      <tr><th>Key</th><th>Where to Get It</th><th>Cost</th></tr>
+      <tr>
+        <td><strong>Claude API Key</strong></td>
+        <td><a href="https://aistudio.google.com" target="_blank">aistudio.google.com</a> → API Keys</td>
+        <td>~$3-5/month for daily use</td>
+      </tr>
+      <tr>
+        <td><strong>Gmail App Password</strong></td>
+        <td><a href="https://myaccount.google.com/apppasswords" target="_blank">myaccount.google.com/apppasswords</a></td>
+        <td>Free (requires 2FA enabled)</td>
+      </tr>
+    </table>
+
+    <h3>Optional (for LinkedIn)</h3>
+    <div class="warn">
+      <strong>⚠️ LinkedIn Warning:</strong> LinkedIn's ToS technically disallows scraping. Use it moderately. Start with <code>max_jobs_per_source: 20</code> and <code>auto_apply: false</code> initially. LinkedIn often blocks mass scraping — the remote boards (Remotive, WWR) are more reliable.
+    </div>
+
+    <h3>Gmail App Password Setup</h3>
+    <pre>
+1. Go to: myaccount.google.com
+2. Security → 2-Step Verification (enable it if not done)
+3. Security → App passwords
+4. Select app: "Mail", Device: "Other" → name it "JobBot"
+5. Copy the 16-character password → paste in config.json</pre>
+  </div>
+
+  <!-- Step 3: Resume -->
+  <div class="step-card">
+    <h2><span class="step-num">3</span> Parse Your Resume</h2>
+    <p>The bot uses Claude AI to understand your skills from your resume PDF.</p>
+    <pre>
+# Replace with your actual resume path
+python main.py --parse-resume /home/you/resume.pdf
+
+# OR on Windows:
+python main.py --parse-resume C:\Users\You\resume.pdf</pre>
+    <p style="margin-top:12px; font-size:14px;">This creates <code>config/resume_profile.json</code> with all your skills extracted. You can also edit this JSON manually to add skills that aren't on your resume yet.</p>
+    <div class="tip"><strong>💡 Tip:</strong> Check the generated <code>resume_profile.json</code> and add any missing tools or skills manually. The more complete your profile, the better the matching!</div>
+  </div>
+
+  <!-- Step 4: Test Run -->
+  <div class="step-card success">
+    <h2><span class="step-num" style="background:#16a34a;">4</span> Test Your Setup</h2>
+    <pre>
+# Test email works first
+python main.py --test-email
+
+# Then run a full pipeline immediately
+python main.py --run-now</pre>
+    <p style="margin-top:12px; font-size:14px;">Check your inbox! You should receive the first report. If not, check <code>logs/</code> folder for errors.</p>
+  </div>
+
+  <!-- Step 5: Scheduler -->
+  <div class="step-card">
+    <h2><span class="step-num">5</span> Enable Daily Scheduler (9AM IST)</h2>
+
+    <h3>Option A: Crontab (Recommended — Linux/Mac/WSL)</h3>
+    <pre>
+# Open crontab editor
+crontab -e
+
+# Add this line (3:30 AM UTC = 9:00 AM IST):
+30 3 * * * cd /full/path/to/job-automation && /path/to/python main.py >> logs/cron.log 2>&1
+
+# Example:
+30 3 * * * cd /home/rahul/job-automation && /home/rahul/qa-job-env/bin/python main.py >> logs/cron.log 2>&1</pre>
+
+    <h3>Option B: Python Scheduler (Background Process)</h3>
+    <pre>
+# Run in background (keeps running even if you close terminal)
+nohup python scheduler/scheduler.py &gt; logs/scheduler.log 2&gt;&1 &
+
+# View logs
+tail -f logs/scheduler.log</pre>
+
+    <h3>Option C: Windows Task Scheduler</h3>
+    <pre>
+# Create a .bat file: run_job_bot.bat
+@echo off
+cd C:\path\to\job-automation
+C:\path\to\python.exe main.py >> logs\cron.log 2>&1
+
+# Then add in Windows Task Scheduler:
+# - Trigger: Daily at 9:00 AM
+# - Action: Run run_job_bot.bat</pre>
+  </div>
+
+  <!-- Customize -->
+  <div class="step-card" style="border-left-color:#7c3aed;">
+    <h2>⚙️ Customization Options</h2>
+
+    <h3>Adjust Min Match Score</h3>
+    <pre>
+// In config.json — jobs below this score are hidden from report
+"min_match_score": 60  // 60% = good balance; 75% = only excellent matches</pre>
+
+    <h3>Add More Job Titles</h3>
+    <pre>
+"role_titles": [
+  "QA Automation Engineer",
+  "SDET",
+  "Test Automation Engineer",
+  "Senior QA Engineer",
+  "QA Lead",
+  "Automation Test Engineer",
+  "Quality Engineer"   // ← add more here
+]</pre>
+
+    <h3>Enable Auto-Apply</h3>
+    <pre>
+"linkedin": {
+  "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="374e584245195b5e595c52535e5977525a565e5b1954585a">[email&#160;protected]</a>",
+  "password": "your_password",
+  "auto_apply": true,      // ← Change to true
+  "max_apply_per_day": 5   // Start low, increase gradually
+}</pre>
+    <div class="warn"><strong>⚠️ Start with auto_apply: false</strong> and manually review jobs first. After 1-2 weeks, enable auto-apply only for jobs with 80%+ match score.</div>
+  </div>
+
+  <!-- Expected Report -->
+  <div class="step-card success">
+    <h2>📧 What Your Daily Report Looks Like</h2>
+    <div style="background:#f9fafb; border:1px solid #e5e7eb; border-radius:10px; padding:20px; font-size:14px;">
+      <div style="background:linear-gradient(135deg,#1e40af,#7c3aed); color:#fff; padding:16px; border-radius:8px; text-align:center; margin-bottom:16px;">
+        <strong>🤖 Daily Job Hunt Report</strong><br>
+        <span style="opacity:0.8;">Saturday, February 21, 2026 | 9:00 AM IST</span>
+      </div>
+      <div style="display:flex; gap:12px; margin-bottom:16px; flex-wrap:wrap;">
+        <div style="flex:1; background:#fff; border-radius:8px; padding:12px; text-align:center; border:1px solid #e5e7eb;"><strong style="color:#2563eb; font-size:22px;">127</strong><br><small>Jobs Scanned</small></div>
+        <div style="flex:1; background:#fff; border-radius:8px; padding:12px; text-align:center; border:1px solid #e5e7eb;"><strong style="color:#7c3aed; font-size:22px;">18</strong><br><small>Matched Jobs</small></div>
+        <div style="flex:1; background:#fff; border-radius:8px; padding:12px; text-align:center; border:1px solid #e5e7eb;"><strong style="color:#16a34a; font-size:22px;">7</strong><br><small>Excellent (80%+)</small></div>
+        <div style="flex:1; background:#fff; border-radius:8px; padding:12px; text-align:center; border:1px solid #e5e7eb;"><strong style="color:#f59e0b; font-size:22px;">3</strong><br><small>Auto-Applied</small></div>
+      </div>
+      <p style="color:#6b7280; font-size:13px; text-align:center;">✈️ Outside India (Sponsorship) | 🇮🇳 India Remote | 🌍 Remote Worldwide | 🧠 Skill Gap Analysis</p>
+    </div>
+  </div>
+
+  <!-- Troubleshooting -->
+  <div class="step-card warning">
+    <h2><span class="step-num" style="background:#f59e0b;">?</span> Troubleshooting</h2>
+
+    <table>
+      <tr><th>Problem</th><th>Solution</th></tr>
+      <tr>
+        <td>LinkedIn blocks scraping</td>
+        <td>Add delays, reduce <code>max_jobs_per_source</code> to 15, or use Remotive/WWR which have APIs</td>
+      </tr>
+      <tr>
+        <td>Email not sending</td>
+        <td>Use Gmail App Password (not regular password). Enable 2FA first at myaccount.google.com</td>
+      </tr>
+      <tr>
+        <td>Claude API expensive</td>
+        <td>Switch matching to <code>claude-haiku-4-5-20251001</code> (already done) for lower cost. ~$0.10/day for 100 jobs</td>
+      </tr>
+      <tr>
+        <td>Resume not parsed correctly</td>
+        <td>Manually edit <code>config/resume_profile.json</code> to add missing skills</td>
+      </tr>
+      <tr>
+        <td>No jobs found</td>
+        <td>Check <code>logs/</code> for errors. Try <code>python main.py --run-now</code> in terminal to see output</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Cost Estimate -->
+  <div class="step-card" style="border-left-color:#16a34a;">
+    <h2>💰 Monthly Cost Estimate</h2>
+    <table>
+      <tr><th>Service</th><th>Usage</th><th>Cost/Month</th></tr>
+      <tr><td>Claude API (Haiku for matching)</td><td>~100 jobs/day × 30 days</td><td>$0</td></tr>
+      <tr><td>Claude API (Opus for skill gap)</td><td>1 analysis/day</td><td>$0</td></tr>
+      <tr><td>Remotive API</td><td>Free tier</td><td>$0</td></tr>
+      <tr><td>LinkedIn scraping</td><td>Playwright (self-hosted)</td><td>$0</td></tr>
+      <tr><td>Gmail SMTP</td><td>Free</td><td>$0</td></tr>
+      <tr><td><strong>Total</strong></td><td></td><td><strong><strong style="color:#16a34a;">$0/month (Gemini Free Tier!)</strong></strong></td></tr>
+    </table>
+  </div>
+
+  <!-- Footer -->
+  <div style="text-align:center; padding:30px; color:#9ca3af; font-size:13px;">
+    <p>🤖 QA Job Hunt Bot | Built for QA Automation Engineers | Powe

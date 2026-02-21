@@ -1,0 +1,103 @@
+name: 🤖 Daily QA Job Hunt
+
+on:
+  schedule:
+    - cron: '30 3 * * *'   # 9:00 AM IST (3:30 AM UTC) every day
+  workflow_dispatch:         # Also allows manual trigger from GitHub UI (for testing)
+
+jobs:
+  job-hunt:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45      # Stop if something hangs
+
+    steps:
+
+      # ── Step 1: Get your code ────────────────────────────────
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      # ── Step 2: Setup Python ─────────────────────────────────
+      - name: 🐍 Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'        # Caches pip packages — makes runs faster
+
+      # ── Step 3: Install dependencies ─────────────────────────
+      - name: 📦 Install Python packages
+        run: pip install -r requirements.txt
+
+      # ── Step 4: Install Playwright browser ───────────────────
+      - name: 🌐 Install Playwright Chromium
+        run: playwright install chromium --with-deps
+
+      # ── Step 5: Create config from GitHub Secrets ────────────
+      - name: ⚙️ Create config.json from secrets
+        run: |
+          mkdir -p config
+          cat > config/config.json << EOF
+          {
+            "api_keys": {
+              "gemini_api_key": "${{ secrets.GEMINI_API_KEY }}",
+              "apify_api_key": ""
+            },
+            "email": {
+              "sender_email": "${{ secrets.GMAIL_ADDRESS }}",
+              "sender_app_password": "${{ secrets.GMAIL_APP_PASSWORD }}",
+              "recipient_email": "${{ secrets.GMAIL_ADDRESS }}",
+              "report_time_ist": "09:00"
+            },
+            "linkedin": {
+              "email": "${{ secrets.LINKEDIN_EMAIL }}",
+              "password": "${{ secrets.LINKEDIN_PASSWORD }}",
+              "auto_apply": false,
+              "max_apply_per_day": 0
+            },
+            "job_preferences": {
+              "role_titles": [
+                "QA Automation Engineer",
+                "Software Test Engineer",
+                "SDET",
+                "Test Automation Engineer",
+                "QA Engineer",
+                "Quality Assurance Engineer",
+                "Automation Test Lead",
+                "Senior QA Engineer"
+              ],
+              "experience_years": 3,
+              "min_match_score": 60,
+              "excluded_keywords": ["unpaid", "internship", "fresher only"],
+              "preferred_salary_usd_min": 30000
+            },
+            "search_settings": {
+              "max_jobs_per_source": 30,
+              "days_old_max": 3,
+              "dedup_window_days": 30
+            }
+          }
+          EOF
+
+      # ── Step 6: Create resume profile from secret ─────────────
+      - name: 📄 Create resume profile
+        run: |
+          mkdir -p config
+          echo '${{ secrets.RESUME_PROFILE_JSON }}' > config/resume_profile.json
+
+      # ── Step 7: Create required folders ──────────────────────
+      - name: 📁 Create folders
+        run: mkdir -p logs data
+
+      # ── Step 8: Run the job hunt bot ─────────────────────────
+      - name: 🚀 Run Job Hunt Pipeline
+        run: python main.py
+        env:
+          PYTHONUNBUFFERED: 1   # Shows logs in real time
+
+      # ── Step 9: Upload report as artifact ────────────────────
+      - name: 📊 Upload report artifact
+        if: always()            # Upload even if there was an error
+        uses: actions/upload-artifact@v4
+        with:
+          name: job-report-${{ github.run_number }}
+          path: logs/report_*.html
+          retention-days: 30    # Keep reports for 30 days

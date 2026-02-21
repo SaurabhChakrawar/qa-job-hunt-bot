@@ -1,0 +1,13 @@
+google-generativeai>=0.7.0
+playwright>=1.40.0
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+schedule>=1.2.0
+python-dotenv>=1.0.0
+PyMuPDF>=1.23.0
+jinja2>=3.1.0
+aiohttp>=3.9.0
+asyncio
+fake-useragent>=1.4.0
+pytz>=2023.3

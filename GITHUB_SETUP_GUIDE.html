@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GitHub Actions Setup — Step by Step</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; background: #f8fafc; color: #1f2937; line-height: 1.7; }
+  .header { background: linear-gradient(135deg, #1e40af 0%, #7c3aed 100%); color: #fff; padding: 40px; text-align: center; }
+  .header h1 { font-size: 30px; margin-bottom: 8px; }
+  .header p { opacity: 0.85; font-size: 15px; }
+  .container { max-width: 860px; margin: 0 auto; padding: 30px 20px 60px; }
+
+  .step { background: #fff; border-radius: 14px; padding: 28px 32px; margin: 24px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.07); border-left: 5px solid #2563eb; }
+  .step.green { border-left-color: #16a34a; }
+  .step.purple { border-left-color: #7c3aed; }
+  .step.amber { border-left-color: #f59e0b; }
+  .step.red { border-left-color: #ef4444; }
+
+  .step-header { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+  .step-num { background: #2563eb; color: #fff; border-radius: 50%; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 16px; flex-shrink: 0; }
+  .step.green .step-num { background: #16a34a; }
+  .step.purple .step-num { background: #7c3aed; }
+  .step.amber .step-num { background: #f59e0b; }
+  .step.red .step-num { background: #ef4444; }
+  .step-title { font-size: 20px; font-weight: 700; color: #1f2937; }
+  .step-subtitle { font-size: 13px; color: #6b7280; margin-top: 2px; }
+
+  pre { background: #0f172a; color: #e2e8f0; padding: 16px 20px; border-radius: 10px; font-size: 13px; overflow-x: auto; margin: 12px 0; font-family: 'SF Mono', 'Courier New', monospace; line-height: 1.6; }
+  code { background: #f1f5f9; color: #be185d; padding: 2px 7px; border-radius: 5px; font-size: 13px; font-family: 'SF Mono', monospace; }
+  .tip { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 14px; }
+  .tip strong { color: #1d4ed8; }
+  .warn { background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 14px; }
+  .warn strong { color: #b45309; }
+  .success-box { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 14px; }
+  .success-box strong { color: #166534; }
+
+  .secret-row { display: flex; align-items: flex-start; gap: 14px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px 16px; margin: 8px 0; }
+  .secret-name { background: #1e293b; color: #f8fafc; padding: 4px 10px; border-radius: 6px; font-family: monospace; font-size: 13px; font-weight: bold; white-space: nowrap; flex-shrink: 0; }
+  .secret-desc { font-size: 13px; color: #374151; }
+  .secret-desc span { display: block; color: #6b7280; font-size: 12px; margin-top: 3px; }
+
+  .file-tree { background: #0f172a; color: #94a3b8; border-radius: 10px; padding: 18px 20px; font-family: monospace; font-size: 13px; line-height: 1.8; margin: 12px 0; }
+  .file-tree .highlight { color: #34d399; font-weight: bold; }
+  .file-tree .dim { color: #475569; }
+
+  h3 { font-size: 16px; color: #374151; margin: 18px 0 8px 0; }
+  p { font-size: 14px; color: #374151; margin: 8px 0; }
+  ol, ul { padding-left: 20px; font-size: 14px; color: #374151; }
+  ol li, ul li { margin: 6px 0; }
+  a { color: #2563eb; }
+
+  .cmd { display: flex; align-items: center; gap: 10px; background: #0f172a; border-radius: 8px; padding: 12px 16px; margin: 8px 0; }
+  .cmd code { background: transparent; color: #34d399; font-size: 14px; padding: 0; }
+  .cmd .label { color: #64748b; font-size: 12px; white-space: nowrap; }
+
+  .checklist { list-style: none; padding: 0; }
+  .checklist li { padding: 8px 0; border-bottom: 1px solid #f3f4f6; font-size: 14px; display: flex; align-items: center; gap: 10px; }
+  .checklist li:last-child { border: none; }
+  .check { color: #16a34a; font-size: 18px; }
+
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+  .badge.free { background: #dcfce7; color: #166534; }
+  .badge.important { background: #fef3c7; color: #92400e; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🚀 GitHub Actions Setup Guide</h1>
+  <p>Step-by-step: Deploy your QA Job Hunt Bot to GitHub — FREE, runs at 9AM IST daily</p>
+  <p style="margin-top:8px; opacity:0.7; font-size:13px;">Mac → GitHub → Automatic daily reports forever</p>
+</div>
+
+<div class="container">
+
+  <!-- Overview -->
+  <div class="step purple">
+    <div class="step-header">
+      <div class="step-num">📋</div>
+      <div>
+        <div class="step-title">What We're Setting Up</div>
+        <div class="step-subtitle">Total time: ~20 minutes</div>
+      </div>
+    </div>
+    <ul class="checklist">
+      <li><span class="check">①</span> Install Git on your Mac</li>
+      <li><span class="check">②</span> Create a GitHub account + private repo</li>
+      <li><span class="check">③</span> Upload your bot files to GitHub</li>
+      <li><span class="check">④</span> Get your Gemini API key (free)</li>
+      <li><span class="check">⑤</span> Add all secrets to GitHub (API keys, email, resume)</li>
+      <li><span class="check">⑥</span> Test run — trigger manually from GitHub</li>
+      <li><span class="check">⑦</span> Sit back — runs every day at 9AM IST automatically ✅</li>
+    </ul>
+  </div>
+
+
+  <!-- STEP 1 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">1</div>
+      <div>
+        <div class="step-title">Install Git on Your Mac</div>
+        <div class="step-subtitle">Git is how you send files to GitHub</div>
+      </div>
+    </div>
+    <p>Open <strong>Terminal</strong> (press <code>Cmd + Space</code>, type "Terminal", press Enter)</p>
+    <p>Type this command and press Enter:</p>
+    <pre>git --version</pre>
+    <p>If you see something like <code>git version 2.39.0</code> → Git is already installed, skip to Step 2.</p>
+    <p>If you see a popup asking to install developer tools → click <strong>Install</strong> and wait. That installs Git automatically.</p>
+    <div class="tip"><strong>💡</strong> You can also install Git from <a href="https://git-scm.com/download/mac" target="_blank">git-scm.com/download/mac</a></div>
+  </div>
+
+
+  <!-- STEP 2 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">2</div>
+      <div>
+        <div class="step-title">Create GitHub Account</div>
+        <div class="step-subtitle">Free — takes 2 minutes</div>
+      </div>
+    </div>
+    <ol>
+      <li>Go to <a href="https://github.com" target="_blank"><strong>github.com</strong></a></li>
+      <li>Click <strong>"Sign up"</strong></li>
+      <li>Enter your email, create a password, choose a username</li>
+      <li>Verify your email</li>
+    </ol>
+    <div class="tip"><strong>💡</strong> If you already have a GitHub account, just sign in.</div>
+  </div>
+
+
+  <!-- STEP 3 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">3</div>
+      <div>
+        <div class="step-title">Create a Private Repository</div>
+        <div class="step-subtitle">Private = only you can see it (important for security)</div>
+      </div>
+    </div>
+    <ol>
+      <li>On GitHub, click the <strong>"+"</strong> icon (top right) → <strong>"New repository"</strong></li>
+      <li>Repository name: <code>qa-job-hunt-bot</code></li>
+      <li>Select <strong>Private</strong> ← very important!</li>
+      <li>Leave everything else as default</li>
+      <li>Click <strong>"Create repository"</strong></li>
+    </ol>
+    <div class="warn"><strong>⚠️ Must be Private!</strong> Your repo will contain paths to your email and LinkedIn. Always keep it private.</div>
+  </div>
+
+
+  <!-- STEP 4 -->
+  <div class="step">
+    <div class="step-header">
+      <div class="step-num">4</div>
+      <div>
+        <div class="step-title">Upload Your Bot Files to GitHub</div>
+        <div class="step-subtitle">From your Mac Terminal</div>
+      </div>
+    </div>
+
+    <h3>First, tell Git who you are (one time only):</h3>
+    <pre>git config --global user.name "Your Name"
+git config --global user.email "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="9ce5f3e9eedcf9f1fdf5f0b2fff3f1">[email&#160;protected]</a>"</pre>
+
+    <h3>Navigate to your downloaded bot folder:</h3>
+    <p>The folder you downloaded is called <code>job-automation-free</code>. In Terminal:</p>
+    <pre># Replace with actual path where you downloaded it
+# Example if it's in Downloads folder:
+cd ~/Downloads/job-automation-free</pre>
+
+    <h3>Initialize and push to GitHub:</h3>
+    <pre>git init
+git add .
+git commit -m "Initial commit - QA Job Hunt Bot"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/qa-job-hunt-bot.git
+git push -u origin main</pre>
+
+    <div class="tip"><strong>💡</strong> Replace <code>YOUR_USERNAME</code> with your actual GitHub username. You can find the exact URL on your GitHub repo page — click the green <strong>"Code"</strong> button and copy the HTTPS URL.</div>
+
+    <p>GitHub will ask for your username and password. For the password, use a <strong>Personal Access Token</strong> (not your GitHub password):</p>
+    <ol>
+      <li>GitHub → Settings → Developer Settings → Personal access tokens → Tokens (classic)</li>
+      <li>Click <strong>"Generate new token (classic)"</strong></li>
+      <li>Check the <strong>"repo"</strong> checkbox</li>
+      <li>Click Generate → Copy the token → use it as your password in Terminal</li>
+    </ol>
+  </div>
+
+
+  <!-- STEP 5 -->
+  <div class="step amber">
+    <div class="step-header">
+      <div class="step-num">5</div>
+      <div>
+        <div class="step-title">Get Your Gemini API Key (Free)</div>
+        <div class="step-subtitle">Takes 2 minutes — no credit card needed</div>
+      </div>
+    </div>
+    <ol>
+      <li>Go to <a href="https://aistudio.google.com" target="_blank"><strong>aistudio.google.com</strong></a></li>
+      <li>Sign in with your Google account</li>
+      <li>Click <strong>"Get API Key"</strong> (top left)</li>
+      <li>Click <strong>"Create API Key"</strong></li>
+      <li>Copy the key — it looks like: <code>AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXX</code></li>
+      <li>Save it somewhere safe temporarily (Notepad, Notes app)</li>
+    </ol>
+    <div class="success-box"><strong>🎉 Free Tier:</strong> 15 requests/minute, 1500 requests/day. Your bot needs ~100-150/day. Completely within limits!</div>
+  </div>
+
+
+  <!-- STEP 6 -->
+  <div class="step amber">
+    <div class="step-header">
+      <div class="step-num">6</div>
+      <div>
+        <div class="step-title">Get Gmail App Password</div>
+        <div class="step-subtitle">So the bot can email you the daily report</div>
+      </div>
+    </div>
+    <ol>
+      <li>Go to <a href="https://myaccount.google.com" target="_blank"><strong>myaccount.google.com</strong></a></li>
+      <li>Click <strong>Security</strong> (left sidebar)</li>
+      <li>Under "How you sign in to Google" → click <strong>"2-Step Verification"</strong> → Enable it if not done</li>
+      <li>Go back to Security → scroll down → click <strong>"App passwords"</strong></li>
+      <li>App name: type <code>JobBot</code> → click <strong>Create</strong></li>
+      <li>Copy the 16-character password shown (example: <code>abcd efgh ijkl mnop</code>)</li>
+      <li>Save it temporarily</li>
+    </ol>
+    <div class="warn"><strong>⚠️</strong> Use your Gmail App Password here, NOT your regular Gmail password. Regular password won't work.</div>
+  </div>
+
+
+  <!-- STEP 7 -->
+  <div class="step green">
+    <div class="step-header">
+      <div class="step-num">7</div>
+      <div>
+        <div class="step-title">Add Secrets to GitHub</div>
+        <div class="step-subtitle">This is where your API keys are stored safely — GitHub encrypts them</div>
+      </div>
+    </div>
+
+    <p>Go to your GitHub repo → <strong>Settings</strong> → <strong>Secrets and variables</strong> → <strong>Actions</strong> → <strong>"New repository secret"</strong></p>
+    <p>Add these 4 secrets one by one:</p>
+
+    <div class="secret-row">
+      <div class="secret-name">GEMINI_API_KEY</div>
+      <div class="secret-desc">
+        Your Gemini API key from Step 5
+        <span>Example: AIzaSyXXXXXXXXXXXXXXXXXXXX</span>
+      </div>
+    </div>
+
+    <div class="secret-row">
+      <div class="secret-name">GMAIL_ADDRESS</div>
+      <div class="secret-desc">
+        Your Gmail address (report will be sent here)
+        <span>Example: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="80f9eff5f2eee1ede5c0e7ede1e9ecaee3efed">[email&#160;protected]</a></span>
+      </div>
+    </div>
+
+    <div class="secret-row">
+      <div class="secret-name">GMAIL_APP_PASSWORD</div>
+      <div class="secret-desc">
+        Your 16-character Gmail App Password from Step 6
+        <span>Example: abcdefghijklmnop (no spaces)</span>
+      </div>
+    </div>
+
+    <div class="secret-row">
+      <div class="secret-name">LINKEDIN_EMAIL</div>
+      <div class="secret-desc">
+        Your LinkedIn login email (for scraping jobs)
+        <span>Example: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="027b6d77706c636f6742656f636b6e2c616d6f">[email&#160;protected]</a></span>
+      </div>
+    </div>
+
+    <div class="secret-row">
+      <div class="secret-name">LINKEDIN_PASSWORD</div>
+      <div class="secret-desc">
+        Your LinkedIn password
+        <span>Used only for scraping job listings. Auto-apply is disabled.</span>
+      </div>
+    </div>
+
+    <div class="secret-row">
+      <div class="secret-name">RESUME_PROFILE_JSON</div>
+      <div class="secret-desc">
+        Your resume profile as JSON — see instructions below ↓
+        <span>This is the config/resume_profile.json content</span>
+      </div>
+    </div>
+
+    <h3 style="margin-top:20px;">How to get RESUME_PROFILE_JSON:</h3>
+    <p>Run this on your Mac Terminal first (needs Gemini key set in local config.json):</p>
+    <pre>cd ~/Downloads/job-automation-free
+pip install -r requirements.txt
+pip install PyMuPDF
+
+# Set your Gemini key temporarily in config/config.json
+# Then run:
+python main.py --parse-resume /path/to/your_resume.pdf</pre>
+    <p>This creates <code>config/resume_profile.json</code>. Then copy its entire contents:</p>
+    <pre>cat config/resume_profile.json</pre>
+    <p>Copy everything that appears → paste it as the value for <code>RESUME_PROFILE_JSON</code> secret on GitHub.</p>
+
+    <div class="tip"><strong>💡 No resume PDF yet?</strong> Use the sample file: copy the contents of <code>config/resume_profile.sample.json</code> and manually edit it with your real skills. Then paste that as the secret.</div>
+  </div>
+
+
+  <!-- STEP 8 -->
+  <div class="step green">
+    <div class="step-header">
+      <div class="step-num">8</div>
+      <div>
+        <div class="step-title">Test Run — Trigger Manually</div>
+        <div class="step-subtitle">Make sure everything works before waiting for 9AM tomorrow</div>
+      </div>
+    </div>
+    <ol>
+      <li>Go to your GitHub repo</li>
+      <li>Click the <strong>"Actions"</strong> tab</li>
+      <li>Click <strong>"🤖 Daily QA Job Hunt"</strong> (left sidebar)</li>
+      <li>Click <strong>"Run workflow"</strong> button (right side)</li>
+      <li>Click the green <strong>"Run workflow"</strong> button in the popup</li>
+      <li>Refresh the page — you'll see a yellow dot (running) → green ✅ (success)</li>
+      <li>Click on the run to see live logs</li>
+    </ol>
+    <p>The run takes about <strong>10-15 minutes</strong>. When done, check your email inbox — your first job report should be there! 🎉</p>
+    <div class="tip"><strong>💡</strong> You can also download the HTML report from the "Artifacts" section at the bottom of the workflow run page.</div>
+  </div>
+
+
+  <!-- STEP 9 -->
+  <div class="step purple">
+    <div class="step-header">
+      <div class="step-num">9</div>
+      <div>
+        <div class="step-title">Done! Runs Automatically Every Day</div>
+        <div class="step-subtitle">9:00 AM IST = 3:30 AM UTC — no action needed from you</div>
+      </div>
+    </div>
+    <ul class="checklist">
+      <li><span class="check">✅</span> Bot scrapes Remotive, We Work Remotely, Himalayas, Naukri, Relocate.me, LinkedIn</li>
+      <li><span class="check">✅</span> Gemini AI scores each job against your resume</li>
+      <li><span class="check">✅</span> Beautiful HTML report emailed to you at 9AM IST</li>
+      <li><span class="check">✅</span> Skill gap analysis — what to learn next</li>
+      <li><span class="check">✅</span> Your Mac can be OFF — GitHub handles everything</li>
+      <li><span class="check">✅</span> Total cost: $0.00/month forever</li>
+    </ul>
+
+    <h3 style="margin-top:18px;">View past runs anytime:</h3>
+    <p>GitHub repo → Actions tab → click any past run → download the HTML report from Artifacts</p>
+  </div>
+
+
+  <!-- Troubleshooting -->
+  <div class="step red">
+    <div class="step-header">
+      <div class="step-num">⚠</div>
+      <div>
+        <div class="step-title">Troubleshooting</div>
+        <div class="step-subtitle">If something goes wrong</div>
+      </div>
+    </div>
+
+    <h3>❌ Workflow fails (red X)</h3>
+    <p>Click on the failed run → click on the failed step → read the error message. Most common causes:</p>
+    <ul>
+      <li><strong>Wrong Gemini key</strong> → Double-check GEMINI_API_KEY secret has no extra spaces</li>
+      <li><strong>Email not sending</strong> → Make sure GMAIL_APP_PASSWORD has no spaces (remove spaces from the 16-char password)</li>
+      <li><strong>RESUME_PROFILE_JSON invalid</strong> → Make sure you copied the entire JSON including the opening <code>{'{'}{'}'}</code> braces</li>
+    </ul>
+
+    <h3 style="margin-top:14px;">❌ No email received</h3>
+    <ul>
+      <li>Check spam/junk folder</li>
+      <li>Check Gmail "All Mail" folder</li>
+      <li>Verify GMAIL_ADDRESS and GMAIL_APP_PASSWORD secrets are correct</li>
+    </ul>
+
+    <h3 style="margin-top:14px;">❌ 0 jobs found</h3>
+    <ul>
+      <li>LinkedIn may be blocking — that's okay, Remotive/WWR/Himalayas will still work</li>
+      <li>You'll still get jobs from 4+ other sources</li>
+    </ul>
+
+    <h3 style="margin-top:14px;">Update your resume profile anytime:</h3>
+    <pre>python main.py --parse-resume /new/resume.pdf
+# Then copy config/resume_profile.json content

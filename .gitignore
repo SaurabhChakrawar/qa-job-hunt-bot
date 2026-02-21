@@ -1,0 +1,25 @@
+# ── NEVER upload these to GitHub ──
+config/config.json
+config/resume_profile.json
+
+# Keep the sample files (safe to upload)
+!config/resume_profile.sample.json
+
+# Logs and runtime data
+logs/
+data/jobs_db.json
+data/applied_jobs.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+qa-job-env/
+
+# Mac
+.DS_Store
+
+# Playwright
+.playwright/

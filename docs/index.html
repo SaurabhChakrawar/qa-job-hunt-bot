@@ -95,6 +95,25 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-s
   .jobs-grid { grid-template-columns: 1fr; }
   .header h1 { font-size: 18px; }
 }
+
+/* PIN Lock Screen */
+.pin-overlay { position: fixed; inset: 0; background: linear-gradient(135deg, #1e40af, #6d28d9); display: flex; align-items: center; justify-content: center; z-index: 9999; }
+.pin-box { background: #fff; border-radius: 24px; padding: 40px 36px; text-align: center; width: 340px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.pin-icon { font-size: 48px; margin-bottom: 12px; }
+.pin-title { font-size: 22px; font-weight: 800; color: #1f2937; margin-bottom: 4px; }
+.pin-subtitle { font-size: 13px; color: #9ca3af; margin-bottom: 28px; }
+.pin-dots { display: flex; justify-content: center; gap: 14px; margin-bottom: 28px; }
+.pin-dot { width: 16px; height: 16px; border-radius: 50%; background: #e5e7eb; transition: all 0.2s; }
+.pin-dot.filled { background: #1d4ed8; transform: scale(1.1); }
+.pin-dot.error { background: #ef4444; }
+.pin-keypad { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.pin-key { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; font-size: 20px; font-weight: 700; cursor: pointer; transition: all 0.15s; color: #1f2937; }
+.pin-key:hover { background: #eff6ff; border-color: #93c5fd; color: #1d4ed8; }
+.pin-key:active { transform: scale(0.95); background: #dbeafe; }
+.pin-key.del { font-size: 16px; color: #6b7280; }
+.pin-error { color: #ef4444; font-size: 13px; font-weight: 600; margin-top: 16px; min-height: 20px; }
+.pin-hint { font-size: 11px; color: #d1d5db; margin-top: 16px; }
+
 </style>
 </head>
 <body>
@@ -342,7 +361,83 @@ document.getElementById('search').addEventListener('input', () => {
   searchTimer = setTimeout(renderJobs, 300);
 });
 
-loadJobs();
+// loadJobs() called after PIN unlock or if session active
+
+// ── PIN Protection ──────────────────────────────────────────
+const CORRECT_PIN = '9356'; // Change this to your own 4-digit PIN
+const SESSION_KEY = 'qa_dashboard_unlocked';
+const SESSION_DURATION = 8 * 60 * 60 * 1000; // 8 hours
+
+let pinInput = '';
+
+function checkSession() {
+  const unlocked = sessionStorage.getItem(SESSION_KEY);
+  const unlockedAt = parseInt(sessionStorage.getItem(SESSION_KEY + '_at') || '0');
+  if (unlocked === 'true' && Date.now() - unlockedAt < SESSION_DURATION) {
+    document.getElementById('pin-overlay').style.display = 'none';
+    return true;
+  }
+  return false;
+}
+
+function pinPress(digit) {
+  if (!digit) return;
+  if (pinInput.length >= 4) return;
+  pinInput += digit;
+  updateDots();
+  if (pinInput.length === 4) {
+    setTimeout(checkPin, 150);
+  }
+}
+
+function pinDelete() {
+  pinInput = pinInput.slice(0, -1);
+  updateDots();
+  document.getElementById('pin-error').textContent = '';
+  document.querySelectorAll('.pin-dot').forEach(d => d.classList.remove('error'));
+}
+
+function updateDots() {
+  for (let i = 0; i < 4; i++) {
+    const dot = document.getElementById('dot-' + i);
+    dot.classList.toggle('filled', i < pinInput.length);
+    dot.classList.remove('error');
+  }
+}
+
+function checkPin() {
+  if (pinInput === CORRECT_PIN) {
+    sessionStorage.setItem(SESSION_KEY, 'true');
+    sessionStorage.setItem(SESSION_KEY + '_at', Date.now().toString());
+    const overlay = document.getElementById('pin-overlay');
+    overlay.style.transition = 'opacity 0.3s';
+    overlay.style.opacity = '0';
+    setTimeout(() => overlay.style.display = 'none', 300);
+    loadJobs();
+  } else {
+    document.querySelectorAll('.pin-dot').forEach(d => d.classList.add('error'));
+    document.getElementById('pin-error').textContent = '❌ Wrong PIN. Try again.';
+    setTimeout(() => {
+      pinInput = '';
+      updateDots();
+      document.getElementById('pin-error').textContent = '';
+    }, 1200);
+  }
+}
+
+// Keyboard support
+document.addEventListener('keydown', (e) => {
+  if (document.getElementById('pin-overlay').style.display === 'none') return;
+  if (e.key >= '0' && e.key <= '9') pinPress(e.key);
+  if (e.key === 'Backspace') pinDelete();
+});
+
+// Check session on load
+if (checkSession()) {
+  loadJobs(); // Already unlocked this session
+}
+// else: PIN screen is shown, loadJobs() called after correct PIN
+
 </script>
 </body>
 </html>

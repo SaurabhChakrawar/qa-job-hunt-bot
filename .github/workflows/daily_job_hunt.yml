@@ -65,7 +65,7 @@ jobs:
                 "Senior QA Engineer"
               ],
               "experience_years": 5,
-              "min_match_score": 40,
+              "min_match_score": 25,
               "excluded_keywords": ["unpaid", "internship", "fresher only"],
               "preferred_salary_usd_min": 30000
             },

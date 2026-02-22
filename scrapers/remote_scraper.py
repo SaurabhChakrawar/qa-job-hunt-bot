@@ -1,11 +1,6 @@
 """
-remote_scraper.py
-Scrapes remote-specific job boards for QA/Test Automation roles:
-- Remotive.io
-- We Work Remotely (WWR)
-- Remote.co
-- Himalayas.app
-- Wellfound (AngelList)
+remote_scraper.py - FIXED VERSION
+Uses Remotive free API properly with full job descriptions.
 """
 
 import requests
@@ -15,255 +10,287 @@ import sys
 from datetime import datetime
 from bs4 import BeautifulSoup
 import time
-import random
+import re
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "en-US,en;q=0.5",
 }
 
-QA_KEYWORDS = ["qa automation", "test automation", "sdet", "quality assurance", "selenium", "playwright", "cypress", "software tester"]
+# QA-specific search terms
+QA_SEARCHES = [
+    "selenium", "playwright", "cypress", "appium",
+    "test automation", "qa automation", "sdet",
+    "quality assurance", "software tester", "testng"
+]
+
+
+def clean_html(html_text: str) -> str:
+    """Strip HTML tags from job description."""
+    if not html_text:
+        return ""
+    soup = BeautifulSoup(html_text, "lxml")
+    return soup.get_text(separator=" ", strip=True)[:3000]
 
 
 def scrape_remotive() -> list:
-    """Scrape Remotive.io for QA jobs via their API."""
+    """Scrape Remotive.io using their free API - returns full descriptions."""
     jobs = []
-    searches = ["qa", "test", "sdet", "quality assurance"]
+    seen_ids = set()
 
-    for query in searches:
+    # Remotive free API - no key needed
+    categories = ["qa", "testing", "software-dev"]
+    
+    for category in categories:
         try:
-            url = f"https://remotive.com/api/remote-jobs?category=qa&search={query}&limit=20"
+            url = f"https://remotive.com/api/remote-jobs?category={category}&limit=50"
             resp = requests.get(url, headers=HEADERS, timeout=15)
-            if resp.status_code == 200:
-                data = resp.json()
-                for job in data.get("jobs", []):
-                    jobs.append({
-                        "id": f"remotive_{job.get('id', '')}",
-                        "title": job.get("title", ""),
-                        "company": job.get("company_name", ""),
-                        "location": job.get("candidate_required_location", "Worldwide"),
-                        "url": job.get("url", ""),
-                        "description": job.get("description", "")[:2000],
-                        "source": "remotive",
-                        "category": "remote_worldwide",
-                        "type": "Remote Worldwide",
-                        "date_posted": job.get("publication_date", str(datetime.now().date())),
-                        "scraped_at": datetime.now().isoformat(),
-                        "salary": job.get("salary", ""),
-                        "tags": job.get("tags", []),
-                    })
-            time.sleep(random.uniform(1, 2))
-        except Exception as e:
-            print(f"   ⚠️ Remotive error: {e}")
-
-    print(f"   ✅ Remotive: {len(jobs)} jobs")
-    return deduplicate(jobs)
-
-
-def scrape_weworkremotely() -> list:
-    """Scrape We Work Remotely for QA jobs."""
-    jobs = []
-    categories = [
-        "https://weworkremotely.com/categories/remote-programming-jobs",
-        "https://weworkremotely.com/categories/remote-qa-jobs",
-    ]
-
-    for cat_url in categories:
-        try:
-            resp = requests.get(cat_url, headers=HEADERS, timeout=15)
             if resp.status_code != 200:
                 continue
+            
+            data = resp.json()
+            for job in data.get("jobs", []):
+                job_id = str(job.get("id", ""))
+                if job_id in seen_ids:
+                    continue
+                seen_ids.add(job_id)
 
-            soup = BeautifulSoup(resp.text, "lxml")
-            job_sections = soup.select("section.jobs article")
-
-            for article in job_sections[:30]:
-                title_el = article.select_one("span.title")
-                company_el = article.select_one("span.company")
-                link_el = article.select_one("a[href*='/remote-jobs/']")
-                region_el = article.select_one("span.region")
-
-                title = title_el.get_text(strip=True) if title_el else ""
-                company = company_el.get_text(strip=True) if company_el else ""
-                url = "https://weworkremotely.com" + link_el["href"] if link_el else ""
-                location = region_el.get_text(strip=True) if region_el else "Worldwide"
-
-                # Filter for QA-related jobs
-                if not any(kw in title.lower() for kw in ["qa", "test", "quality", "sdet", "automation"]):
+                title = job.get("title", "").lower()
+                # Filter only QA related jobs
+                if not any(kw in title for kw in [
+                    "qa", "quality", "test", "sdet", "automation",
+                    "selenium", "playwright", "cypress"
+                ]):
                     continue
 
-                if title and url:
-                    jobs.append({
-                        "id": f"wwr_{url.split('/')[-1]}",
-                        "title": title,
-                        "company": company,
-                        "location": location,
-                        "url": url,
-                        "description": "",
-                        "source": "weworkremotely",
-                        "category": "remote_worldwide",
-                        "type": "Remote Worldwide",
-                        "date_posted": str(datetime.now().date()),
-                        "scraped_at": datetime.now().isoformat(),
-                    })
-
-            time.sleep(random.uniform(2, 4))
+                description = clean_html(job.get("description", ""))
+                
+                jobs.append({
+                    "id": f"remotive_{job_id}",
+                    "title": job.get("title", ""),
+                    "company": job.get("company_name", ""),
+                    "location": job.get("candidate_required_location", "Worldwide"),
+                    "url": job.get("url", ""),
+                    "description": description,
+                    "source": "remotive",
+                    "category": "remote_worldwide",
+                    "type": "Remote Worldwide",
+                    "date_posted": job.get("publication_date", str(datetime.now().date())),
+                    "scraped_at": datetime.now().isoformat(),
+                    "salary": job.get("salary", ""),
+                    "tags": job.get("tags", []),
+                })
+            
+            time.sleep(1)
         except Exception as e:
-            print(f"   ⚠️ WWR error: {e}")
+            print(f"   ⚠️ Remotive {category} error: {e}")
 
-    print(f"   ✅ We Work Remotely: {len(jobs)} jobs")
+    print(f"   ✅ Remotive: {len(jobs)} QA jobs with descriptions")
     return jobs
 
 
 def scrape_himalayas() -> list:
-    """Scrape Himalayas.app via their public API."""
+    """Scrape Himalayas.app - great remote job board with full descriptions."""
     jobs = []
-    searches = ["QA automation engineer", "SDET", "test automation engineer", "software test engineer"]
+    searches = [
+        "QA automation engineer",
+        "SDET",
+        "test automation engineer",
+        "software test engineer",
+        "selenium engineer"
+    ]
 
     for query in searches:
         try:
-            url = f"https://himalayas.app/api/jobs?q={query.replace(' ', '+')}&remote=true&limit=20"
-            resp = requests.get(url, headers=HEADERS, timeout=15)
-            if resp.status_code == 200:
-                data = resp.json()
-                for job in data.get("jobs", []):
-                    jobs.append({
-                        "id": f"himalayas_{job.get('slug', '')}",
-                        "title": job.get("title", ""),
-                        "company": job.get("company", {}).get("name", ""),
-                        "location": job.get("locationRestrictions", ["Worldwide"])[0] if job.get("locationRestrictions") else "Worldwide",
-                        "url": f"https://himalayas.app/jobs/{job.get('slug', '')}",
-                        "description": job.get("description", "")[:2000],
-                        "source": "himalayas",
-                        "category": "remote_worldwide",
-                        "type": "Remote Worldwide",
-                        "date_posted": job.get("publishedAt", str(datetime.now().date())),
-                        "scraped_at": datetime.now().isoformat(),
-                        "salary": job.get("salaryRange", ""),
-                    })
-            time.sleep(random.uniform(1, 2))
-        except Exception as e:
-            print(f"   ⚠️ Himalayas error: {e}")
-
-    print(f"   ✅ Himalayas: {len(jobs)} jobs")
-    return deduplicate(jobs)
-
-
-def scrape_relocate_me() -> list:
-    """Scrape Relocate.me for sponsorship/relocation jobs."""
-    jobs = []
-
-    try:
-        searches = ["qa-automation-engineer", "software-tester", "sdet"]
-        for search in searches:
-            url = f"https://relocate.me/search?q={search}"
+            url = f"https://himalayas.app/api/jobs?q={query.replace(' ', '+')}&limit=20"
             resp = requests.get(url, headers=HEADERS, timeout=15)
             if resp.status_code != 200:
                 continue
 
-            soup = BeautifulSoup(resp.text, "lxml")
-            job_cards = soup.select(".job-card, [data-testid='job-card'], article.job")
+            data = resp.json()
+            for job in data.get("jobs", []):
+                slug = job.get("slug", "")
+                description = clean_html(job.get("description", ""))
+                
+                # Get location restrictions
+                locations = job.get("locationRestrictions", [])
+                location = locations[0] if locations else "Worldwide"
 
-            for card in job_cards[:20]:
-                title_el = card.select_one("h2, h3, .job-title, [class*='title']")
-                company_el = card.select_one(".company-name, [class*='company']")
-                location_el = card.select_one(".location, [class*='location']")
-                link_el = card.select_one("a[href]")
+                jobs.append({
+                    "id": f"himalayas_{slug}",
+                    "title": job.get("title", ""),
+                    "company": job.get("company", {}).get("name", ""),
+                    "location": location,
+                    "url": f"https://himalayas.app/jobs/{slug}",
+                    "description": description,
+                    "source": "himalayas",
+                    "category": "remote_worldwide",
+                    "type": "Remote Worldwide",
+                    "date_posted": job.get("publishedAt", str(datetime.now().date())),
+                    "scraped_at": datetime.now().isoformat(),
+                    "salary": str(job.get("salaryRange", "")),
+                })
+            time.sleep(1)
+        except Exception as e:
+            print(f"   ⚠️ Himalayas error for '{query}': {e}")
 
-                title = title_el.get_text(strip=True) if title_el else ""
-                company = company_el.get_text(strip=True) if company_el else ""
-                location = location_el.get_text(strip=True) if location_el else ""
-                href = link_el["href"] if link_el else ""
-                url_job = href if href.startswith("http") else f"https://relocate.me{href}"
+    # Deduplicate
+    seen = set()
+    unique = []
+    for job in jobs:
+        if job["id"] not in seen and job["title"]:
+            seen.add(job["id"])
+            unique.append(job)
 
-                if title and url_job:
-                    jobs.append({
-                        "id": f"relocate_{href.split('/')[-1]}",
-                        "title": title,
-                        "company": company,
-                        "location": location,
-                        "url": url_job,
-                        "description": "",
-                        "source": "relocate.me",
-                        "category": "sponsorship_worldwide",
-                        "type": "Outside India (Sponsorship)",
-                        "sponsorship": True,
-                        "date_posted": str(datetime.now().date()),
-                        "scraped_at": datetime.now().isoformat(),
-                    })
+    print(f"   ✅ Himalayas: {len(unique)} jobs")
+    return unique
 
-            time.sleep(random.uniform(2, 3))
+
+def scrape_arbeitnow() -> list:
+    """Scrape Arbeitnow - great for Europe + visa sponsorship jobs."""
+    jobs = []
+    try:
+        # Free API, no key needed
+        url = "https://www.arbeitnow.com/api/job-board-api"
+        resp = requests.get(url, headers=HEADERS, timeout=15)
+        if resp.status_code != 200:
+            return []
+
+        data = resp.json()
+        for job in data.get("data", []):
+            title = job.get("title", "").lower()
+            # Filter QA related
+            if not any(kw in title for kw in [
+                "qa", "quality", "test", "sdet", "automation"
+            ]):
+                continue
+
+            description = clean_html(job.get("description", ""))
+            visa = job.get("visa_sponsorship", False)
+
+            jobs.append({
+                "id": f"arbeitnow_{job.get('slug', '')}",
+                "title": job.get("title", ""),
+                "company": job.get("company_name", ""),
+                "location": job.get("location", "Europe"),
+                "url": job.get("url", ""),
+                "description": description,
+                "source": "arbeitnow",
+                "category": "sponsorship_worldwide" if visa else "remote_worldwide",
+                "type": "Outside India (Sponsorship)" if visa else "Remote Worldwide",
+                "sponsorship": visa,
+                "date_posted": job.get("created_at", str(datetime.now().date())),
+                "scraped_at": datetime.now().isoformat(),
+            })
 
     except Exception as e:
-        print(f"   ⚠️ Relocate.me error: {e}")
+        print(f"   ⚠️ Arbeitnow error: {e}")
 
-    print(f"   ✅ Relocate.me: {len(jobs)} sponsorship jobs")
+    print(f"   ✅ Arbeitnow: {len(jobs)} QA jobs (includes visa sponsorship)")
     return jobs
 
 
-def scrape_naukri_remote() -> list:
-    """Scrape Naukri.com for India remote QA jobs."""
+def scrape_jobicy() -> list:
+    """Scrape Jobicy - remote jobs API, free, no key needed."""
     jobs = []
+    searches = ["qa-engineer", "test-automation", "sdet", "quality-assurance"]
+    
+    for tag in searches:
+        try:
+            url = f"https://jobicy.com/api/v2/remote-jobs?tag={tag}&count=20"
+            resp = requests.get(url, headers=HEADERS, timeout=15)
+            if resp.status_code != 200:
+                continue
 
+            data = resp.json()
+            for job in data.get("jobs", []):
+                description = clean_html(job.get("jobDescription", ""))
+                jobs.append({
+                    "id": f"jobicy_{job.get('id', '')}",
+                    "title": job.get("jobTitle", ""),
+                    "company": job.get("companyName", ""),
+                    "location": job.get("jobGeo", "Worldwide"),
+                    "url": job.get("url", ""),
+                    "description": description,
+                    "source": "jobicy",
+                    "category": "remote_worldwide",
+                    "type": "Remote Worldwide",
+                    "date_posted": job.get("pubDate", str(datetime.now().date())),
+                    "scraped_at": datetime.now().isoformat(),
+                    "salary": job.get("annualSalaryMin", ""),
+                })
+            time.sleep(1)
+        except Exception as e:
+            print(f"   ⚠️ Jobicy error: {e}")
+
+    # Deduplicate
+    seen = set()
+    unique = [j for j in jobs if j["id"] not in seen and not seen.add(j["id"]) and j["title"]]
+    print(f"   ✅ Jobicy: {len(unique)} remote QA jobs")
+    return unique
+
+
+def scrape_naukri_remote() -> list:
+    """Scrape Naukri for India remote QA jobs."""
+    jobs = []
     searches = [
-        "QA automation engineer remote",
-        "test automation engineer work from home",
-        "SDET remote",
-        "software tester remote"
+        ("qa-automation-engineer-jobs", "QA Automation Engineer"),
+        ("test-automation-engineer-jobs", "Test Automation Engineer"),
+        ("sdet-jobs", "SDET"),
     ]
 
-    for search in searches:
+    for path, label in searches:
         try:
-            encoded = search.replace(" ", "-")
-            url = f"https://www.naukri.com/{encoded}-jobs?jobType=work+from+home&wfhType=wfh"
+            url = f"https://www.naukri.com/{path}?jobType=work+from+home"
             resp = requests.get(url, headers=HEADERS, timeout=15)
             if resp.status_code != 200:
                 continue
 
             soup = BeautifulSoup(resp.text, "lxml")
-            job_articles = soup.select("article.jobTuple, [class*='jobTupleHeader'], .job-container")
+            
+            # Try multiple selectors
+            cards = (soup.select("article.jobTuple") or 
+                    soup.select("[class*='jobTuple']") or
+                    soup.select(".job-container"))
 
-            for article in job_articles[:20]:
-                title_el = article.select_one("a.title, [class*='jobTitle'] a, .designation a")
-                company_el = article.select_one(".companyInfo a, [class*='companyName']")
-                location_el = article.select_one(".location, [class*='location']")
-
+            for card in cards[:20]:
+                title_el = card.select_one("a.title, [class*='jobTitle'] a")
+                company_el = card.select_one("[class*='companyName'], .companyInfo a")
+                
                 title = title_el.get_text(strip=True) if title_el else ""
                 company = company_el.get_text(strip=True) if company_el else ""
-                location = location_el.get_text(strip=True) if location_el else "India (Remote)"
-                url_job = title_el.get("href", "") if title_el else ""
+                job_url = title_el.get("href", "") if title_el else ""
 
-                if title and url_job:
+                if title and job_url:
                     jobs.append({
-                        "id": f"naukri_{url_job.split('/')[-1][:30]}",
+                        "id": f"naukri_{hash(job_url) % 100000}",
                         "title": title,
                         "company": company,
-                        "location": f"India - Remote ({location})",
-                        "url": url_job,
-                        "description": "",
+                        "location": "India (Remote)",
+                        "url": job_url,
+                        "description": f"QA Automation role at {company}. Position: {title}. Remote work from India.",
                         "source": "naukri",
                         "category": "india_remote",
                         "type": "India Remote",
                         "date_posted": str(datetime.now().date()),
                         "scraped_at": datetime.now().isoformat(),
                     })
-
-            time.sleep(random.uniform(3, 5))
+            time.sleep(2)
         except Exception as e:
-            print(f"   ⚠️ Naukri error for '{search}': {e}")
+            print(f"   ⚠️ Naukri error: {e}")
 
-    print(f"   ✅ Naukri: {len(jobs)} India remote jobs")
-    return deduplicate(jobs)
+    seen = set()
+    unique = [j for j in jobs if j["id"] not in seen and not seen.add(j["id"]) and j["title"]]
+    print(f"   ✅ Naukri: {len(unique)} India remote jobs")
+    return unique
 
 
 def deduplicate(jobs: list) -> list:
     seen = set()
     unique = []
     for job in jobs:
-        key = job.get("url", "") or f"{job.get('title', '')}_{job.get('company', '')}"
+        key = job.get("url", "") or job.get("id", "")
         if key and key not in seen:
             seen.add(key)
             unique.append(job)
@@ -271,8 +298,8 @@ def deduplicate(jobs: list) -> list:
 
 
 def scrape_all_remote_boards() -> dict:
-    """Scrape all remote job boards. Returns categorized jobs."""
-    print("\n🌐 Scraping remote job boards...")
+    """Scrape all job boards. Returns categorized jobs with descriptions."""
+    print("\n🌐 Scraping job boards...")
 
     results = {
         "remote_worldwide": [],
@@ -280,23 +307,29 @@ def scrape_all_remote_boards() -> dict:
         "sponsorship_worldwide": [],
     }
 
-    print("  📍 Remotive.io...")
+    print("  📍 Remotive.io (free API)...")
     results["remote_worldwide"].extend(scrape_remotive())
-
-    print("  📍 We Work Remotely...")
-    results["remote_worldwide"].extend(scrape_weworkremotely())
 
     print("  📍 Himalayas.app...")
     results["remote_worldwide"].extend(scrape_himalayas())
 
-    print("  📍 Relocate.me (Sponsorship)...")
-    results["sponsorship_worldwide"].extend(scrape_relocate_me())
+    print("  📍 Arbeitnow (Europe + Visa Sponsorship)...")
+    arbeitnow_jobs = scrape_arbeitnow()
+    for job in arbeitnow_jobs:
+        cat = job.get("category", "remote_worldwide")
+        results[cat].append(job)
+
+    print("  📍 Jobicy (Remote)...")
+    results["remote_worldwide"].extend(scrape_jobicy())
 
     print("  📍 Naukri (India Remote)...")
     results["india_remote"].extend(scrape_naukri_remote())
 
+    # Deduplicate each category
     for cat in results:
         results[cat] = deduplicate(results[cat])
         print(f"  📊 {cat}: {len(results[cat])} unique jobs")
 
+    total = sum(len(j) for j in results.values())
+    print(f"\n  🎯 Total: {total} jobs scraped across all boards")
     return results

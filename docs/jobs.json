@@ -1,0 +1,353 @@
+{
+  "generated_at": "2026-02-22T15:33:06.409637",
+  "total_scraped": 10,
+  "total_matched": 10,
+  "jobs": [
+    {
+      "id": "shine_434997",
+      "title": "Software Engineer II - Test Automation Engineer - Selenium / Cypress / Playwright (Bengaluru)",
+      "company": "",
+      "location": "India (Remote)",
+      "url": "https://www.shine.com/jobs/software-engineer-ii-test-automation-engineer-selenium-cypress-playwright-bengaluru/jpmorgan-chase-bank/18676565",
+      "description": "Software Engineer II - Test Automation Engineer - Selenium / Cypress / Playwright (Bengaluru) at . Remote/WFH QA role in India.",
+      "source": "shine",
+      "category": "india_remote",
+      "type": "India Remote",
+      "date_posted": "2026-02-22",
+      "scraped_at": "2026-02-22T15:30:17.254435",
+      "match_score": 75,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Mid-level position matches your profile",
+        "Selenium mentioned in title"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "arbeitnow_senior-embedded-qa-engineer-berlin-363608",
+      "title": "Senior Embedded QA Engineer",
+      "company": "SumUp",
+      "location": "Berlin, Berlin, Germany",
+      "url": "https://www.arbeitnow.com/jobs/companies/sumup/senior-embedded-qa-engineer-berlin-363608",
+      "description": "About the role As a Senior Embedded QA Engineer in SumUp's Hardware Tribe, you will be part of one of our small and highly skilled cross-functional teams and work together with Product Managers, Embedded Engineers, Mobile Engineers, and more. You will build sustainable solutions for testing and be accountable for the mobile testing tools that the QA team are building. Lastly, you will also be a critical decision maker in the design of hardware test infrastructures to run HIL tests and provide crucial support to software releases. You should be an engineer with a product mindset who can fully own the features you are working on and remain flexible with changing priorities. The role is based on-site in our office in Berlin. We believe in the power of face-to-face conversations that happen organically when working next to one another. About the team You have probably used our card readers to buy a cappuccino or pay your hairdresser already. In Hardware, we are passionate about creating these beautifully designed card payment devices and accessories that enable our merchants to start, run, and grow their own businesses. In doing so, we deal with a diverse range of engineering topics - industrial and electronic design, embedded systems, all the way to mobile apps and backend services. We believe in open communication and constant learning over strict rules. If you're looking for the chance to innovate and help millions of small independent merchants succeed - join us! What you'll do Ensure that all new code of developers has the right quality and is compliant with selected best practices (in collaboration with the CL) Build and maintain test infrastructure for HIL tests, with a strong emphasis on Embedded QA. Ensure that multiple types of tests cover the main features (especially UI, Mobile Application, and end to end tests) Ensure that new releases are delivered timely with the right quality Evangelize a strong quality mindset within the Hardware tribe You'll be great for this position if: Expertise in Embedded QA in Linux environment Experience with Object Oriented Programming ( Python being a must ) Knowledge with REST APIs Experience building test libraries Expertise in testing and continuous integration strategies Experience of manual testing, writing test cases and campaign management Why you should join SumUp The opportunity to work on large scale fintech products used by millions of small businesses around the world A dedicated annual Learning & Development budget for attending conferences and/or advancing your career through further education Enrollment onto our virtual stock ownership program - you will own a stake in SumUp's future success A corporate pension scheme 28 days paid leave + 1 for birthday You'll attend global offsites and/or hackathons. You'd enjoy other great benefits such as Urban Sports Club subsidy, Kita placement assistance, subsidized office lunches and other location-tailored benefits, Babbel language platform subscripti",
+      "source": "arbeitnow",
+      "category": "remote_worldwide",
+      "type": "Remote Worldwide",
+      "sponsorship": false,
+      "date_posted": "2026-02-22",
+      "scraped_at": "2026-02-22T15:29:19.562729",
+      "match_score": 70,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Seniority level matches your experience"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "jobicy_138964",
+      "title": "Senior QA Engineer &amp;#8211; Earn",
+      "company": "Binance",
+      "location": "APAC,  UAE",
+      "url": "https://jobicy.com/jobs/138964-senior-qa-engineer-earn",
+      "description": "Binance is a leading global blockchain ecosystem behind the world\u2019s largest cryptocurrency exchange by trading volume and registered users. We are trusted by over 280 million people in 100+ countries for our industry-leading security, user fund transparency, trading engine speed, deep liquidity, and an unmatched portfolio of digital-asset products. Binance offerings range from trading and finance to education, research, payments, institutional services, Web3 features, and more. We leverage the power of digital assets and blockchain to build an inclusive financial ecosystem to advance the freedom of money and improve financial access for people around the world. Responsibilities Participate in the entire software development lifecycle (including Backend Testing), encompassing all stages from requirements analysis to test planning, execution, defect tracking, through to product release and maintenance. Work closely with team members (Developers, Product Manager and all other partners) to design, develop, test and deliver high quality products. Create detailed, comprehensive, well-structured and effective test plans and test cases for applications, including Data applications, Data platform and pipelines. Prevent, report, analyse and track issues in an effective and efficient mannerImprove test strategy to reduce manual test efforts \u2013 Design, develop and execute Automation scripts. Requirements At least 6+ years of QA engineering experience in Automation and familiar with Backend Testing + Coding (Intermediate coding ability in Python or Java ). Experience in writing clear and comprehensive test plans and test cases. Experience in testing Backend services such as APIs, Databases, distributed servicesStrong SQL testing, understanding different SQL statements. Experience working in an Agile/Scrum development process. Bonus: Knowledge in the Blockchain or Web3 domain. Bonus: Big Data middle-wares testing (Hadoop, Hive, Spark, Kafka, Flink) Why Binance \u2022 Shape the future with the world\u2019s leading blockchain ecosystem\u2022 Collaborate with world-class talent in a user-centric global organization with a flat structure\u2022 Tackle unique, fast-paced projects with autonomy in an innovative environment\u2022 Thrive in a results-driven workplace with opportunities for career growth and continuous learning\u2022 Competitive salary and company benefits\u2022 Work-from-home arrangement (the arrangement may vary depending on the work nature of the business team) Binance is committed to being an equal opportunity employer. We believe that having a diverse workforce is fundamental to our success. By submitting a job application, you confirm that you have read and agree to our Candidate Privacy Notice .",
+      "source": "jobicy",
+      "category": "remote_worldwide",
+      "type": "Remote Worldwide",
+      "date_posted": "2026-01-28T05:26:05+00:00",
+      "scraped_at": "2026-02-22T15:29:23.876322",
+      "match_score": 70,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Seniority level matches your experience"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "arbeitnow_test-engineer-bess-munich-302271",
+      "title": "Test Engineer BESS (m/f/d)",
+      "company": "STABL Energy",
+      "location": "Munich",
+      "url": "https://www.arbeitnow.com/jobs/companies/stabl-energy/test-engineer-bess-munich-302271",
+      "description": "Your Role We are looking for a skilled and analytical Test Engineer (m/f/d) to drive system-level validation of our Battery Energy Storage Systems (BESS). You will help build the foundation of our testing function by defining processes, infrastructure, and tools as production scales. The role focuses on validating complete BESS and key subsystems to ensure functionality, reliability, and safe integration of mechanical, electrical, and software components. Additional tasks may include ECAD support, PLC logic implementation, and development of EoL/FAT tooling. Your mission System & Subsystem Testing Plan, execute, and document system- and subsystem-level BESS tests. Verify integration of electrical, software, thermal, and safety systems. Conduct functional, performance, and regression tests. Analyze deviations and support troubleshooting and root-cause investigations. Develop scalable test procedures and contribute to the long-term testing roadmap. Building the Testing Function Help establish internal testing processes, standards, and tooling. Support definition of future testing infrastructure and methodologies. Enable knowledge transfer and, over time, support additional testing staff. Documentation & Compliance Maintain accurate test documentation and traceability. Support CE/EMC and other certification-related tests. Provide structured feedback to engineering teams for continuous improvement. Additional Engineering Tasks ECAD Support: Assist with wiring diagrams, component integration, and prototype electrical reviews. PLC Programming: Support PLC logic implementation and communication/I/O configuration. EoL/FAT Tooling: Contribute to automated test processes, device integration, and reporting. Your profile Degree in Electrical Engineering, Mechatronics, or similar. Experience in testing, validation, commissioning, or troubleshooting complex systems. Strong understanding of industrial electrical systems, safety, and system integration. Practical skills in PLC programming and/or Python. Strong analytical, documentation, and problem-solving skills. Optional: Experience with BESS, ECAD tools (e.g., EPLAN) and/or PLC systems (ideally WAGO). Methodical, structured, detail-oriented working style. Hands-on mindset and comfort with prototypes and hardware. Strong communication and cross-functional collaboration skills. Proactive and process-oriented, with interest in shaping a growing testing function. Why STABL Energy? STABL Energy is one of the most innovative start-ups in the energy transition, ees Award winner and named a global Top100 Energy Start-up. We are funded by renowned and experienced Tech VCs from Germany, Denmark and Switzerland. What you\u2019ll love about working with us: Agile, open & innovation-driven culture with flat hierarchies, quick decision-making processes and real ownership Company pension scheme to support you plan for the future Flexible working hours, a hybrid work model, and the option to work remotely from abroad Digital meal",
+      "source": "arbeitnow",
+      "category": "remote_worldwide",
+      "type": "Remote Worldwide",
+      "sponsorship": false,
+      "date_posted": "2026-02-22",
+      "scraped_at": "2026-02-22T15:29:20.952163",
+      "match_score": 65,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "arbeitnow_supplier-quality-engineer-munich-145423",
+      "title": "Supplier Quality Engineer (m/w/d)",
+      "company": "MY Humancapital GmbH",
+      "location": "Munich",
+      "url": "https://www.arbeitnow.com/jobs/companies/my-humancapital-gmbh/supplier-quality-engineer-munich-145423",
+      "description": "Im Auftrag unser Partnerunternehmen in M\u00fcnchen sucht Sie als Supplier Quality Engineer (m/w/d) / Spezialist (m/w/d) Lieferantenqualit\u00e4t. Aufgaben Als Spezialist (m/w/d) f\u00fcr Lieferantenqualit\u00e4t sichern Sie die Anlieferqualit\u00e4t und begleiten pr\u00e4ventive Ma\u00dfnahmen zur Lieferantenentwicklung Zudem steuern Sie das technische Fehlermanagement und dokumentieren Abweichungen zuverl\u00e4ssig im CAQ-System Auch die Moderation von Ursachenanalysen und die Definition nachhaltiger Korrekturma\u00dfnahmen geh\u00f6rt zu Ihrem Aufgabenbereich Dar\u00fcber hinaus bewerten Sie 8D-Reports eigenst\u00e4ndig und koordinieren Sofort- und Korrekturma\u00dfnahmen mit Kunden und Lieferanten Erg\u00e4nzend unterst\u00fctzen Sie bei der Risikoeinstufung von Lieferanten und Bauteilen und kl\u00e4ren technische Fragestellungen proaktiv Qualifikation Sie bringen ein abgeschlossenes, technisches Studium bspw. im Bereich Wirtschaftsingenieurwesen, Maschinenbau oder Bauingenieurwesen oder alternativ eine technische Ausbildung, bspw. als gepr\u00fcfter Techniker (m/w/d), Industriemechaniker (m/w/d) oder Mechatroniker (m/w/d) Zudem bringen Sie einschl\u00e4gige Berufserfahrung, bspw. als Qualit\u00e4tsingenieur (m/w/d), Spezialist (m/w/d) f\u00fcr Lieferantenqualit\u00e4t oder Technischer QM-Spezialist (m/w/d) mit Sie \u00fcberzeugen durch eine strukturierte und zuverl\u00e4ssige Arbeitsweise gepaart mit einem ausgepr\u00e4gten, technischen Verst\u00e4ndnis Sichere Englisch- und Deutschkenntnisse sowie idealerweise Kenntnisse im Umgang mit SAP runden Ihr Profil ab Benefits IG-Metall-Tarifvertrag: Hier erwarten Sie flexible Arbeitszeiten, anteilige Homeoffice-M\u00f6glichkeit sowie eine attraktive Bezahlung nach dem IG-Metall Tarifvertrag Onboarding: Ihre erfahrenen Kollegen stehen Ihnen w\u00e4hrend der Einarbeitung mit Rat und Tat zur Seite Gesundheit: Ergonomische Arbeitspl\u00e4tze sowie zahlreiche Sport- und Gesundheitsangebote sorgen daf\u00fcr, dass Sie sich rundum wohlf\u00fchlen Entwicklung: Langfristige Jobm\u00f6glichkeit sowie zahlreiche Weiterbildungs- und Entwicklungsm\u00f6glichkeiten Vielseitigkeit: Freuen Sie sich aufspannende und abwechslungsreiche T\u00e4tigkeiten in einem dynamischen Umfeld Sie finden das Stellenprofil interessant? Dann freuen wir uns auf Ihre Bewerbung. Senden Sie uns Ihre Unterlagen. F\u00fcr R\u00fcckfragen steht Ihnen Simon Schneider gerne unter 089 954 287 111 zur Verf\u00fcgung. Find more English Speaking Jobs in Germany on Arbeitnow",
+      "source": "arbeitnow",
+      "category": "remote_worldwide",
+      "type": "Remote Worldwide",
+      "sponsorship": false,
+      "date_posted": "2026-02-22",
+      "scraped_at": "2026-02-22T15:29:22.236395",
+      "match_score": 65,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "jobicy_139487",
+      "title": "Automation QA Engineer",
+      "company": "PriceLabs",
+      "location": "USA",
+      "url": "https://jobicy.com/jobs/139487-automation-qa-engineer",
+      "description": "About the Role: We are looking for a Quality Gatekeeper to join PriceLabs, a fast-paced leader in revenue management software. We deal with complex data, dynamic pricing algorithms, and high-traffic dashboards. In this role, you won\u2019t just write scripts; you will own the automation architecture. You will work side-by-side with Developers and Product Managers to ensure that our React-based platform is robust, reliable, and ready for deployment. You will build scalable automation frameworks that catch regressions before they reach our users. This role is fully remote and open to individuals who reside in India . Key Responsibilities: Architect the Framework: Design, build, and maintain a scalable E2E automation framework using Cypress.io and Java Script . Focus on reusability, stability (handling flakes), and speed. API & Backend Validation: Go beyond the UI. Implement API automation (using cy.request or tools like Postman/Rest-Assured) and write complex SQL queries to validate our pricing logic and data accuracy. CI/CD Integration: Own the \u201cQuality Pipeline.\u201d Collaborate with DevOps to integrate automated tests into Jenkins , ensuring rapid feedback loops for every commit. Shift-Left Quality: Participate in design and requirement reviews (grooming) to identify test scenarios early. Advocate for testability in the codebase. Defect Management: Identify, document, and track defects in Jira/ClickUp . Provide developers with detailed root-cause analysis (logs, screenshots, network traces) rather than just \u201cbug reports.\u201d Continuous Improvement: Stay updated on Cypress features (e.g., Component Testing, Cypress Studio) and industry trends to continuously optimize our testing strategy. What We Are Looking For (The Must-Haves): Automation Expertise: 3+ years of hands-on automation experience in Cypress.io . Strong Coding Skills: Proficient in TypeScript or JavaScript (ES6+) . You understand asynchronous code, promises, and the DOM. The \u201cSDET\u201d Mindset: You treat test code like production code\u2014clean, modular, and version-controlled (Git/Bitbucket). Database Proficiency: Comfortable writing SQL joins and queries to verify data persistence and business logic. API Testing: Solid understanding of RESTful services and experience automating API tests. Tooling: Experience with CI/CD tools (Jenkins), Test Management (BrowserStack/ClickUp), and Cross-browser testing (BrowserStack). Nice to Have (The Differentiators): Experience testing in Native React.js Mobile applications is a huge plus. Experience with Visual Regression Testing tools (e.g., Percy, Applitools). Background in FinTech, SaaS, or data-heavy industries. How to apply for this role? Please fill out the form with the required details. If your profile is shortlisted, our team will reach out to you via email. If you don\u2019t find the emails in your inbox, please check your spam folder.Tip: Avoid using AI-generated responses. We want to hear from you! About PriceLabs: PriceLabs is a revenue management solution f",
+      "source": "jobicy",
+      "category": "remote_worldwide",
+      "type": "Remote Worldwide",
+      "date_posted": "2026-02-13T15:07:54+00:00",
+      "scraped_at": "2026-02-22T15:29:23.875659",
+      "match_score": 65,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "jobicy_139746",
+      "title": "Quality Automation Engineer (IT Applications)",
+      "company": "iFIT",
+      "location": "Ireland",
+      "url": "https://jobicy.com/jobs/139746-quality-automation-engineer-it-applications",
+      "description": "General Purpose: The QA Automation Engineer designs, develops, and maintains software-based test automation solutions to ensure the reliability, performance, and security of TPx enterprise applications. This role\u2019s primary function is the engineering and maintenance of automated testing frameworks, test code, and CI/CD quality gates for SaaS and enterprise platforms (including ServiceNow and Salesforce and related integrations). The QA Automation Engineer performs systems analysis of functional and non-functional requirements, translates specifications into automated validation strategies, and delivers reusable testing utilities that enable rapid, consistent, and measurable product quality. Direct Reports: No Essential Duties and Responsibilities: Design and develop automated test frameworks and code Designs, develops, and\u00a0maintains\u00a0automated test frameworks, libraries, and reusable components for UI, API, and integration testing. Writes, reviews, and\u00a0maintains\u00a0test automation code using modern programming/scripting languages and testing frameworks (e.g., Java, JavaScript/TypeScript, Python; Selenium/Playwright/Cypress; REST/API test tooling). Establishes coding standards and patterns for automation (page object model or equivalent), and\u00a0implements version-controlled test code practices. Systems analysis and test architecture based on specifications Performs analysis of business and technical requirements and system design specifications to\u00a0determine\u00a0automated testing approaches and coverage. Translates user stories, acceptance criteria, and interface specifications into automated test designs that\u00a0validate\u00a0functional behavior, data integrity, and security controls. CI/CD integration and quality gates Integrates automated test execution into CI/CD pipelines (e.g., GitHub Actions, Jenkins, Azure DevOps) and manages quality gates for build/release readiness. Diagnoses and resolves test pipeline failures,\u00a0test flakiness,\u00a0environment issues, and\u00a0test-data\u00a0dependencies to ensure reliable automated validation at scale. Automated regression, integration, and data validation Builds and\u00a0maintains\u00a0automated regression suites and integration tests to\u00a0validate\u00a0enterprise workflows across ServiceNow, Salesforce, and connected systems. Develops automated validation for data movement and transformations using SQL and/or API validation techniques. Performance and security test automation support Develops and\u00a0maintains\u00a0automated checks for role-based access controls, field-level security, data visibility rules, and authentication flows (OAuth/SAML/SSO), as applicable to the supported platforms. Implements automated performance and reliability checks (where\u00a0appropriate)\u00a0and provides engineering recommendations to improve system performance and stability. Defect engineering and root cause collaboration Produces high-quality defect reports with reproducible steps, logs, and automation evidence; partners with developers/architects to isolate root cause. Uses\u00a0engineer",
+      "source": "jobicy",
+      "category": "remote_worldwide",
+      "type": "Remote Worldwide",
+      "date_posted": "2026-02-21T05:14:41+00:00",
+      "scraped_at": "2026-02-22T15:29:34.348985",
+      "match_score": 65,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "jobicy_139583",
+      "title": "Senior Python Engineer &amp;#8211; AI Testing Project (Freelance, Mindrift)",
+      "company": "Mindrift",
+      "location": "Germany",
+      "url": "https://jobicy.com/jobs/139583-senior-python-engineer-ai-testing-project-freelance-mindrift",
+      "description": "Please submit your CV in English and indicate your level of English proficiency. Mindrift connects specialists with project-based AI opportunities for leading tech companies, focused on testing, evaluating, and improving AI systems. Participation is project-based, not permanent employment. About the Role This project is suited for a Senior Python developer with deep functional testing experience, strong Linux and Docker skills, the ability to read code across multiple languages with the support of LLMs (e.g., C, Rust, Go) and translate requirements for migration tasks, and confidence using tools like Roo Code or Claude Code to accelerate iterative development. Key Responsibilities Create functional black box tests for large codebases in various source languages Create and manage Docker environments to ensure 100% reproducible builds and test execution across different platforms Monitor code coverage and configure automated scoring criteria to meet industry benchmark-level standards Leverage LLMs (Roo Code, Claude) to accelerate development cycles, automate repetitive tasks, and improve overall code quality Requirements 5+ years of experience as a Software Engineer (primarily Python ) Deep experience with pytest (fixtures, session-scoped, timeouts) and designing black-box functional tests for CLI tools Expert-level Docker skills (reproducible Dockerfiles, user contexts, secure workspaces) Strong Linux & Bash scripting skills and comfort debugging inside containers Proficiency with modern Python tooling (uv, pyproject.toml, packaging) Ability to read and understand with LLM many coding languages (for example C, C++, Rust, or Go) Experience using LLMs (Claude Code, Roo Code, Cursor) to accelerate iterative development and test-case generation English language \u2013 B2 or higher Requirements + Prior experience with agent evaluation platforms and MCP CLI Tools and Technologies: Python (pytest, uv, Pillow), Docker, Bash, Git Submodules, C/C++/Rust/Go (reading), Dagger, GitHub Codespaces, LLMs (Claude Code, Roo Code, Cursor), coverage.py, gcov, kcov. Benefits What we can offer Freelance project-based collaboration via the Mindrift platform (powered by Toloka AI) Fully remote and flexible participation \u2014 choose when and how much to contribute (20-30 hours per week) Task-based compensation, equivalent to up to $50/hour depending on performance and volume Opportunity to contribute to innovative AI projects for leading tech companies Supportive global community",
+      "source": "jobicy",
+      "category": "remote_worldwide",
+      "type": "Remote Worldwide",
+      "date_posted": "2026-02-16T16:40:14+00:00",
+      "scraped_at": "2026-02-22T15:29:25.328603",
+      "match_score": 30,
+      "match_reasons": [
+        "Seniority level matches your experience",
+        "Python mentioned in title"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "MAYBE",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "jobicy_139530",
+      "title": "Software Engineer Lead &amp;#8211; Automation Anywhere/Python/JAVA",
+      "company": "PNC",
+      "location": "USA",
+      "url": "https://jobicy.com/jobs/139530-software-engineer-lead-automation-anywhere-python-java",
+      "description": "Position Overview At PNC, our people are our greatest differentiator and competitive advantage in the markets we serve. We are all united in delivering the best experience for our customers. We work together each day to foster an inclusive workplace culture where all of our employees feel respected, valued and have an opportunity to contribute to the company\u2019s success. As a Software Engineer within PNC\u2019s Technology organization, you will be based in Pittsburgh, PA or Cleveland, OH. Must have: \u2013 Coded in A360; Power Automate \u2013 Python \u2013 JAVA \u2013 Experience monitoring applications Preferred skills: \u2013 Indico AI; Agentic AI; GenAI \u2013 experience building complex AI bots \u2013 Hadoop PNC is an in-office company that fosters a supportive culture where employees can thrive and achieve balance. We encourage candidates to connect with their recruiter and hiring manager to understand workplace expectations and ensure the role aligns with their goals. PNC will not provide sponsorship for employment visas or participate in STEM OPT for this position. Job Description Creates and leads the technical design and development of software solutions. Proposes & designs software solutions to address complex business needs. Prepares technical and procedural documentation required. Facilitates complex problem resolution. Provides technical guidance and support to colleagues. Reviews coding, testing, and documentation of software. Applies modern principles, methodologies and tools to advance business initiatives and capabilities. PNC Employees take pride in our reputation and to continue building upon that we expect our employees to be: Customer Focused \u2013 Knowledgeable of the values and practices that align customer needs and satisfaction as primary considerations in all business decisions and able to leverage that information in creating customized customer solutions. Managing Risk \u2013 Assessing and effectively managing all of the risks associated with their business objectives and activities to ensure they adhere to and support PNC\u2019s Enterprise Risk Management Framework. Qualifications Successful candidates must demonstrate appropriate knowledge, skills, and abilities for a role. Listed below are skills, competencies, work experience, education, and required certifications/licensures needed to be successful in this position. Preferred Skills Application Development, Automation Anywhere (RPA Software), Automation Anywhere (Software), Business Management, Customer Solutions, Design, Group Problem Solving, Process Improvements, Release Management, Software Solutions, User Experience (UX) Design Competencies Application Delivery Process, Application Design, Architecture, Application Development Tools, Application Testing, Packaged Application Integration, System Development Life Cycle, Technical Troubleshooting Work Experience Roles at this level typically require a university / college degree, with 3+ years of relevant / direct industry experience. Certifications are often desired.",
+      "source": "jobicy",
+      "category": "remote_worldwide",
+      "type": "Remote Worldwide",
+      "date_posted": "2026-02-15T07:00:15+00:00",
+      "scraped_at": "2026-02-22T15:29:34.350198",
+      "match_score": 30,
+      "match_reasons": [
+        "Seniority level matches your experience",
+        "Java mentioned in title"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "MAYBE",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "staff-software-engineer-testing-infrastructure-at-mattermost-4373771203",
+      "title": "Staff Software Engineer, Testing Infrastructure",
+      "company": "Mattermost",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/staff-software-engineer-testing-infrastructure-at-mattermost-4373771203",
+      "source": "linkedin",
+      "category": "remote_worldwide",
+      "date_posted": "2026-02-22",
+      "scraped_at": "2026-02-22T15:32:59.482799",
+      "description": "",
+      "type": "Remote Worldwide",
+      "easy_apply": false,
+      "match_score": 15,
+      "match_reasons": [
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "MAYBE",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    }
+  ],
+  "skill_gap": {
+    "critical_skills_to_learn": [
+      {
+        "skill": "Cypress",
+        "reason": "Modern JS framework, high demand",
+        "learning_time": "2-4 weeks",
+        "resources": [
+          "cypress.io/docs"
+        ]
+      },
+      {
+        "skill": "Playwright",
+        "reason": "Microsoft automation tool",
+        "learning_time": "2-3 weeks",
+        "resources": [
+          "playwright.dev"
+        ]
+      },
+      {
+        "skill": "K6",
+        "reason": "Performance testing tool",
+        "learning_time": "1 week",
+        "resources": [
+          "k6.io/docs"
+        ]
+      }
+    ],
+    "trending_in_qa": [
+      "AI-powered testing",
+      "Shift-left testing",
+      "API contract testing"
+    ],
+    "certifications_recommended": [
+      {
+        "cert": "ISTQB Advanced",
+        "reason": "Valued for senior roles",
+        "url": "istqb.org"
+      }
+    ],
+    "quick_wins": [
+      "Add Docker basics to profile",
+      "Learn GitHub Actions CI/CD"
+    ],
+    "career_advice": "With 5 years Selenium/Java experience, focus on Playwright or Cypress to expand globally."
+  },
+  "stats": {
+    "excellent": 0,
+    "good": 7,
+    "india_remote": 1,
+    "sponsorship": 0,
+    "remote_worldwide": 9
+  }
+}

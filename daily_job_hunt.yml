@@ -1,0 +1,108 @@
+name: 🤖 Daily QA Job Hunt
+
+on:
+  schedule:
+    - cron: '30 3 * * *'   # 9:00 AM IST daily
+  workflow_dispatch:
+
+# Allow GitHub Pages deployment
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  job-hunt:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: 📦 Install Python packages
+        run: pip install -r requirements.txt
+
+      - name: 🌐 Install Playwright Chromium
+        run: playwright install chromium --with-deps
+
+      - name: ⚙️ Create config.json from secrets
+        run: |
+          mkdir -p config
+          cat > config/config.json << EOF
+          {
+            "api_keys": {
+              "gemini_api_key": "${{ secrets.GEMINI_API_KEY }}",
+              "apify_api_key": ""
+            },
+            "email": {
+              "sender_email": "${{ secrets.GMAIL_ADDRESS }}",
+              "sender_app_password": "${{ secrets.GMAIL_APP_PASSWORD }}",
+              "recipient_email": "${{ secrets.GMAIL_ADDRESS }}",
+              "report_time_ist": "09:00"
+            },
+            "linkedin": {
+              "email": "${{ secrets.LINKEDIN_EMAIL }}",
+              "password": "${{ secrets.LINKEDIN_PASSWORD }}",
+              "auto_apply": false,
+              "max_apply_per_day": 0
+            },
+            "job_preferences": {
+              "role_titles": [
+                "QA Automation Engineer",
+                "Software Test Engineer",
+                "SDET",
+                "Test Automation Engineer",
+                "QA Engineer",
+                "Quality Assurance Engineer",
+                "Automation Test Lead",
+                "Senior QA Engineer"
+              ],
+              "experience_years": 5,
+              "min_match_score": 0,
+              "excluded_keywords": ["unpaid", "internship", "fresher only"],
+              "preferred_salary_usd_min": 30000
+            },
+            "search_settings": {
+              "max_jobs_per_source": 50,
+              "days_old_max": 3,
+              "dedup_window_days": 30
+            }
+          }
+          EOF
+
+      - name: 📄 Create resume profile
+        run: |
+          mkdir -p config
+          echo '${{ secrets.RESUME_PROFILE_JSON }}' > config/resume_profile.json
+
+      - name: 📁 Create folders
+        run: mkdir -p logs data docs
+
+      - name: 🚀 Run Job Hunt Pipeline
+        run: python main.py
+        env:
+          PYTHONUNBUFFERED: 1
+
+      - name: 📊 Upload report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: job-report-${{ github.run_number }}
+          path: logs/report_*.html
+          retention-days: 30
+
+      - name: 🌐 Deploy Dashboard to GitHub Pages
+        if: always()
+        run: |
+          git config user.name "QA Job Bot"
+          git config user.email "bot@github.com"
+          git add docs/
+          git diff --staged --quiet || git commit -m "Update job dashboard [skip ci]"
+          git push

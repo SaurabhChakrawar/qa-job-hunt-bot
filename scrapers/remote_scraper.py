@@ -416,6 +416,13 @@ def scrape_all_remote_boards() -> dict:
     for job in scrape_adzuna():
         results[job.get("category", "remote_worldwide")].append(job)
 
+    print("  📍 Indeed India (Remote)...")
+    results["india_remote"].extend(scrape_indeed_india_rss())
+
+    print("  📍 Indeed Worldwide (US/UK/AU/CA)...")
+    for job in scrape_indeed_worldwide_rss():
+        results[job.get("category", "remote_worldwide")].append(job)
+
     for cat in results:
         results[cat] = deduplicate(results[cat])
         print(f"  📊 {cat}: {len(results[cat])} unique jobs")
@@ -423,3 +430,147 @@ def scrape_all_remote_boards() -> dict:
     total = sum(len(j) for j in results.values())
     print(f"\n  🎯 Total: {total} jobs scraped")
     return results
+
+
+def scrape_indeed_india_rss() -> list:
+    """
+    Indeed India RSS feeds for QA jobs — works from cloud servers.
+    No login needed, returns real job listings.
+    """
+    jobs = []
+    seen = set()
+
+    searches = [
+        ("qa+automation+engineer", "QA Automation Engineer"),
+        ("test+automation+engineer", "Test Automation Engineer"),
+        ("sdet", "SDET"),
+        ("selenium+automation", "Selenium Automation"),
+        ("automation+tester", "Automation Tester"),
+        ("qa+engineer+remote", "QA Engineer Remote"),
+    ]
+
+    for query, label in searches:
+        try:
+            # Indeed RSS feed for India remote jobs
+            url = f"https://in.indeed.com/rss?q={query}&l=India&rbl=Remote&jt=fulltime&sort=date"
+            resp = requests.get(url, headers={
+                **HEADERS,
+                "Accept": "application/rss+xml, application/xml, text/xml, */*",
+            }, timeout=20)
+
+            if resp.status_code != 200:
+                continue
+
+            root = ET.fromstring(resp.content)
+            items = root.findall(".//item")
+
+            for item in items[:15]:
+                title = item.findtext("title", "").strip()
+                link = item.findtext("link", "").strip()
+                desc = clean_html(item.findtext("description", ""))
+                company_el = item.find("{http://www.indeed.com/about/feed}company")
+                company = company_el.text.strip() if company_el is not None else ""
+                pub_date = item.findtext("pubDate", str(datetime.now().date()))
+
+                if not title or not link:
+                    continue
+                if link in seen:
+                    continue
+                seen.add(link)
+
+                jobs.append({
+                    "id": f"indeed_in_{hash(link) % 1000000}",
+                    "title": title,
+                    "company": company,
+                    "location": "India (Remote)",
+                    "url": link,
+                    "description": desc or f"{title} at {company}. Remote QA role in India.",
+                    "source": "indeed_india",
+                    "category": "india_remote",
+                    "type": "India Remote",
+                    "date_posted": pub_date,
+                    "scraped_at": datetime.now().isoformat(),
+                })
+            time.sleep(1)
+
+        except Exception as e:
+            print(f"   ⚠️ Indeed India '{label}': {e}")
+
+    print(f"   ✅ Indeed India: {len(jobs)} India remote QA jobs")
+    return jobs
+
+
+def scrape_indeed_worldwide_rss() -> list:
+    """
+    Indeed worldwide RSS for remote QA jobs — visa sponsorship focus.
+    """
+    jobs = []
+    seen = set()
+
+    searches = [
+        ("qa+automation+engineer+visa+sponsorship", "US"),
+        ("test+automation+engineer+visa+sponsorship", "UK"),
+        ("sdet+remote", "US"),
+        ("qa+automation+engineer+remote", "US"),
+        ("selenium+engineer+remote", "US"),
+        ("qa+automation+engineer+remote", "GB"),
+        ("automation+test+engineer+remote", "AU"),
+        ("qa+engineer+remote", "CA"),
+    ]
+
+    for query, country_code in searches:
+        try:
+            domain = {
+                "US": "www.indeed.com",
+                "UK": "uk.indeed.com",
+                "GB": "uk.indeed.com",
+                "AU": "au.indeed.com",
+                "CA": "ca.indeed.com",
+            }.get(country_code, "www.indeed.com")
+
+            url = f"https://{domain}/rss?q={query}&rbl=Remote&jt=fulltime&sort=date"
+            resp = requests.get(url, headers={
+                **HEADERS,
+                "Accept": "application/rss+xml, application/xml, text/xml, */*",
+            }, timeout=20)
+
+            if resp.status_code != 200:
+                continue
+
+            root = ET.fromstring(resp.content)
+            is_sponsorship = "visa+sponsorship" in query
+
+            for item in root.findall(".//item")[:10]:
+                title = item.findtext("title", "").strip()
+                link = item.findtext("link", "").strip()
+                desc = clean_html(item.findtext("description", ""))
+                company_el = item.find("{http://www.indeed.com/about/feed}company")
+                company = company_el.text.strip() if company_el is not None else ""
+
+                if not title or not link or link in seen:
+                    continue
+                if not is_qa_job(title):
+                    continue
+                seen.add(link)
+
+                country_names = {"US": "United States", "UK": "United Kingdom", "GB": "United Kingdom", "AU": "Australia", "CA": "Canada"}
+                jobs.append({
+                    "id": f"indeed_{country_code}_{hash(link) % 1000000}",
+                    "title": title,
+                    "company": company,
+                    "location": f"{country_names.get(country_code, country_code)} (Remote)",
+                    "url": link,
+                    "description": desc or f"{title} at {company}. Remote role in {country_code}.",
+                    "source": "indeed",
+                    "category": "sponsorship_worldwide" if is_sponsorship else "remote_worldwide",
+                    "type": "Outside India (Sponsorship)" if is_sponsorship else "Remote Worldwide",
+                    "date_posted": item.findtext("pubDate", str(datetime.now().date())),
+                    "scraped_at": datetime.now().isoformat(),
+                })
+            time.sleep(1.5)
+
+        except Exception as e:
+            print(f"   ⚠️ Indeed {country_code}: {e}")
+
+    print(f"   ✅ Indeed Worldwide: {len(jobs)} jobs")
+    return jobs

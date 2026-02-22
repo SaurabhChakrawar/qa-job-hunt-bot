@@ -5,11 +5,8 @@ on:
     - cron: '30 3 * * *'   # 9:00 AM IST daily
   workflow_dispatch:
 
-# Allow GitHub Pages deployment
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 jobs:
   job-hunt:
@@ -19,12 +16,14 @@ jobs:
     steps:
       - name: 📥 Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
       - name: 🐍 Setup Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'
 
       - name: 📦 Install Python packages
         run: pip install -r requirements.txt
@@ -35,7 +34,7 @@ jobs:
       - name: ⚙️ Create config.json from secrets
         run: |
           mkdir -p config
-          cat > config/config.json << EOF
+          cat > config/config.json << 'EOF'
           {
             "api_keys": {
               "gemini_api_key": "${{ secrets.GEMINI_API_KEY }}",
@@ -72,7 +71,7 @@ jobs:
             "search_settings": {
               "max_jobs_per_source": 50,
               "days_old_max": 3,
-              "dedup_window_days": 30
+              "dedup_window_days": 1
             }
           }
           EOF
@@ -90,6 +89,33 @@ jobs:
         env:
           PYTHONUNBUFFERED: 1
 
+      - name: 💾 Verify and save dashboard data
+        if: always()
+        run: |
+          echo "=== Checking docs folder ==="
+          ls -la docs/ || echo "docs folder empty or missing"
+          
+          if [ -f docs/jobs.json ]; then
+            SIZE=$(wc -c < docs/jobs.json)
+            JOBS=$(python3 -c "import json; d=json.load(open('docs/jobs.json')); print(d.get('total_matched',0))")
+            echo "✅ jobs.json found: $SIZE bytes, $JOBS jobs"
+          else
+            echo "⚠️ jobs.json missing — creating placeholder"
+            mkdir -p docs
+            python3 -c "
+          import json, datetime
+          data = {
+            'generated_at': datetime.datetime.now().isoformat(),
+            'total_scraped': 0,
+            'total_matched': 0,
+            'jobs': [],
+            'stats': {'excellent':0,'good':0,'india_remote':0,'sponsorship':0,'remote_worldwide':0}
+          }
+          json.dump(data, open('docs/jobs.json','w'))
+          print('Placeholder created')
+          "
+          fi
+
       - name: 📊 Upload report artifact
         if: always()
         uses: actions/upload-artifact@v4
@@ -98,21 +124,24 @@ jobs:
           path: logs/report_*.html
           retention-days: 30
 
-      - name: 🌐 Deploy Dashboard to GitHub Pages
+      - name: 🌐 Push dashboard data to GitHub
         if: always()
         run: |
-          # Ensure docs folder exists with at least a placeholder jobs.json
-          mkdir -p docs
-          if [ ! -f docs/jobs.json ]; then
-            echo '{"generated_at":"'$(date -u +%Y-%m-%dT%H:%M:%S)'","total_scraped":0,"total_matched":0,"jobs":[],"stats":{"excellent":0,"good":0,"india_remote":0,"sponsorship":0,"remote_worldwide":0}}' > docs/jobs.json
-            echo "⚠️ Created placeholder jobs.json (pipeline may have failed)"
-          else
-            echo "✅ jobs.json exists ($(wc -c < docs/jobs.json) bytes)"
-          fi
-          
           git config user.name "QA Job Bot"
-          git config user.email "bot@github.com"
-          git add docs/
+          git config user.email "qa-bot@users.noreply.github.com"
+          
+          echo "=== Git status before ==="
           git status
-          git diff --staged --quiet || git commit -m "Update job dashboard $(date +%Y-%m-%d) [skip ci]"
-          git push origin main
+          
+          git add docs/jobs.json
+          
+          echo "=== Git status after add ==="
+          git status
+          
+          if git diff --staged --quiet; then
+            echo "ℹ️ No changes to commit (jobs.json unchanged)"
+          else
+            git commit -m "📊 Daily job update - $(date '+%Y-%m-%d %H:%M') UTC [skip ci]"
+            git push origin HEAD:main
+            echo "✅ Dashboard updated successfully"
+          fi

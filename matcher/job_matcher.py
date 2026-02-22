@@ -143,7 +143,7 @@ def batch_match_jobs(jobs: list, min_score: int = 60) -> list:
         # Sleep 4 seconds between requests to stay safe (15 req/min = 1 req per 4s)
         if i % 14 == 0:
             print("   ⏳ Rate limit pause (4s)...")
-            time.sleep(4)
+            time.sleep(1)
 
     matched.sort(key=lambda x: x.get("match_score", 0), reverse=True)
     print(f"✅ Found {len(matched)} jobs above {min_score}% match threshold")

@@ -121,18 +121,11 @@ jobs:
         run: |
           git config user.name "QA Job Bot"
           git config user.email "qa-bot@users.noreply.github.com"
-
-          # Force add — works even if docs/ is in .gitignore or file is new
           git add -f docs/jobs.json
-
-          echo "=== Git status ==="
-          git status --porcelain
-
-          # Use porcelain to detect any change including new files
           if git status --porcelain | grep -q "docs/jobs.json"; then
             git commit -m "📊 Daily jobs $(date '+%Y-%m-%d') [skip ci]"
             git push origin HEAD:main
             echo "✅ Dashboard updated!"
           else
-            echo "ℹ️ No changes to push"
+            echo "ℹ️ No changes"
           fi

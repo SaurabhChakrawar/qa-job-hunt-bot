@@ -53,6 +53,13 @@ jobs:
               "auto_apply": false,
               "max_apply_per_day": 0
             },
+            "direct_apply": {
+              "enabled": true,
+              "dry_run": true,
+              "min_match_score": 70,
+              "max_per_day": 10,
+              "resume_path": "config/resume.pdf"
+            },
             "job_preferences": {
               "role_titles": [
                 "QA Automation Engineer",
@@ -81,6 +88,14 @@ jobs:
         run: |
           mkdir -p config
           echo '${{ secrets.RESUME_PROFILE_JSON }}' > config/resume_profile.json
+
+      - name: 📎 Decode resume PDF (for direct apply)
+        if: env.RESUME_PDF_BASE64 != ''
+        env:
+          RESUME_PDF_BASE64: ${{ secrets.RESUME_PDF_BASE64 }}
+        run: |
+          echo "$RESUME_PDF_BASE64" | base64 -d > config/resume.pdf
+          echo "✅ Resume PDF decoded ($(wc -c < config/resume.pdf) bytes)"
 
       - name: 📁 Create folders
         run: mkdir -p logs data docs

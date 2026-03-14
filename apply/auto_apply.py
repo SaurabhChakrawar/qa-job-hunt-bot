@@ -25,15 +25,16 @@ def load_applied_jobs() -> dict:
     return {}
 
 
-def save_applied_job(job_id: str, job: dict, status: str):
+def save_applied_job(job_id: str, job: dict, status: str, method: str = "linkedin_easy_apply"):
     applied = load_applied_jobs()
     applied[job_id] = {
         "title": job.get("title"),
         "company": job.get("company"),
         "url": job.get("url"),
         "applied_at": datetime.now().isoformat(),
-        "status": status,  # "applied" | "failed" | "skipped_manual_needed"
+        "status": status,
         "match_score": job.get("match_score", 0),
+        "method": method,  # "linkedin_easy_apply" | "direct_greenhouse" | "direct_lever"
     }
     os.makedirs(os.path.dirname(APPLIED_PATH), exist_ok=True)
     with open(APPLIED_PATH, "w") as f:

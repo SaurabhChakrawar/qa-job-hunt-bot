@@ -104,12 +104,24 @@ def run_full_pipeline(resume_path: str = None):
     total_matched = sum(len(j) for j in matched_jobs.values())
     print(f"\n✅ Matched: {total_matched} jobs")
 
-    # ── STEP 4: SKIP AUTO-APPLY ON GITHUB ───────────────────────
+    # ── STEP 4a: LINKEDIN AUTO-APPLY (local only) ───────────────
     applied_results = []
+    all_flat = [j for jobs in matched_jobs.values() for j in jobs]
+
     if not is_github and config["linkedin"].get("auto_apply", False):
         from apply.auto_apply import run_auto_apply
-        all_flat = [j for jobs in matched_jobs.values() for j in jobs]
         applied_results = run_auto_apply(all_flat, resume_path or "")
+
+    # ── STEP 4b: DIRECT APPLY (no login needed, works on CI) ──
+    direct_results = []
+    if config.get("direct_apply", {}).get("enabled", False):
+        print("\n🎯 STEP 4b: Direct Apply (no login required)...")
+        try:
+            from apply.direct_apply import run_direct_apply
+            direct_results = run_direct_apply(all_flat, resume_path or "")
+            applied_results.extend(direct_results)
+        except Exception as e:
+            print(f"   ⚠️ Direct apply error: {e}")
 
     # ── STEP 5: SKILL GAP ANALYSIS ──────────────────────────────
     print("\n🧠 STEP 5: Skill gap analysis...")

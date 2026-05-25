@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-24T06:55:05.927973",
-  "total_scraped": 32,
+  "generated_at": "2026-05-25T08:09:17.424611",
+  "total_scraped": 33,
   "total_matched": 32,
   "jobs": [
     {
@@ -14,7 +14,7 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-05-22T01:53:22+00:00",
-      "scraped_at": "2026-05-24T06:51:35.586531",
+      "scraped_at": "2026-05-25T08:05:57.470333",
       "match_score": 70,
       "match_reasons": [
         "Job title matches QA/Testing domain",
@@ -43,7 +43,7 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-04-29T09:33:59+00:00",
-      "scraped_at": "2026-05-24T06:51:35.605291",
+      "scraped_at": "2026-05-25T08:05:57.478170",
       "match_score": 70,
       "match_reasons": [
         "Job title matches QA/Testing domain",
@@ -72,7 +72,7 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-04-28T12:38:03+00:00",
-      "scraped_at": "2026-05-24T06:51:35.608633",
+      "scraped_at": "2026-05-25T08:05:57.480954",
       "match_score": 70,
       "match_reasons": [
         "Job title matches QA/Testing domain",
@@ -91,15 +91,15 @@
       "scored_by": "title_fallback"
     },
     {
-      "id": "quality-assurance-automation-engineer-at-jobs-via-dice-4416565070",
-      "title": "Quality Assurance Automation Engineer",
-      "company": "Jobs via Dice",
-      "location": "North Palm Beach, FL",
-      "url": "https://www.linkedin.com/jobs/view/quality-assurance-automation-engineer-at-jobs-via-dice-4416565070",
+      "id": "software-engineer-ii-qa-automation-at-teladoc-health-4418933005",
+      "title": "Software Engineer II, QA Automation",
+      "company": "Teladoc Health",
+      "location": "New York, United States",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-ii-qa-automation-at-teladoc-health-4418933005",
       "source": "linkedin",
       "category": "sponsorship_worldwide",
-      "date_posted": "2026-05-23",
-      "scraped_at": "2026-05-24T06:52:59.370670",
+      "date_posted": "2026-05-25",
+      "scraped_at": "2026-05-25T08:07:19.250245",
       "description": "",
       "type": "Outside India (Sponsorship)",
       "easy_apply": false,
@@ -121,7 +121,7 @@
       "scored_by": "title_fallback"
     },
     {
-      "id": "shine_402224",
+      "id": "shine_538642",
       "title": "TOSCA Automation Engineer (UI & API Testing) | Immediate Joiners 2 Plus Years",
       "company": "",
       "location": "India (Remote)",
@@ -130,8 +130,8 @@
       "source": "shine",
       "category": "india_remote",
       "type": "India Remote",
-      "date_posted": "2026-05-24",
-      "scraped_at": "2026-05-24T06:52:02.362280",
+      "date_posted": "2026-05-25",
+      "scraped_at": "2026-05-25T08:06:24.191826",
       "match_score": 65,
       "match_reasons": [
         "Job title matches QA/Testing domain",
@@ -150,7 +150,7 @@
       "scored_by": "title_fallback"
     },
     {
-      "id": "shine_640780",
+      "id": "shine_271970",
       "title": "Automation Test Engineer",
       "company": "",
       "location": "India (Remote)",
@@ -159,8 +159,8 @@
       "source": "shine",
       "category": "india_remote",
       "type": "India Remote",
-      "date_posted": "2026-05-24",
-      "scraped_at": "2026-05-24T06:52:05.048079",
+      "date_posted": "2026-05-25",
+      "scraped_at": "2026-05-25T08:06:27.323910",
       "match_score": 65,
       "match_reasons": [
         "Job title matches QA/Testing domain",
@@ -179,15 +179,15 @@
       "scored_by": "title_fallback"
     },
     {
-      "id": "quality-assurance-engineer-at-hastraa-consulting-services-4417541542",
-      "title": "Quality Assurance Engineer",
-      "company": "Hastraa Consulting Services",
+      "id": "quality-assurance-tester-at-cube-consultancy-services-4417832969",
+      "title": "Quality Assurance Tester",
+      "company": "Cube Consultancy Services",
       "location": "India",
-      "url": "https://in.linkedin.com/jobs/view/quality-assurance-engineer-at-hastraa-consulting-services-4417541542",
+      "url": "https://in.linkedin.com/jobs/view/quality-assurance-tester-at-cube-consultancy-services-4417832969",
       "source": "linkedin",
       "category": "india_remote",
-      "date_posted": "2026-05-23",
-      "scraped_at": "2026-05-24T06:53:44.191065",
+      "date_posted": "2026-05-25",
+      "scraped_at": "2026-05-25T08:08:02.059894",
       "description": "",
       "type": "India Remote",
       "easy_apply": false,
@@ -209,15 +209,15 @@
       "scored_by": "title_fallback"
     },
     {
-      "id": "qa-engineer-at-fetchjobs-co-4417597236",
-      "title": "QA Engineer",
-      "company": "FetchJobs.co",
+      "id": "quality-assurance-engineer-%2480-hr-remote-at-crossing-hurdles-4417587723",
+      "title": "Quality Assurance Engineer | $80/hr Remote",
+      "company": "Crossing Hurdles",
       "location": "India",
-      "url": "https://in.linkedin.com/jobs/view/qa-engineer-at-fetchjobs-co-4417597236",
+      "url": "https://in.linkedin.com/jobs/view/quality-assurance-engineer-%2480-hr-remote-at-crossing-hurdles-4417587723",
       "source": "linkedin",
       "category": "india_remote",
       "date_posted": "2026-05-24",
-      "scraped_at": "2026-05-24T06:53:44.303035",
+      "scraped_at": "2026-05-25T08:08:02.146549",
       "description": "",
       "type": "India Remote",
       "easy_apply": false,
@@ -239,15 +239,15 @@
       "scored_by": "title_fallback"
     },
     {
-      "id": "sr-qa-engineer-at-agilegrid-solutions-4418645199",
-      "title": "Sr QA Engineer",
-      "company": "AgileGrid Solutions",
+      "id": "qa-engineer-ai-applications-remote-at-hire-feed-4418912861",
+      "title": "QA Engineer (AI Applications) (Remote)",
+      "company": "Hire Feed",
       "location": "India",
-      "url": "https://in.linkedin.com/jobs/view/sr-qa-engineer-at-agilegrid-solutions-4418645199",
+      "url": "https://in.linkedin.com/jobs/view/qa-engineer-ai-applications-remote-at-hire-feed-4418912861",
       "source": "linkedin",
       "category": "india_remote",
-      "date_posted": "2026-05-24",
-      "scraped_at": "2026-05-24T06:53:44.365635",
+      "date_posted": "2026-05-25",
+      "scraped_at": "2026-05-25T08:08:02.265432",
       "description": "",
       "type": "India Remote",
       "easy_apply": false,
@@ -274,13 +274,13 @@
       "company": "MY Humancapital GmbH",
       "location": "Munich",
       "url": "https://www.arbeitnow.com/jobs/companies/my-humancapital-gmbh/software-tester-testautomatisierung-munich-39701",
-      "description": "Im Auftrag unseres Partnerunternehmens in München suchen wir Sie zum nächstmöglichen Zeitpunkt als „ Software Tester Testautomatisierung (m/w/d)“. Aufgaben Als Software Test Engineer (m/w/d) planen und entwickeln Sie strukturierte Testfälle auf Basis von Anforderungen Zudem führen Sie manuelle und automatisierte Tests sowie Regressionstests in komplexen Systemumgebungen durch Auch erstellen und pflegen Sie Testkonzepte, Testdaten sowie automatisierte Testskripte Darüber hinaus analysieren, dokumentieren und verfolgen Sie Fehler bis zur erfolgreichen Nachprüfung Zusätzlich arbeiten Sie eng mit der Entwicklung zusammen und optimieren kontinuierlich Testprozesse und Tools Qualifikation Sie verfügen über ein abgeschlossenes Studium im IT-Bereich, z. B. Informatik, Wirtschaftsinformatik, Software Engineering oder eine vergleichbare Fachrichtung Alternativ haben Sie eine abgeschlossene IT-Ausbildung, z. B. als Fachinformatiker für Anwendungsentwicklung (m/w/d), Fachinformatiker für Systemintegration (m/w/d) oder IT-Systemelektroniker (m/w/d) Zudem bringen Sie mehrjährige Erfahrung im Softwaretesting sowie im Umgang mit verteilten Systemen mit Auch besitzen Sie fundierte Kenntnisse in Testautomatisierung sowie im Einsatz gängiger Testtools und Frameworks Darüber hinaus überzeugen Sie durch sehr gute Deutsch- und Englischkenntnisse sowie Teamfähigkeit und eine ausgeprägte Kommunikationsstärke Benefits IG-Metall-Tarifvertrag : Hier erwarten Sie flexible Arbeitszeiten, anteiliger Homeoffice-Möglichkeit sowie eine attraktive Bezahlung nach dem IG-Metall Tarifvertrag Onboarding : Ihre erfahrenen Kollegen stehen Ihnen während der Einarbeitung mit Rat und Tat zur Seite Kantine : Freuen Sie sich auf täglich wechselnde Gerichte in der hauseigenen Kantine Entwicklung : Langfristige Jobmöglichkeit sowie zahlreiche Weiterbildungs- und Entwicklungsmöglichkeiten Vielseitigkeit : Freuen Sie sich aufspannende und abwechslungsreiche Tätigkeiten in einem dynamischen Umfeld Sie finden das Stellenprofil interessant? Dann freuen wir uns auf Ihre Bewerbung. Senden Sie uns Ihre Unterlagen. Für Rückfragen steht Ihnen Simon Schneider gerne unter 089 954 287 111 zur Verfügung. Find Jobs in Germany on Arbeitnow",
+      "description": "Im Auftrag unseres Partnerunternehmens in München suchen wir Sie zum nächstmöglichen Zeitpunkt als „ Software Tester Testautomatisierung (m/w/d)“. Aufgaben Als Software Test Engineer (m/w/d) planen und entwickeln Sie strukturierte Testfälle auf Basis von Anforderungen Zudem führen Sie manuelle und automatisierte Tests sowie Regressionstests in komplexen Systemumgebungen durch Auch erstellen und pflegen Sie Testkonzepte, Testdaten sowie automatisierte Testskripte Darüber hinaus analysieren, dokumentieren und verfolgen Sie Fehler bis zur erfolgreichen Nachprüfung Zusätzlich arbeiten Sie eng mit der Entwicklung zusammen und optimieren kontinuierlich Testprozesse und Tools Qualifikation Sie verfügen über ein abgeschlossenes Studium im IT-Bereich, z. B. Informatik, Wirtschaftsinformatik, Software Engineering oder eine vergleichbare Fachrichtung Alternativ haben Sie eine abgeschlossene IT-Ausbildung, z. B. als Fachinformatiker für Anwendungsentwicklung (m/w/d), Fachinformatiker für Systemintegration (m/w/d) oder IT-Systemelektroniker (m/w/d) Zudem bringen Sie mehrjährige Erfahrung im Softwaretesting sowie im Umgang mit verteilten Systemen mit Auch besitzen Sie fundierte Kenntnisse in Testautomatisierung sowie im Einsatz gängiger Testtools und Frameworks Darüber hinaus überzeugen Sie durch sehr gute Deutsch- und Englischkenntnisse sowie Teamfähigkeit und eine ausgeprägte Kommunikationsstärke Benefits IG-Metall-Tarifvertrag : Hier erwarten Sie flexible Arbeitszeiten, anteiliger Homeoffice-Möglichkeit sowie eine attraktive Bezahlung nach dem IG-Metall Tarifvertrag Onboarding : Ihre erfahrenen Kollegen stehen Ihnen während der Einarbeitung mit Rat und Tat zur Seite Kantine : Freuen Sie sich auf täglich wechselnde Gerichte in der hauseigenen Kantine Entwicklung : Langfristige Jobmöglichkeit sowie zahlreiche Weiterbildungs- und Entwicklungsmöglichkeiten Vielseitigkeit : Freuen Sie sich aufspannende und abwechslungsreiche Tätigkeiten in einem dynamischen Umfeld Sie finden das Stellenprofil interessant? Dann freuen wir uns auf Ihre Bewerbung. Senden Sie uns Ihre Unterlagen. Für Rückfragen steht Ihnen Simon Schneider gerne unter 089 954 287 111 zur Verfügung. Find more English Speaking Jobs in Germany on Arbeitnow",
       "source": "arbeitnow",
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "sponsorship": false,
-      "date_posted": "2026-05-24",
-      "scraped_at": "2026-05-24T06:51:21.018093",
+      "date_posted": "2026-05-25",
+      "scraped_at": "2026-05-25T08:05:45.743077",
       "match_score": 65,
       "match_reasons": [
         "Job title matches QA/Testing domain",
@@ -309,8 +309,8 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "sponsorship": false,
-      "date_posted": "2026-05-24",
-      "scraped_at": "2026-05-24T06:51:21.029980",
+      "date_posted": "2026-05-25",
+      "scraped_at": "2026-05-25T08:05:45.752109",
       "match_score": 65,
       "match_reasons": [
         "Job title matches QA/Testing domain",
@@ -334,103 +334,13 @@
       "company": "smartmicro",
       "location": "Braunschweig",
       "url": "https://www.arbeitnow.com/jobs/companies/smartmicro/test-engineer-web-ui-braunschweig-272879",
-      "description": "Introduction We are smartmicro, the leading specialist in high-performance automotive and traffic radar- and radar/camera hybrid sensor technology. We design, develop and manufacture high-tech sensors for autonomous driving, intelligent traffic infrastructure and smart cities. Our mission is to make roads safer, enable autonomous driving in all-weather scenarios, optimize traffic flow for reduced travel times and enable greener, smarter cities. We are a German company with international presence, having own teams in the UK and in the US, while we are headquartered in Braunschweig for design, development and production. We make the future of mobility a reality. We are looking for an experienced WEB UI Test Engineer. Your Tasks As a test engineer, you will support us in developing our existing infrastructure and improve our applications through intensive testing You carry out test scenarios based on specifications and user stories, and document and evaluate the test results You plan and carry out manual tests to ensure new and existing software functions Also, you write automated tests to cover bugfixes and new features Throughout the entire process, you will be in close communication with other development teams Your Strengths Complete studies in Electrical Engineering or Computer Science You have a solid technical understanding of software testing, test automation, GUI test tools, and UI/UX design You have experience in working with Python, Pytest, Playwright, Git, XPATH and Jenkins Expertise with Allure, Bash, Linux and Raspberry Pi would be desirable You are known for your independent and conscientious work ethic and have a clean code mentality Next to English communication skills, german would be a plus What you can expect from us Innovation: latest technology, innovation and rapid development cycles, excellent work- and test equipment Pleasant working environment: informal culture, motivated teams, short communication channels, room for active participation Future-oriented workplace: modern buildings, offices and labs, permanent employment and individual training opportunities Attractive location: located directly next to the highway, direct bus stop at our facilities, parking facilities for cars and bikes, free charging of electric vehicles Flexible working: hybrid working (4 days office presence per week) Activities: team events, gym membership and more. Other benefits Find Jobs in Germany on Arbeitnow",
+      "description": "Introduction We are smartmicro, the leading specialist in high-performance automotive and traffic radar- and radar/camera hybrid sensor technology. We design, develop and manufacture high-tech sensors for autonomous driving, intelligent traffic infrastructure and smart cities. Our mission is to make roads safer, enable autonomous driving in all-weather scenarios, optimize traffic flow for reduced travel times and enable greener, smarter cities. We are a German company with international presence, having own teams in the UK and in the US, while we are headquartered in Braunschweig for design, development and production. We make the future of mobility a reality. We are looking for an experienced WEB UI Test Engineer. Your Tasks As a test engineer, you will support us in developing our existing infrastructure and improve our applications through intensive testing You carry out test scenarios based on specifications and user stories, and document and evaluate the test results You plan and carry out manual tests to ensure new and existing software functions Also, you write automated tests to cover bugfixes and new features Throughout the entire process, you will be in close communication with other development teams Your Strengths Complete studies in Electrical Engineering or Computer Science You have a solid technical understanding of software testing, test automation, GUI test tools, and UI/UX design You have experience in working with Python, Pytest, Playwright, Git, XPATH and Jenkins Expertise with Allure, Bash, Linux and Raspberry Pi would be desirable You are known for your independent and conscientious work ethic and have a clean code mentality Next to English communication skills, german would be a plus What you can expect from us Innovation: latest technology, innovation and rapid development cycles, excellent work- and test equipment Pleasant working environment: informal culture, motivated teams, short communication channels, room for active participation Future-oriented workplace: modern buildings, offices and labs, permanent employment and individual training opportunities Attractive location: located directly next to the highway, direct bus stop at our facilities, parking facilities for cars and bikes, free charging of electric vehicles Flexible working: hybrid working (4 days office presence per week) Activities: team events, gym membership and more. Other benefits Find more English Speaking Jobs in Germany on Arbeitnow",
       "source": "arbeitnow",
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "sponsorship": false,
-      "date_posted": "2026-05-24",
-      "scraped_at": "2026-05-24T06:51:22.213336",
-      "match_score": 65,
-      "match_reasons": [
-        "Job title matches QA/Testing domain",
-        "Mid-level position matches your profile"
-      ],
-      "missing_skills": [
-        "Cypress",
-        "Playwright",
-        "K6 performance testing"
-      ],
-      "nice_to_have_present": [],
-      "recommendation": "APPLY",
-      "recommendation_reason": "Title-based match",
-      "seniority_match": true,
-      "remote_type": "not_specified",
-      "scored_by": "title_fallback"
-    },
-    {
-      "id": "arbeitnow_ai-test-engineer-f-md-berlin-284707",
-      "title": "AI Test Engineer (f/md)",
-      "company": "Verwaltungssprung GmbH",
-      "location": "Berlin",
-      "url": "https://www.arbeitnow.com/jobs/companies/verwaltungssprung-gmbh/ai-test-engineer-f-md-berlin-284707",
-      "description": "Verwaltungssprung is a Berlin-based GovTech company developing AI-powered software solutions to simplify and digitize administrative processes. Our platform enables citizens and public institutions to access secure, user-friendly, and fully digital public services. To support the growth of our organization, we are looking for an AI Test Engineer (f/md) who is passionate about ensuring the reliability, security, and quality of AI-driven applications in the public sector. In this role, you will help validate and optimize AI systems that directly impact digital government services and citizen experiences. In this role, you will design, develop, and optimize AI-powered solutions that help modernize public administration and create seamless digital experiences for citizens and institutions. Tasks Design, implement, and maintain testing strategies for AI-powered applications and machine learning systems Evaluate AI model performance, accuracy, robustness, and reliability across different use cases Identify system weaknesses, edge cases, biases, hallucinations, and security vulnerabilities Develop automated test frameworks and quality assurance processes for AI solutions Collaborate closely with AI Engineers, Product Managers, and Software Developers throughout the development lifecycle Analyze datasets and outputs to ensure compliance with quality and ethical standards Support continuous improvement of AI systems through structured feedback and testing insights Document testing methodologies, findings, and recommendations for internal and external stakeholders Contribute to establishing best practices for responsible and trustworthy AI within public administration environments Requirements Degree in Computer Science, Software Engineering, AI, Data Science, or a related field Experience in software testing, quality assurance, or AI/ML system evaluation Strong understanding of machine learning concepts, AI system behavior, and testing methodologies Familiarity with automated testing tools, scripting languages, and test frameworks Experience analyzing model outputs, performance metrics, and potential biases Understanding of security, privacy, and compliance considerations in AI applications Strong analytical thinking and problem-solving skills Excellent communication skills and the ability to work in interdisciplinary teams Fluent in English; German is a plus Benefits Attractive above-average compensation package State-of-the-art IT equipment enabling flexible hybrid working worldwide - from home, our Berlin office, or on-site with partners Centrally located offices with access to the unique ThinkTank Campus in Berlin-Wannsee Comfortable travel policy as well as free snacks and beverages in our offices Flat hierarchies, fast decision-making, and room for your own ideas International team spirit with recognition of both collective and individual successes Early responsibility and creative freedom from day one Structured onboarding with a buddy and experien",
-      "source": "arbeitnow",
-      "category": "remote_worldwide",
-      "type": "Remote Worldwide",
-      "sponsorship": false,
-      "date_posted": "2026-05-24",
-      "scraped_at": "2026-05-24T06:51:23.354172",
-      "match_score": 65,
-      "match_reasons": [
-        "Job title matches QA/Testing domain",
-        "Mid-level position matches your profile"
-      ],
-      "missing_skills": [
-        "Cypress",
-        "Playwright",
-        "K6 performance testing"
-      ],
-      "nice_to_have_present": [],
-      "recommendation": "APPLY",
-      "recommendation_reason": "Title-based match",
-      "seniority_match": true,
-      "remote_type": "not_specified",
-      "scored_by": "title_fallback"
-    },
-    {
-      "id": "arbeitnow_remote-manual-quality-assurance-engineer-simba-team-vilnius-lithuania-239329",
-      "title": "Manual Quality Assurance Engineer, SIMBA Team - Vilnius, Lithuania",
-      "company": "Speechify",
-      "location": "Remote",
-      "url": "https://www.arbeitnow.com/jobs/companies/speechify/remote-manual-quality-assurance-engineer-simba-team-vilnius-lithuania-239329",
-      "description": "About SIMBA Voice Agents by Speechify SIMBA lets companies deploy natural, human-sounding AI voice agents in 71+ languages with sub-second latency. We don't just hand customers a product and wish them luck — every customer gets a Forward Deployed Engineer who builds their agents, joins their Slack, and iterates with them weekly. We're building the future of voice AI, and we're looking for someone who can sell that vision and help bring it to life. Overview Our team is committed to changing the way people read and with our exponential growth, we are looking for a strong QA engineer to help us for our SIMBA Team. We love a commitment to quality and risk assessment, maintaining documentation, and curiosity of testing trends and industry standards. This is a full-time remote role and can be based anywhere globally. What You'll Do Develop and execute detailed manual test plans and test cases for the SIMBA Team, ensuring strong functional coverage across core user flows and edge cases. Perform hands-on manual testing across browsers and devices to validate new features, bug fixes, and releases. Collaborate closely with engineers and product teams to identify, reproduce, isolate, and document defects, providing clear steps, expected vs. actual results, and supporting evidence. Maintain clear and organized QA documentation, including test cases, regression suites, test reports, and release validation summaries. Partner with Product, Engineering, and Customer Support to ensure issues are triaged correctly and prioritized based on user impact. Participate in Agile workflows including daily standups, sprint planning, grooming, and retrospectives, ensuring QA is embedded throughout the development lifecycle. Execute regression testing and release validation to ensure product quality and stability prior to launch. Continuously identify ways to improve manual QA processes, test coverage, and communication between teams. An ideal candidate should have B.S. in Computer Science, related technical field, or equivalent experience 3+ years of experience in manual QA testing, with a strong focus on Web applications Strong understanding of QA fundamentals including test planning, test case design, regression testing, exploratory testing, and bug reporting Experience working in Agile environments and collaborating cross functionally with engineering and product teams Excellent troubleshooting and problem-solving skills, with the ability to isolate root causes and communicate issues clearly Strong written communication skills, especially when documenting defects and test results Familiarity with tools like Jira, Linear, or similar bug tracking/project management systems Experience using browser developer tools to assist with debugging and issue reproduction Nice-to-Have: Experience with accessibility testing and familiarity with WCAG guidelines Familiarity with text-to-speech technologies or audio-based products Exposure to test automation tools (even if not responsible",
-      "source": "arbeitnow",
-      "category": "remote_worldwide",
-      "type": "Remote Worldwide",
-      "sponsorship": false,
-      "date_posted": "2026-05-24",
-      "scraped_at": "2026-05-24T06:51:23.391390",
-      "match_score": 65,
-      "match_reasons": [
-        "Job title matches QA/Testing domain",
-        "Mid-level position matches your profile"
-      ],
-      "missing_skills": [
-        "Cypress",
-        "Playwright",
-        "K6 performance testing"
-      ],
-      "nice_to_have_present": [],
-      "recommendation": "APPLY",
-      "recommendation_reason": "Title-based match",
-      "seniority_match": true,
-      "remote_type": "not_specified",
-      "scored_by": "title_fallback"
-    },
-    {
-      "id": "arbeitnow_remote-manual-quality-assurance-engineer-simba-team-tallinn-estonia-336232",
-      "title": "Manual Quality Assurance Engineer, SIMBA Team - Tallinn, Estonia",
-      "company": "Speechify",
-      "location": "Remote",
-      "url": "https://www.arbeitnow.com/jobs/companies/speechify/remote-manual-quality-assurance-engineer-simba-team-tallinn-estonia-336232",
-      "description": "About SIMBA Voice Agents by Speechify SIMBA lets companies deploy natural, human-sounding AI voice agents in 71+ languages with sub-second latency. We don't just hand customers a product and wish them luck — every customer gets a Forward Deployed Engineer who builds their agents, joins their Slack, and iterates with them weekly. We're building the future of voice AI, and we're looking for someone who can sell that vision and help bring it to life. Overview Our team is committed to changing the way people read and with our exponential growth, we are looking for a strong QA engineer to help us for our SIMBA Team. We love a commitment to quality and risk assessment, maintaining documentation, and curiosity of testing trends and industry standards. This is a full-time remote role and can be based anywhere globally. What You'll Do Develop and execute detailed manual test plans and test cases for the SIMBA Team, ensuring strong functional coverage across core user flows and edge cases. Perform hands-on manual testing across browsers and devices to validate new features, bug fixes, and releases. Collaborate closely with engineers and product teams to identify, reproduce, isolate, and document defects, providing clear steps, expected vs. actual results, and supporting evidence. Maintain clear and organized QA documentation, including test cases, regression suites, test reports, and release validation summaries. Partner with Product, Engineering, and Customer Support to ensure issues are triaged correctly and prioritized based on user impact. Participate in Agile workflows including daily standups, sprint planning, grooming, and retrospectives, ensuring QA is embedded throughout the development lifecycle. Execute regression testing and release validation to ensure product quality and stability prior to launch. Continuously identify ways to improve manual QA processes, test coverage, and communication between teams. An ideal candidate should have B.S. in Computer Science, related technical field, or equivalent experience 3+ years of experience in manual QA testing, with a strong focus on Web applications Strong understanding of QA fundamentals including test planning, test case design, regression testing, exploratory testing, and bug reporting Experience working in Agile environments and collaborating cross functionally with engineering and product teams Excellent troubleshooting and problem-solving skills, with the ability to isolate root causes and communicate issues clearly Strong written communication skills, especially when documenting defects and test results Familiarity with tools like Jira, Linear, or similar bug tracking/project management systems Experience using browser developer tools to assist with debugging and issue reproduction Nice-to-Have: Experience with accessibility testing and familiarity with WCAG guidelines Familiarity with text-to-speech technologies or audio-based products Exposure to test automation tools (even if not responsible",
-      "source": "arbeitnow",
-      "category": "remote_worldwide",
-      "type": "Remote Worldwide",
-      "sponsorship": false,
-      "date_posted": "2026-05-24",
-      "scraped_at": "2026-05-24T06:51:23.392930",
+      "date_posted": "2026-05-25",
+      "scraped_at": "2026-05-25T08:05:46.938744",
       "match_score": 65,
       "match_reasons": [
         "Job title matches QA/Testing domain",
@@ -459,7 +369,7 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-05-22T10:57:11+00:00",
-      "scraped_at": "2026-05-24T06:51:35.584457",
+      "scraped_at": "2026-05-25T08:05:57.468717",
       "match_score": 65,
       "match_reasons": [
         "Job title matches QA/Testing domain",
@@ -488,7 +398,7 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-05-15T12:25:13+00:00",
-      "scraped_at": "2026-05-24T06:51:35.599895",
+      "scraped_at": "2026-05-25T08:05:57.473556",
       "match_score": 65,
       "match_reasons": [
         "Job title matches QA/Testing domain",
@@ -507,15 +417,15 @@
       "scored_by": "title_fallback"
     },
     {
-      "id": "qa-automation-engineer-at-bright-vision-technologies-4418475800",
-      "title": "QA Automation Engineer",
-      "company": "Bright Vision Technologies",
-      "location": "Frisco, TX",
-      "url": "https://www.linkedin.com/jobs/view/qa-automation-engineer-at-bright-vision-technologies-4418475800",
+      "id": "qa-automation-engineer-%2490-hr-remote-at-crossing-hurdles-4417848105",
+      "title": "QA Automation Engineer | $90/hr Remote",
+      "company": "Crossing Hurdles",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/qa-automation-engineer-%2490-hr-remote-at-crossing-hurdles-4417848105",
       "source": "linkedin",
       "category": "remote_worldwide",
-      "date_posted": "2026-05-23",
-      "scraped_at": "2026-05-24T06:54:28.761538",
+      "date_posted": "2026-05-24",
+      "scraped_at": "2026-05-25T08:08:43.406371",
       "description": "",
       "type": "Remote Worldwide",
       "easy_apply": false,
@@ -537,15 +447,15 @@
       "scored_by": "title_fallback"
     },
     {
-      "id": "software-development-engineer-in-test-sdet-at-bright-vision-technologies-4418490220",
-      "title": "Software Development Engineer in Test (SDET)",
-      "company": "Bright Vision Technologies",
-      "location": "Frisco, TX",
-      "url": "https://www.linkedin.com/jobs/view/software-development-engineer-in-test-sdet-at-bright-vision-technologies-4418490220",
+      "id": "quality-assurance-engineer-virtual-full-time-at-wealthcounsel-llc-4418685054",
+      "title": "Quality Assurance Engineer (Virtual, Full-time)",
+      "company": "WealthCounsel, LLC",
+      "location": "Jersey City, NJ",
+      "url": "https://www.linkedin.com/jobs/view/quality-assurance-engineer-virtual-full-time-at-wealthcounsel-llc-4418685054",
       "source": "linkedin",
       "category": "remote_worldwide",
-      "date_posted": "2026-05-23",
-      "scraped_at": "2026-05-24T06:54:28.915342",
+      "date_posted": "2026-05-24",
+      "scraped_at": "2026-05-25T08:08:43.672404",
       "description": "",
       "type": "Remote Worldwide",
       "easy_apply": false,
@@ -567,15 +477,15 @@
       "scored_by": "title_fallback"
     },
     {
-      "id": "quality-assurance-engineer-at-sundayy-4418604087",
+      "id": "quality-assurance-engineer-at-sundayy-4418676077",
       "title": "Quality Assurance Engineer",
       "company": "Sundayy",
       "location": "United States",
-      "url": "https://www.linkedin.com/jobs/view/quality-assurance-engineer-at-sundayy-4418604087",
+      "url": "https://www.linkedin.com/jobs/view/quality-assurance-engineer-at-sundayy-4418676077",
       "source": "linkedin",
       "category": "remote_worldwide",
-      "date_posted": "2026-05-23",
-      "scraped_at": "2026-05-24T06:54:28.977594",
+      "date_posted": "2026-05-24",
+      "scraped_at": "2026-05-25T08:08:43.731702",
       "description": "",
       "type": "Remote Worldwide",
       "easy_apply": false,
@@ -597,141 +507,22 @@
       "scored_by": "title_fallback"
     },
     {
-      "id": "qa-engineer-ii-at-remotehunter-4417578485",
+      "id": "qa-engineer-ii-at-remotehunter-4417842224",
       "title": "QA Engineer II",
       "company": "RemoteHunter",
       "location": "United States",
-      "url": "https://www.linkedin.com/jobs/view/qa-engineer-ii-at-remotehunter-4417578485",
+      "url": "https://www.linkedin.com/jobs/view/qa-engineer-ii-at-remotehunter-4417842224",
       "source": "linkedin",
       "category": "remote_worldwide",
-      "date_posted": "2026-05-23",
-      "scraped_at": "2026-05-24T06:54:29.040455",
-      "description": "",
-      "type": "Remote Worldwide",
-      "easy_apply": false,
-      "match_score": 65,
-      "match_reasons": [
-        "Job title matches QA/Testing domain",
-        "Mid-level position matches your profile"
-      ],
-      "missing_skills": [
-        "Cypress",
-        "Playwright",
-        "K6 performance testing"
-      ],
-      "nice_to_have_present": [],
-      "recommendation": "APPLY",
-      "recommendation_reason": "Title-based match",
-      "seniority_match": true,
-      "remote_type": "not_specified",
-      "scored_by": "title_fallback"
-    },
-    {
-      "id": "qa-engineer-core-db-at-sundayy-4418483995",
-      "title": "QA Engineer - Core DB",
-      "company": "Sundayy",
-      "location": "United States",
-      "url": "https://www.linkedin.com/jobs/view/qa-engineer-core-db-at-sundayy-4418483995",
-      "source": "linkedin",
-      "category": "remote_worldwide",
-      "date_posted": "2026-05-23",
-      "scraped_at": "2026-05-24T06:54:29.102917",
-      "description": "",
-      "type": "Remote Worldwide",
-      "easy_apply": false,
-      "match_score": 65,
-      "match_reasons": [
-        "Job title matches QA/Testing domain",
-        "Mid-level position matches your profile"
-      ],
-      "missing_skills": [
-        "Cypress",
-        "Playwright",
-        "K6 performance testing"
-      ],
-      "nice_to_have_present": [],
-      "recommendation": "APPLY",
-      "recommendation_reason": "Title-based match",
-      "seniority_match": true,
-      "remote_type": "not_specified",
-      "scored_by": "title_fallback"
-    },
-    {
-      "id": "quality-assurance-engineer-iii-remote-at-ad-hoc-llc-4407966733",
-      "title": "Quality Assurance Engineer III (Remote)",
-      "company": "Ad Hoc LLC",
-      "location": "United States",
-      "url": "https://www.linkedin.com/jobs/view/quality-assurance-engineer-iii-remote-at-ad-hoc-llc-4407966733",
-      "source": "linkedin",
-      "category": "remote_worldwide",
-      "date_posted": "2026-05-23",
-      "scraped_at": "2026-05-24T06:54:29.167929",
-      "description": "",
-      "type": "Remote Worldwide",
-      "easy_apply": false,
-      "match_score": 65,
-      "match_reasons": [
-        "Job title matches QA/Testing domain",
-        "Mid-level position matches your profile"
-      ],
-      "missing_skills": [
-        "Cypress",
-        "Playwright",
-        "K6 performance testing"
-      ],
-      "nice_to_have_present": [],
-      "recommendation": "APPLY",
-      "recommendation_reason": "Title-based match",
-      "seniority_match": true,
-      "remote_type": "not_specified",
-      "scored_by": "title_fallback"
-    },
-    {
-      "id": "salesforce-clariti-qa-engineer-rate-%2450-hr-on-c2c-remote-project-at-jobs-via-dice-4417572517",
-      "title": "Salesforce Clariti QA Engineer, Rate $50/Hr on C2C, Remote Project.",
-      "company": "Jobs via Dice",
-      "location": "United States",
-      "url": "https://www.linkedin.com/jobs/view/salesforce-clariti-qa-engineer-rate-%2450-hr-on-c2c-remote-project-at-jobs-via-dice-4417572517",
-      "source": "linkedin",
-      "category": "remote_worldwide",
-      "date_posted": "2026-05-23",
-      "scraped_at": "2026-05-24T06:54:29.231088",
-      "description": "",
-      "type": "Remote Worldwide",
-      "easy_apply": false,
-      "match_score": 65,
-      "match_reasons": [
-        "Job title matches QA/Testing domain",
-        "Mid-level position matches your profile"
-      ],
-      "missing_skills": [
-        "Cypress",
-        "Playwright",
-        "K6 performance testing"
-      ],
-      "nice_to_have_present": [],
-      "recommendation": "APPLY",
-      "recommendation_reason": "Title-based match",
-      "seniority_match": true,
-      "remote_type": "not_specified",
-      "scored_by": "title_fallback"
-    },
-    {
-      "id": "arbeitnow_head-of-sales-saas-sales-leadership-mit-marketing-schnittstelle-munster-329548",
-      "title": "Head of Sales (m/w/d) - SaaS Sales Leadership mit Marketing-Schnittstelle",
-      "company": "PAQATO GmbH",
-      "location": "Münster",
-      "url": "https://www.arbeitnow.com/jobs/companies/paqato-gmbh/head-of-sales-saas-sales-leadership-mit-marketing-schnittstelle-munster-329548",
-      "description": "Wir bei PAQATO bauen seit 2016 eine SaaS-Plattform, die das After‑Sales‑Erlebnis im E‑Commerce messbar verbessert – von Versandkommunikation bis Retourenprozesse. Mehr als 2.500 Shops nutzen PAQATO bereits. Wir wachsen weiter und wollen unseren Vertrieb auf das nächste Level heben. Dafür suchen wir einen Head of Sales (m/w/d) , der unsere Sales-Organisation strategisch und operativ weiterentwickelt, skalierbar macht und als Vorbild im Closing vorangeht. Deine Mission Du verantwortest den Vertriebserfolg end-to-end: Teamführung, Prozesse, Pipeline & Forecast, Go-to-Market-Weiterentwicklung und eine Closing-Kultur, die nachhaltig funktioniert – für eine Kundenlandschaft von kleineren Shops bis zu großen Marken. Aufgaben Führung, Coaching & Kultur Führung und Weiterentwicklung des Sales-Teams (Coach/Mentor, klare Ziele, Feedback, Enablement) Stärkung einer Closing-Kultur: pragmatisch, verbindlich, performanceorientiert – ohne „Sales-Theater“ Weiterentwicklung von Rollen, Verantwortlichkeiten und (wenn nötig) Teamstruktur inkl. Hiring/Onboarding Vertriebsstrategie & Go-to-Market Entwicklung und Implementierung der Vertriebsstrategie, um PAQATO im SaaS‑Umfeld weiter zu skalieren Strategische Neukundenakquise inkl. aktiver eigener Beteiligung (hands-on) Aktive Outbound-Neukundenakquise (Kaltakquise) verantworten und mit dem Team umsetzen: Zielkunden identifizieren, Outreach-Sequenzen aufsetzen und regelmäßige Outbound Calls zur Terminierung und Pipeline-Generierung durchführen Weiterentwicklung eines überzeugenden Pitch (Value Proposition, Use Cases, Einwandbehandlung) Pipeline-Management & Forecasting (klarer Fokus) Verantwortung für den gesamten Sales-Funnel: Pipeline‑Transparenz, Forecast‑Qualität, Umsatzprognosen KPI-getriebenes Arbeiten etablieren/ausbauen (z. B. Conversion, Cycle Time, Win Rates, Pipeline Coverage) Kontinuierliche Optimierung von Prozessen/Playbooks, um Wachstum nachhaltig skalierbar zu machen Kunden gewinnen – und nachhaltig binden (mit CS) Enge Zusammenarbeit mit Customer Success für Retention-, Cross- und Upsell-Strategien Sicherstellen sauberer Übergaben und gemeinsamer Verantwortung für nachhaltige Kundenentwicklung Marktanalyse & Wettbewerbsbeobachtung Markt und Wettbewerb kontinuierlich beobachten, um neue Ansätze zu identifizieren und PAQATO klar zu positionieren Marketing-Schnittstelle Enge Verzahnung mit Marketing zur Umsatzsteigerung: ICP‑Schärfung, Messaging, Funnel-Feedback Sicherstellen, dass Marketing-Aktivitäten Sales wirksam unterstützen (Lead-Qualität, Conversion, Positionierung) Kein Fokus auf operative Kampagnenumsetzung Qualifikation Mehrjährige Erfahrung im B2B‑Vertrieb (idealerweise SaaS und/oder E‑Commerce-nah) Nachweisliche Führungserfahrung (Teamaufbau/-entwicklung, Zielerreichung, Coaching) Ausgeprägte Hands-on-Mentalität und Freude daran, Strukturen aufzubauen und zu verbessern Stark in Pipeline, Forecasting, KPIs und datenbasierter Steuerung Kommunikationsstärke (intern wie extern), Verhandlungssicher",
-      "source": "arbeitnow",
-      "category": "remote_worldwide",
-      "type": "Remote Worldwide",
-      "sponsorship": false,
       "date_posted": "2026-05-24",
-      "scraped_at": "2026-05-24T06:51:23.373139",
-      "match_score": 20,
+      "scraped_at": "2026-05-25T08:08:43.790758",
+      "description": "",
+      "type": "Remote Worldwide",
+      "easy_apply": false,
+      "match_score": 65,
       "match_reasons": [
-        "Seniority level matches your experience"
+        "Job title matches QA/Testing domain",
+        "Mid-level position matches your profile"
       ],
       "missing_skills": [
         "Cypress",
@@ -739,7 +530,67 @@
         "K6 performance testing"
       ],
       "nice_to_have_present": [],
-      "recommendation": "MAYBE",
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "qa-engineer-ai-platform-infrastructure-at-immunitybio-inc-4414915332",
+      "title": "QA Engineer, AI & Platform Infrastructure",
+      "company": "ImmunityBio, Inc.",
+      "location": "California, United States",
+      "url": "https://www.linkedin.com/jobs/view/qa-engineer-ai-platform-infrastructure-at-immunitybio-inc-4414915332",
+      "source": "linkedin",
+      "category": "remote_worldwide",
+      "date_posted": "2026-05-25",
+      "scraped_at": "2026-05-25T08:08:43.850459",
+      "description": "",
+      "type": "Remote Worldwide",
+      "easy_apply": false,
+      "match_score": 65,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "staff-quality-engineer-at-consensus-cloud-solutions-4379082073",
+      "title": "Staff Quality Engineer",
+      "company": "Consensus Cloud Solutions",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/staff-quality-engineer-at-consensus-cloud-solutions-4379082073",
+      "source": "linkedin",
+      "category": "remote_worldwide",
+      "date_posted": "2026-05-24",
+      "scraped_at": "2026-05-25T08:08:43.910594",
+      "description": "",
+      "type": "Remote Worldwide",
+      "easy_apply": false,
+      "match_score": 65,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
       "recommendation_reason": "Title-based match",
       "seniority_match": true,
       "remote_type": "not_specified",
@@ -756,7 +607,7 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-05-13T17:33:10+00:00",
-      "scraped_at": "2026-05-24T06:51:35.601770",
+      "scraped_at": "2026-05-25T08:05:57.475130",
       "match_score": 20,
       "match_reasons": [
         "Seniority level matches your experience"
@@ -784,7 +635,7 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-05-05T06:40:22+00:00",
-      "scraped_at": "2026-05-24T06:51:35.603131",
+      "scraped_at": "2026-05-25T08:05:57.476327",
       "match_score": 20,
       "match_reasons": [
         "Seniority level matches your experience"
@@ -802,15 +653,15 @@
       "scored_by": "title_fallback"
     },
     {
-      "id": "senior-engineer-test-and-automation-remote-us-at-remotehunter-4417569533",
+      "id": "senior-engineer-test-and-automation-remote-us-at-remotehunter-4417833228",
       "title": "Senior Engineer, Test and Automation (Remote, US)",
       "company": "RemoteHunter",
       "location": "United States",
-      "url": "https://www.linkedin.com/jobs/view/senior-engineer-test-and-automation-remote-us-at-remotehunter-4417569533",
+      "url": "https://www.linkedin.com/jobs/view/senior-engineer-test-and-automation-remote-us-at-remotehunter-4417833228",
       "source": "linkedin",
       "category": "remote_worldwide",
-      "date_posted": "2026-05-23",
-      "scraped_at": "2026-05-24T06:54:28.850467",
+      "date_posted": "2026-05-24",
+      "scraped_at": "2026-05-25T08:08:43.612281",
       "description": "",
       "type": "Remote Worldwide",
       "easy_apply": false,
@@ -831,7 +682,7 @@
       "scored_by": "title_fallback"
     },
     {
-      "id": "shine_72667",
+      "id": "shine_3686",
       "title": "Software Engineer - PM Platform & AI Automation",
       "company": "",
       "location": "India (Remote)",
@@ -840,8 +691,37 @@
       "source": "shine",
       "category": "india_remote",
       "type": "India Remote",
+      "date_posted": "2026-05-25",
+      "scraped_at": "2026-05-25T08:06:33.219630",
+      "match_score": 15,
+      "match_reasons": [
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "MAYBE",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "software-development-engineer-in-test-iii-core-modules-at-highlevel-4271291963",
+      "title": "Software Development Engineer in Test III - Core Modules",
+      "company": "HighLevel",
+      "location": "India",
+      "url": "https://in.linkedin.com/jobs/view/software-development-engineer-in-test-iii-core-modules-at-highlevel-4271291963",
+      "source": "linkedin",
+      "category": "india_remote",
       "date_posted": "2026-05-24",
-      "scraped_at": "2026-05-24T06:52:10.404480",
+      "scraped_at": "2026-05-25T08:08:02.206479",
+      "description": "",
+      "type": "India Remote",
+      "easy_apply": false,
       "match_score": 15,
       "match_reasons": [
         "Mid-level position matches your profile"
@@ -869,7 +749,7 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-05-22T02:00:16+00:00",
-      "scraped_at": "2026-05-24T06:51:35.585682",
+      "scraped_at": "2026-05-25T08:05:57.469621",
       "match_score": 15,
       "match_reasons": [
         "Mid-level position matches your profile"
@@ -897,7 +777,7 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-05-17T16:49:06+00:00",
-      "scraped_at": "2026-05-24T06:51:35.589735",
+      "scraped_at": "2026-05-25T08:05:57.471970",
       "match_score": 15,
       "match_reasons": [
         "Mid-level position matches your profile"
@@ -925,7 +805,123 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-04-28T12:39:35+00:00",
-      "scraped_at": "2026-05-24T06:51:35.606787",
+      "scraped_at": "2026-05-25T08:05:57.479396",
+      "match_score": 15,
+      "match_reasons": [
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "MAYBE",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "software-development-engineer-in-test-5-plans-and-pricing-at-netflix-4353525492",
+      "title": "Software Development Engineer in Test 5 - Plans and Pricing",
+      "company": "Netflix",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/software-development-engineer-in-test-5-plans-and-pricing-at-netflix-4353525492",
+      "source": "linkedin",
+      "category": "remote_worldwide",
+      "date_posted": "2026-05-24",
+      "scraped_at": "2026-05-25T08:08:43.492068",
+      "description": "",
+      "type": "Remote Worldwide",
+      "easy_apply": false,
+      "match_score": 15,
+      "match_reasons": [
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "MAYBE",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "applications-engineer-at-convergix-automation-solutions-4379276248",
+      "title": "Applications Engineer",
+      "company": "CONVERGIX Automation Solutions",
+      "location": "Holland, OH",
+      "url": "https://www.linkedin.com/jobs/view/applications-engineer-at-convergix-automation-solutions-4379276248",
+      "source": "linkedin",
+      "category": "remote_worldwide",
+      "date_posted": "2026-05-24",
+      "scraped_at": "2026-05-25T08:09:05.857733",
+      "description": "",
+      "type": "Remote Worldwide",
+      "easy_apply": false,
+      "match_score": 15,
+      "match_reasons": [
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "MAYBE",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "applications-engineer-at-convergix-automation-solutions-4379262868",
+      "title": "Applications Engineer",
+      "company": "CONVERGIX Automation Solutions",
+      "location": "Indianapolis, IN",
+      "url": "https://www.linkedin.com/jobs/view/applications-engineer-at-convergix-automation-solutions-4379262868",
+      "source": "linkedin",
+      "category": "remote_worldwide",
+      "date_posted": "2026-05-24",
+      "scraped_at": "2026-05-25T08:09:05.917336",
+      "description": "",
+      "type": "Remote Worldwide",
+      "easy_apply": false,
+      "match_score": 15,
+      "match_reasons": [
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "MAYBE",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "applications-engineer-at-convergix-automation-solutions-4379279167",
+      "title": "Applications Engineer",
+      "company": "CONVERGIX Automation Solutions",
+      "location": "Bridgman, MI",
+      "url": "https://www.linkedin.com/jobs/view/applications-engineer-at-convergix-automation-solutions-4379279167",
+      "source": "linkedin",
+      "category": "remote_worldwide",
+      "date_posted": "2026-05-24",
+      "scraped_at": "2026-05-25T08:09:05.978016",
+      "description": "",
+      "type": "Remote Worldwide",
+      "easy_apply": false,
       "match_score": 15,
       "match_reasons": [
         "Mid-level position matches your profile"
@@ -990,9 +986,9 @@
   },
   "stats": {
     "excellent": 0,
-    "good": 24,
-    "india_remote": 6,
+    "good": 20,
+    "india_remote": 7,
     "sponsorship": 1,
-    "remote_worldwide": 25
+    "remote_worldwide": 24
   }
 }

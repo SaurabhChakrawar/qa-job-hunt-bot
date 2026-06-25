@@ -1,21 +1,141 @@
 {
-  "generated_at": "2026-06-24T07:05:58.716726",
-  "total_scraped": 45,
-  "total_matched": 45,
+  "generated_at": "2026-06-25T07:06:17.931546",
+  "total_scraped": 61,
+  "total_matched": 59,
   "jobs": [
     {
-      "id": "arbeitnow_senior-test-engineer-leipzig-256947",
-      "title": "Senior Test Engineer (m/w/d)",
-      "company": "Falk Defence GmbH",
-      "location": "Leipzig",
-      "url": "https://www.arbeitnow.com/jobs/companies/falk-defence-gmbh/senior-test-engineer-leipzig-256947",
-      "description": "Falk Defence entwickelt hochmoderne Technologien für Raketen, Lenkflugkörper und Startsysteme im militärischen Umfeld. Wir verbinden Innovationskraft, technische Exzellenz und Zuverlässigkeit und liefern einsatzkritische Systeme auf höchstem Qualitätsniveau – und leisten damit einen unmittelbaren Beitrag zur Verteidigungsfähigkeit Deutschlands und seiner Verbündeten. Aufgaben Als Senior Test Engineer verantwortest du die Erprobung unserer Flugkörper- und Startsysteme – von der Komponente bis zum Gesamtsystem. Du planst Testkampagnen, baust Prüfstände auf und bringst unsere Systeme unter realitätsnahen Bedingungen an ihre Grenzen, damit sie im Einsatz höchste Anforderungen an Performance, Robustheit und Zuverlässigkeit erfüllen. Du entwickelst Testpläne und Testprozeduren auf Komponenten-, Subsystem- und Systemebene Du konzipierst, baust und nimmst Prüfstände und Messsysteme in Betrieb Du planst, führst und wertest Entwicklungs-, Qualifikations- und Abnahmetests aus Du koordinierst Tests mit externen Testeinrichtungen und Flugtest-Ranges Du stellst eine vollständige, nachvollziehbare Testdokumentation und lückenlose Nachverfolgbarkeit sicherDu unterstützt Flugtestkampagnen und führst strukturierte Fehler- und Ursachenanalysen durch Qualifikation Abgeschlossenes Studium der Elektrotechnik, Luft- und Raumfahrttechnik, Maschinenbau oder eines vergleichbaren Fachgebiets Ausgeprägte Hands-on-Mentalität und eine strukturierte, sicherheitsbewusste Arbeitsweise Hohe Reisebereitschaft, auch für mehrwöchige Einsätze auf Test-Ranges Erfahrung mit Raketen-, Flugkörper- oder Luftfahrtsystemen ist von Vorteil Kenntnisse von Flight-Test-Ranges und deren Anforderungen sind von Vorteil Erfahrung im Umgang mit pyrotechnischen Systemen und Raketenmotoren sowie die Befähigung zum Umgang mit Explosivstoffen sind von Vorteil Kenntnisse in Messtechnik, Datenerfassung und Datenauswertung sind von Vorteil Kenntnisse militärischer Test- und Qualifikationsstandards (z. B. MIL-STD, AECTP, STANAG) sind von Vorteil Sehr gute Deutschkenntnisse (mindestens C1) sowie gute Englischkenntnisse Staatsangehörigkeit eines EU- oder NATO-Mitgliedstaats (ausgenommen USA) sowie Bereitschaft zur Sicherheitsüberprüfung nach SÜG Benefits Eine Schlüsselrolle in der Erprobung einsatzkritischer Systeme mit direkter Sichtbarkeit im Flugtest Mitarbeit an hochmodernen Flugkörper- und Startsystemen mit realer sicherheitspolitischer Bedeutung Flache Hierarchien, kurze Entscheidungswege und hohe Eigenverantwortung ab dem ersten Tag Die Chance, ein neues europäisches Defence-Tech-Unternehmen von Grund auf mitzugestalten Ein hochmotiviertes, interdisziplinäres Team aus erfahrenen Ingenieurinnen und Ingenieuren Unbefristete Anstellung und flexible Arbeitszeitmodelle Werde Teil von Falk Defence und gestalte mit uns die nächste Generation moderner Verteidigungssysteme. Find Jobs in Germany on Arbeitnow",
-      "source": "arbeitnow",
+      "id": "remotive_2090994",
+      "title": "Senior Quality Engineer (Florianópolis)",
+      "company": "LawnStarter",
+      "location": "Brazil",
+      "url": "https://remotive.com/remote-jobs/qa/senior-quality-engineer-florianopolis-2090994",
+      "description": "This is a remote role for candidates located in Florianópolis, Brazil About LawnStarter LawnStarter is the nation's leading on-demand marketplace for lawn care and outdoor services, with over $100M in annual bookings. We're expanding beyond lawn care to become the one-stop shop for all home services, operating across three brands (LawnStarter, Lawn Love, Home Gnome) on a single shared platform. About Engineering at LawnStarter We've spent the last two years rebuilding the platform from the ground up: new customer app, new Pro onboarding, job distribution engine, and data infrastructure. The foundation is solid. Now we're moving into expanded service verticals, dynamic pricing, and AI-powered features at scale. Quality needs to keep up. Our stack is PHP (Laravel) and React/React Native, with Cypress as our primary test framework. We actively use Claude Code as part of our engineering workflow, not as an experiment, but as a core part of how we work. The Role As we scale into new service verticals and grow the engineering team, quality can't be reactive. This role exists to make quality proactive: owning the automation coverage, shaping the bug process, and partnering closely with Product, Design, and the Data team to catch problems before they reach customers. You'll report to the Engineering Manager and be embedded across the engineering organization. This is hands-on and strategic, helping raise the quality ceiling for the whole team. What makes this role different: Cross-functional influence : You work directly with engineers, PMs, Designers, and the Data team to surface risks early, understand requirements deeply, and propose better solutions. You may be embedded in one or two delivery teams. Automation ownership : You own the strategy for building and expanding our automated test coverage, not just executing test cases someone else wrote. Process shaper : You'll identify gaps in our quality process and have the authority to fix them, not just flag them. What You'll Own Automated test coverage : Design and grow our E2E and integration test suite using Cypress. Set the strategy, prioritize coverage gaps, and raise the floor across the platform. Bug process : Own the full lifecycle from triage to production fix. Keep it moving, keep stakeholders informed, and make sure nothing falls through the cracks. Cross-functional quality partnership : Collaborate with PMs, Designers, and the Data team to review requirements, raise risks early, and define what \"done\" actually means. Process improvement : Identify weaknesses in how we deliver software and propose solutions. Not just document them. Exploratory testing : Test new features and existing flows on web and mobile across devices, catching what automation misses. Problems to Solve Keeping automation coverage sharp as the product evolves Our E2E coverage is solid. The challenge is staying ahead: bringing new ideas, exploring different types of coverage, and finding smarter ways to automate different a",
+      "source": "remotive",
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
-      "sponsorship": false,
-      "date_posted": "2026-06-24",
-      "scraped_at": "2026-06-24T07:01:25.817930",
+      "date_posted": "2026-06-23T08:30:06",
+      "scraped_at": "2026-06-25T07:01:17.217127",
+      "salary": "$45k - $65k",
+      "match_score": 70,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Seniority level matches your experience"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "remotive_2090995",
+      "title": "Senior Quality Engineer (São Paulo)",
+      "company": "LawnStarter",
+      "location": "Brazil",
+      "url": "https://remotive.com/remote-jobs/qa/senior-quality-engineer-sao-paulo-2090995",
+      "description": "This is a remote role for candidates located in São Paulo , Brazil About LawnStarter LawnStarter is the nation's leading on-demand marketplace for lawn care and outdoor services, with over $100M in annual bookings. We're expanding beyond lawn care to become the one-stop shop for all home services, operating across three brands (LawnStarter, Lawn Love, Home Gnome) on a single shared platform. About Engineering at LawnStarter We've spent the last two years rebuilding the platform from the ground up: new customer app, new Pro onboarding, job distribution engine, and data infrastructure. The foundation is solid. Now we're moving into expanded service verticals, dynamic pricing, and AI-powered features at scale. Quality needs to keep up. Our stack is PHP (Laravel) and React/React Native, with Cypress as our primary test framework. We actively use Claude Code as part of our engineering workflow, not as an experiment, but as a core part of how we work. The Role As we scale into new service verticals and grow the engineering team, quality can't be reactive. This role exists to make quality proactive: owning the automation coverage, shaping the bug process, and partnering closely with Product, Design, and the Data team to catch problems before they reach customers. You'll report to the Engineering Manager and be embedded across the engineering organization. This is hands-on and strategic, helping raise the quality ceiling for the whole team. What makes this role different: Cross-functional influence : You work directly with engineers, PMs, Designers, and the Data team to surface risks early, understand requirements deeply, and propose better solutions. You may be embedded in one or two delivery teams. Automation ownership : You own the strategy for building and expanding our automated test coverage, not just executing test cases someone else wrote. Process shaper : You'll identify gaps in our quality process and have the authority to fix them, not just flag them. What You'll Own Automated test coverage : Design and grow our E2E and integration test suite using Cypress. Set the strategy, prioritize coverage gaps, and raise the floor across the platform. Bug process : Own the full lifecycle from triage to production fix. Keep it moving, keep stakeholders informed, and make sure nothing falls through the cracks. Cross-functional quality partnership : Collaborate with PMs, Designers, and the Data team to review requirements, raise risks early, and define what \"done\" actually means. Process improvement : Identify weaknesses in how we deliver software and propose solutions. Not just document them. Exploratory testing : Test new features and existing flows on web and mobile across devices, catching what automation misses. Problems to Solve Keeping automation coverage sharp as the product evolves Our E2E coverage is solid. The challenge is staying ahead: bringing new ideas, exploring different types of coverage, and finding smarter ways to automate different aspe",
+      "source": "remotive",
+      "category": "remote_worldwide",
+      "type": "Remote Worldwide",
+      "date_posted": "2026-06-23T08:27:20",
+      "scraped_at": "2026-06-25T07:01:17.218958",
+      "salary": "$45k - $65k",
+      "match_score": 70,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Seniority level matches your experience"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "remotive_2090996",
+      "title": "Senior Quality Engineer (Belo Horizonte)",
+      "company": "LawnStarter",
+      "location": "Brazil",
+      "url": "https://remotive.com/remote-jobs/qa/senior-quality-engineer-belo-horizonte-2090996",
+      "description": "This is a remote role for candidates located in Belo Horizonte, Brazil About LawnStarter LawnStarter is the nation's leading on-demand marketplace for lawn care and outdoor services, with over $100M in annual bookings. We're expanding beyond lawn care to become the one-stop shop for all home services, operating across three brands (LawnStarter, Lawn Love, Home Gnome) on a single shared platform. About Engineering at LawnStarter We've spent the last two years rebuilding the platform from the ground up: new customer app, new Pro onboarding, job distribution engine, and data infrastructure. The foundation is solid. Now we're moving into expanded service verticals, dynamic pricing, and AI-powered features at scale. Quality needs to keep up. Our stack is PHP (Laravel) and React/React Native, with Cypress as our primary test framework. We actively use Claude Code as part of our engineering workflow, not as an experiment, but as a core part of how we work. The Role As we scale into new service verticals and grow the engineering team, quality can't be reactive. This role exists to make quality proactive: owning the automation coverage, shaping the bug process, and partnering closely with Product, Design, and the Data team to catch problems before they reach customers. You'll report to the Engineering Manager and be embedded across the engineering organization. This is hands-on and strategic, helping raise the quality ceiling for the whole team. What makes this role different: Cross-functional influence : You work directly with engineers, PMs, Designers, and the Data team to surface risks early, understand requirements deeply, and propose better solutions. You may be embedded in one or two delivery teams. Automation ownership : You own the strategy for building and expanding our automated test coverage, not just executing test cases someone else wrote. Process shaper : You'll identify gaps in our quality process and have the authority to fix them, not just flag them. What You'll Own Automated test coverage : Design and grow our E2E and integration test suite using Cypress. Set the strategy, prioritize coverage gaps, and raise the floor across the platform. Bug process : Own the full lifecycle from triage to production fix. Keep it moving, keep stakeholders informed, and make sure nothing falls through the cracks. Cross-functional quality partnership : Collaborate with PMs, Designers, and the Data team to review requirements, raise risks early, and define what \"done\" actually means. Process improvement : Identify weaknesses in how we deliver software and propose solutions. Not just document them. Exploratory testing : Test new features and existing flows on web and mobile across devices, catching what automation misses. Problems to Solve Keeping automation coverage sharp as the product evolves Our E2E coverage is solid. The challenge is staying ahead: bringing new ideas, exploring different types of coverage, and finding smarter ways to automate different ",
+      "source": "remotive",
+      "category": "remote_worldwide",
+      "type": "Remote Worldwide",
+      "date_posted": "2026-06-23T08:25:38",
+      "scraped_at": "2026-06-25T07:01:17.220803",
+      "salary": "$45k - $65k",
+      "match_score": 70,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Seniority level matches your experience"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "remotive_2090998",
+      "title": "Senior Quality Engineer (Campinas)",
+      "company": "LawnStarter",
+      "location": "Brazil",
+      "url": "https://remotive.com/remote-jobs/qa/senior-quality-engineer-campinas-2090998",
+      "description": "This is a remote role for candidates located in Campinas, Brazil. About LawnStarter LawnStarter is the nation's leading on-demand marketplace for lawn care and outdoor services, with over $100M in annual bookings. We're expanding beyond lawn care to become the one-stop shop for all home services, operating across three brands (LawnStarter, Lawn Love, Home Gnome) on a single shared platform. About Engineering at LawnStarter We've spent the last two years rebuilding the platform from the ground up: new customer app, new Pro onboarding, job distribution engine, and data infrastructure. The foundation is solid. Now we're moving into expanded service verticals, dynamic pricing, and AI-powered features at scale. Quality needs to keep up. Our stack is PHP (Laravel) and React/React Native, with Cypress as our primary test framework. We actively use Claude Code as part of our engineering workflow, not as an experiment, but as a core part of how we work. The Role As we scale into new service verticals and grow the engineering team, quality can't be reactive. This role exists to make quality proactive: owning the automation coverage, shaping the bug process, and partnering closely with Product, Design, and the Data team to catch problems before they reach customers. You'll report to the Engineering Manager and be embedded across the engineering organization. This is hands-on and strategic, helping raise the quality ceiling for the whole team. What makes this role different: Cross-functional influence : You work directly with engineers, PMs, Designers, and the Data team to surface risks early, understand requirements deeply, and propose better solutions. You may be embedded in one or two delivery teams. Automation ownership : You own the strategy for building and expanding our automated test coverage, not just executing test cases someone else wrote. Process shaper : You'll identify gaps in our quality process and have the authority to fix them, not just flag them. What You'll Own Automated test coverage : Design and grow our E2E and integration test suite using Cypress. Set the strategy, prioritize coverage gaps, and raise the floor across the platform. Bug process : Own the full lifecycle from triage to production fix. Keep it moving, keep stakeholders informed, and make sure nothing falls through the cracks. Cross-functional quality partnership : Collaborate with PMs, Designers, and the Data team to review requirements, raise risks early, and define what \"done\" actually means. Process improvement : Identify weaknesses in how we deliver software and propose solutions. Not just document them. Exploratory testing : Test new features and existing flows on web and mobile across devices, catching what automation misses. Problems to Solve Keeping automation coverage sharp as the product evolves Our E2E coverage is solid. The challenge is staying ahead: bringing new ideas, exploring different types of coverage, and finding smarter ways to automate different aspec",
+      "source": "remotive",
+      "category": "remote_worldwide",
+      "type": "Remote Worldwide",
+      "date_posted": "2026-06-23T08:23:50",
+      "scraped_at": "2026-06-25T07:01:17.223531",
+      "salary": "$45k - $65k",
+      "match_score": 70,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Seniority level matches your experience"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "remotive_2090997",
+      "title": "Senior Quality Engineer (Porto Alegre)",
+      "company": "LawnStarter",
+      "location": "Brazil",
+      "url": "https://remotive.com/remote-jobs/qa/senior-quality-engineer-porto-alegre-2090997",
+      "description": "This is a remote role for candidates located in Porto Alegre, Brazil About LawnStarter LawnStarter is the nation's leading on-demand marketplace for lawn care and outdoor services, with over $100M in annual bookings. We're expanding beyond lawn care to become the one-stop shop for all home services, operating across three brands (LawnStarter, Lawn Love, Home Gnome) on a single shared platform. About Engineering at LawnStarter We've spent the last two years rebuilding the platform from the ground up: new customer app, new Pro onboarding, job distribution engine, and data infrastructure. The foundation is solid. Now we're moving into expanded service verticals, dynamic pricing, and AI-powered features at scale. Quality needs to keep up. Our stack is PHP (Laravel) and React/React Native, with Cypress as our primary test framework. We actively use Claude Code as part of our engineering workflow, not as an experiment, but as a core part of how we work. The Role As we scale into new service verticals and grow the engineering team, quality can't be reactive. This role exists to make quality proactive: owning the automation coverage, shaping the bug process, and partnering closely with Product, Design, and the Data team to catch problems before they reach customers. You'll report to the Engineering Manager and be embedded across the engineering organization. This is hands-on and strategic, helping raise the quality ceiling for the whole team. What makes this role different: Cross-functional influence : You work directly with engineers, PMs, Designers, and the Data team to surface risks early, understand requirements deeply, and propose better solutions. You may be embedded in one or two delivery teams. Automation ownership : You own the strategy for building and expanding our automated test coverage, not just executing test cases someone else wrote. Process shaper : You'll identify gaps in our quality process and have the authority to fix them, not just flag them. What You'll Own Automated test coverage : Design and grow our E2E and integration test suite using Cypress. Set the strategy, prioritize coverage gaps, and raise the floor across the platform. Bug process : Own the full lifecycle from triage to production fix. Keep it moving, keep stakeholders informed, and make sure nothing falls through the cracks. Cross-functional quality partnership : Collaborate with PMs, Designers, and the Data team to review requirements, raise risks early, and define what \"done\" actually means. Process improvement : Identify weaknesses in how we deliver software and propose solutions. Not just document them. Exploratory testing : Test new features and existing flows on web and mobile across devices, catching what automation misses. Problems to Solve Keeping automation coverage sharp as the product evolves Our E2E coverage is solid. The challenge is staying ahead: bringing new ideas, exploring different types of coverage, and finding smarter ways to automate different as",
+      "source": "remotive",
+      "category": "remote_worldwide",
+      "type": "Remote Worldwide",
+      "date_posted": "2026-06-23T07:08:26",
+      "scraped_at": "2026-06-25T07:01:17.225314",
+      "salary": "$45k- $65k",
       "match_score": 70,
       "match_reasons": [
         "Job title matches QA/Testing domain",
@@ -44,7 +164,7 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-06-12T16:29:16+00:00",
-      "scraped_at": "2026-06-24T07:01:32.248763",
+      "scraped_at": "2026-06-25T07:01:31.155069",
       "match_score": 70,
       "match_reasons": [
         "Job title matches QA/Testing domain",
@@ -73,7 +193,7 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-06-12T16:29:14+00:00",
-      "scraped_at": "2026-06-24T07:01:32.251985",
+      "scraped_at": "2026-06-25T07:01:31.156626",
       "match_score": 70,
       "match_reasons": [
         "Job title matches QA/Testing domain",
@@ -102,7 +222,7 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-06-23T02:51:41+00:00",
-      "scraped_at": "2026-06-24T07:01:36.965986",
+      "scraped_at": "2026-06-25T07:01:36.021521",
       "match_score": 70,
       "match_reasons": [
         "Job title matches QA/Testing domain",
@@ -131,7 +251,7 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-06-22T13:21:30+00:00",
-      "scraped_at": "2026-06-24T07:01:36.970722",
+      "scraped_at": "2026-06-25T07:01:36.024325",
       "match_score": 70,
       "match_reasons": [
         "Job title matches QA/Testing domain",
@@ -160,7 +280,7 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-06-16T04:07:25+00:00",
-      "scraped_at": "2026-06-24T07:01:36.975722",
+      "scraped_at": "2026-06-25T07:01:36.028638",
       "match_score": 70,
       "match_reasons": [
         "Job title matches QA/Testing domain",
@@ -189,7 +309,7 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-06-12T16:29:40+00:00",
-      "scraped_at": "2026-06-24T07:01:36.982558",
+      "scraped_at": "2026-06-25T07:01:36.035487",
       "match_score": 70,
       "match_reasons": [
         "Job title matches QA/Testing domain",
@@ -208,15 +328,15 @@
       "scored_by": "title_fallback"
     },
     {
-      "id": "senior-qa-automation-engineer-at-quarterhill-inc-4429449900",
-      "title": "Senior QA Automation Engineer",
-      "company": "Quarterhill Inc.",
-      "location": "United States",
-      "url": "https://www.linkedin.com/jobs/view/senior-qa-automation-engineer-at-quarterhill-inc-4429449900",
+      "id": "senior-quality-engineer-at-abridge-4365626098",
+      "title": "Senior Quality Engineer",
+      "company": "Abridge",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/senior-quality-engineer-at-abridge-4365626098",
       "source": "linkedin",
       "category": "remote_worldwide",
-      "date_posted": "2026-06-23",
-      "scraped_at": "2026-06-24T07:05:42.590044",
+      "date_posted": "2026-06-24",
+      "scraped_at": "2026-06-25T07:05:27.236996",
       "description": "",
       "type": "Remote Worldwide",
       "easy_apply": false,
@@ -238,7 +358,96 @@
       "scored_by": "title_fallback"
     },
     {
-      "id": "shine_240872",
+      "id": "senior-quality-assurance-engineer-at-therapynotes-llc-4423923021",
+      "title": "Senior Quality Assurance Engineer",
+      "company": "TherapyNotes, LLC",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/senior-quality-assurance-engineer-at-therapynotes-llc-4423923021",
+      "source": "linkedin",
+      "category": "remote_worldwide",
+      "date_posted": "2026-06-24",
+      "scraped_at": "2026-06-25T07:05:38.928084",
+      "description": "",
+      "type": "Remote Worldwide",
+      "easy_apply": false,
+      "match_score": 70,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Seniority level matches your experience"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "senior-mobile-qa-engineer-at-sequencing-4432118212",
+      "title": "Senior Mobile QA Engineer",
+      "company": "Sequencing",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/senior-mobile-qa-engineer-at-sequencing-4432118212",
+      "source": "linkedin",
+      "category": "remote_worldwide",
+      "date_posted": "2026-06-24",
+      "scraped_at": "2026-06-25T07:05:39.170984",
+      "description": "",
+      "type": "Remote Worldwide",
+      "easy_apply": false,
+      "match_score": 70,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Seniority level matches your experience"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "shine_765374",
+      "title": "QA Automation Engineer for SAP and Salesforce Applications",
+      "company": "",
+      "location": "India (Remote)",
+      "url": "https://www.shine.com/jobs/qa-automation-engineer-for-sap-and-salesforce-applications/jade-global-software-pvt-ltd/19144667",
+      "description": "QA Automation Engineer for SAP and Salesforce Applications at . Remote/WFH QA role in India.",
+      "source": "shine",
+      "category": "india_remote",
+      "type": "India Remote",
+      "date_posted": "2026-06-25",
+      "scraped_at": "2026-06-25T07:02:05.053431",
+      "match_score": 65,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "shine_737477",
       "title": "Automation Test Engineer",
       "company": "",
       "location": "India (Remote)",
@@ -247,8 +456,8 @@
       "source": "shine",
       "category": "india_remote",
       "type": "India Remote",
-      "date_posted": "2026-06-24",
-      "scraped_at": "2026-06-24T07:02:07.229775",
+      "date_posted": "2026-06-25",
+      "scraped_at": "2026-06-25T07:02:07.826382",
       "match_score": 65,
       "match_reasons": [
         "Job title matches QA/Testing domain",
@@ -267,18 +476,17 @@
       "scored_by": "title_fallback"
     },
     {
-      "id": "quality-assurance-engineer-%2460-hr-remote-at-crossing-hurdles-4432231017",
-      "title": "Quality Assurance Engineer | $60/hr Remote",
-      "company": "Crossing Hurdles",
-      "location": "India",
-      "url": "https://in.linkedin.com/jobs/view/quality-assurance-engineer-%2460-hr-remote-at-crossing-hurdles-4432231017",
-      "source": "linkedin",
+      "id": "shine_492085",
+      "title": "Manual Test Engineer",
+      "company": "",
+      "location": "India (Remote)",
+      "url": "https://www.shine.com/jobs/manual-test-engineer/harjai-computers-private-limited/19110318",
+      "description": "Manual Test Engineer at . Remote/WFH QA role in India.",
+      "source": "shine",
       "category": "india_remote",
-      "date_posted": "2026-06-23",
-      "scraped_at": "2026-06-24T07:04:12.120736",
-      "description": "",
       "type": "India Remote",
-      "easy_apply": false,
+      "date_posted": "2026-06-25",
+      "scraped_at": "2026-06-25T07:02:13.442717",
       "match_score": 65,
       "match_reasons": [
         "Job title matches QA/Testing domain",
@@ -297,15 +505,15 @@
       "scored_by": "title_fallback"
     },
     {
-      "id": "manual-qa-engineer-web-crm-at-jobgether-4432227832",
-      "title": "Manual QA Engineer (Web, CRM)",
+      "id": "qa-engineer-at-jobgether-4433032439",
+      "title": "QA Engineer",
       "company": "Jobgether",
       "location": "India",
-      "url": "https://in.linkedin.com/jobs/view/manual-qa-engineer-web-crm-at-jobgether-4432227832",
+      "url": "https://in.linkedin.com/jobs/view/qa-engineer-at-jobgether-4433032439",
       "source": "linkedin",
       "category": "india_remote",
-      "date_posted": "2026-06-23",
-      "scraped_at": "2026-06-24T07:04:12.186773",
+      "date_posted": "2026-06-25",
+      "scraped_at": "2026-06-25T07:04:12.443252",
       "description": "",
       "type": "India Remote",
       "easy_apply": false,
@@ -327,15 +535,15 @@
       "scored_by": "title_fallback"
     },
     {
-      "id": "qa-engineer-with-cypress-at-intraedge-4431208763",
-      "title": "QA Engineer with Cypress",
-      "company": "IntraEdge",
+      "id": "quality-assurance-engineer-at-trantor-4432601047",
+      "title": "Quality Assurance Engineer",
+      "company": "Trantor",
       "location": "India",
-      "url": "https://in.linkedin.com/jobs/view/qa-engineer-with-cypress-at-intraedge-4431208763",
+      "url": "https://in.linkedin.com/jobs/view/quality-assurance-engineer-at-trantor-4432601047",
       "source": "linkedin",
       "category": "india_remote",
-      "date_posted": "2026-06-23",
-      "scraped_at": "2026-06-24T07:04:12.254028",
+      "date_posted": "2026-06-25",
+      "scraped_at": "2026-06-25T07:04:12.510153",
       "description": "",
       "type": "India Remote",
       "easy_apply": false,
@@ -357,15 +565,15 @@
       "scored_by": "title_fallback"
     },
     {
-      "id": "voice-qa-automation-engineer-ai-speed-ships-daily-at-brilo-ai-4432226281",
-      "title": "Voice QA Automation Engineer (AI-Speed, Ships Daily)",
-      "company": "Brilo AI",
-      "location": "Bengaluru, Karnataka, India",
-      "url": "https://in.linkedin.com/jobs/view/voice-qa-automation-engineer-ai-speed-ships-daily-at-brilo-ai-4432226281",
+      "id": "qa-engineer-manual-testing-%E2%80%93-msi-at-trantor-4432180818",
+      "title": "QA Engineer (Manual Testing – MSI)",
+      "company": "Trantor",
+      "location": "Chandigarh, India",
+      "url": "https://in.linkedin.com/jobs/view/qa-engineer-manual-testing-%E2%80%93-msi-at-trantor-4432180818",
       "source": "linkedin",
       "category": "india_remote",
-      "date_posted": "2026-06-23",
-      "scraped_at": "2026-06-24T07:04:12.320765",
+      "date_posted": "2026-06-25",
+      "scraped_at": "2026-06-25T07:04:12.570861",
       "description": "",
       "type": "India Remote",
       "easy_apply": false,
@@ -387,15 +595,75 @@
       "scored_by": "title_fallback"
     },
     {
-      "id": "quality-assurance-automation-specialist-remote-at-hire-feed-4432530021",
+      "id": "manual-quality-assurance-engineer-simba-team-at-jobgether-4433004219",
+      "title": "Manual Quality Assurance Engineer, SIMBA Team",
+      "company": "Jobgether",
+      "location": "India",
+      "url": "https://in.linkedin.com/jobs/view/manual-quality-assurance-engineer-simba-team-at-jobgether-4433004219",
+      "source": "linkedin",
+      "category": "india_remote",
+      "date_posted": "2026-06-24",
+      "scraped_at": "2026-06-25T07:04:12.629986",
+      "description": "",
+      "type": "India Remote",
+      "easy_apply": false,
+      "match_score": 65,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "qa-automation-engineer-at-shuru-4432582125",
+      "title": "QA Automation Engineer",
+      "company": "Shuru",
+      "location": "India",
+      "url": "https://in.linkedin.com/jobs/view/qa-automation-engineer-at-shuru-4432582125",
+      "source": "linkedin",
+      "category": "india_remote",
+      "date_posted": "2026-06-24",
+      "scraped_at": "2026-06-25T07:04:12.690777",
+      "description": "",
+      "type": "India Remote",
+      "easy_apply": false,
+      "match_score": 65,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "quality-assurance-automation-specialist-remote-at-hire-feed-4433024750",
       "title": "Quality Assurance Automation Specialist (Remote)",
       "company": "Hire Feed",
       "location": "India",
-      "url": "https://in.linkedin.com/jobs/view/quality-assurance-automation-specialist-remote-at-hire-feed-4432530021",
+      "url": "https://in.linkedin.com/jobs/view/quality-assurance-automation-specialist-remote-at-hire-feed-4433024750",
       "source": "linkedin",
       "category": "india_remote",
-      "date_posted": "2026-06-24",
-      "scraped_at": "2026-06-24T07:04:12.387153",
+      "date_posted": "2026-06-25",
+      "scraped_at": "2026-06-25T07:04:12.750731",
       "description": "",
       "type": "India Remote",
       "easy_apply": false,
@@ -427,8 +695,38 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-06-11T14:07:01",
-      "scraped_at": "2026-06-24T07:01:18.743650",
+      "scraped_at": "2026-06-25T07:01:17.240007",
       "salary": "",
+      "match_score": 65,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "arbeitnow_quality-assurance-engineer-wiesbaden-288665",
+      "title": "Quality Assurance Engineer (m/f/d)",
+      "company": "Yalwa GmbH",
+      "location": "Wiesbaden",
+      "url": "https://www.arbeitnow.com/jobs/companies/yalwa-gmbh/quality-assurance-engineer-wiesbaden-288665",
+      "description": "Full-Time •  First Experience • Wiesbaden • (m/f/d) At Yalwa, bringing people together is our mission. We strive to make the digital world a place where people build real-life connections. Working at Yalwa means being part of a friendly, passionate team of people from over twenty-five different countries. With the support of your colleagues, you’ll have the opportunity to challenge yourself, evolve, share your knowledge, hone your skills and work on ambitious projects. Ready to take the next step in your career? We're looking for a dedicated QA Engineer to join our team! Your tasks End-to-End Testing: Design, execute, and maintain manual and automated test cases for web applications and native mobile apps (iOS & Android) Test Automation: Create and optimize test automation scripts using Playwright (JS), maintain existing scripts and utilize AI tools to accelerate automation workflows Full-Spectrum Validation: Perform functional, smoke, sanity, integration, localization, and regression testing across complex features like user registration, ad posting flows, search/filtering logic and premium subscription models Shift-Left approach: Work closely with developers, product managers, designers and DevOps teams to identify issues early in the development lifecycle and ensure high-quality product delivery Defect Lifecycle Management: Investigate, document, and track bugs in Jira and Confluence, providing clear feedback to developers, coordinating bug fixes Environment Verification: Ensure platform quality across different environments prior to production launch and assist with release coordination Cross-Department Syncing: Collaborate with Product, Marketing, Sales, and Customer Support teams during showcases and alignment meetings to safeguard release quality Bachelor’s degree in Computer Science, Engineering, or a related field (or equivalent practical experience) Experience in software quality assurance and testing Strong knowledge of software quality assurance methodologies and the STLC (Software Testing Life Cycle) Experience with mobile application testing on iOS and Android platforms Familiarity with creating and executing Playwright automation scripts using JavaScript (or similar) Experience with version control systems using Git and GitHub workflows Basic knowledge of SQL for performing direct database queries Excellent analytical, problem-solving, and cross-functional communication skills Fluency in English Preferred Qualifications Familiarity with CI/CD pipelines Familiarity with API and performance testing Exposure to AI-driven QA tools, test generation, or intelligent automation platforms What do we offer? Pleasant working atmosphere in top modern offices Hybrid work model Great team and fun at work A powerful employer with a success story of 20 years Further training and qualification opportunities Health promotion, EGYM Wellpass, massages, retirement plan, lunch, MacBook Pro and many more Ready to take your career to the next level? If yo",
+      "source": "arbeitnow",
+      "category": "remote_worldwide",
+      "type": "Remote Worldwide",
+      "sponsorship": false,
+      "date_posted": "2026-06-25",
+      "scraped_at": "2026-06-25T07:01:22.054424",
       "match_score": 65,
       "match_reasons": [
         "Job title matches QA/Testing domain",
@@ -457,8 +755,8 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "sponsorship": false,
-      "date_posted": "2026-06-24",
-      "scraped_at": "2026-06-24T07:01:23.429533",
+      "date_posted": "2026-06-25",
+      "scraped_at": "2026-06-25T07:01:23.274351",
       "match_score": 65,
       "match_reasons": [
         "Job title matches QA/Testing domain",
@@ -487,8 +785,8 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "sponsorship": false,
-      "date_posted": "2026-06-24",
-      "scraped_at": "2026-06-24T07:01:23.444300",
+      "date_posted": "2026-06-25",
+      "scraped_at": "2026-06-25T07:01:24.371269",
       "match_score": 65,
       "match_reasons": [
         "Job title matches QA/Testing domain",
@@ -517,7 +815,7 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-06-23T02:31:46+00:00",
-      "scraped_at": "2026-06-24T07:01:36.969556",
+      "scraped_at": "2026-06-25T07:01:36.023235",
       "match_score": 65,
       "match_reasons": [
         "Job title matches QA/Testing domain",
@@ -546,7 +844,7 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-06-18T06:56:43+00:00",
-      "scraped_at": "2026-06-24T07:01:36.974342",
+      "scraped_at": "2026-06-25T07:01:36.027464",
       "match_score": 65,
       "match_reasons": [
         "Job title matches QA/Testing domain",
@@ -575,7 +873,7 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-06-16T03:55:46+00:00",
-      "scraped_at": "2026-06-24T07:01:36.977293",
+      "scraped_at": "2026-06-25T07:01:36.030994",
       "match_score": 65,
       "match_reasons": [
         "Job title matches QA/Testing domain",
@@ -594,15 +892,15 @@
       "scored_by": "title_fallback"
     },
     {
-      "id": "qa-automation-engineer-remote-at-archesys-inc-4432505290",
-      "title": "QA Automation Engineer (Remote)",
-      "company": "ArcheSys Inc",
-      "location": "Baltimore, MD",
-      "url": "https://www.linkedin.com/jobs/view/qa-automation-engineer-remote-at-archesys-inc-4432505290",
+      "id": "test-automation-engineer-at-anblicks-4426386325",
+      "title": "Test Automation Engineer",
+      "company": "Anblicks",
+      "location": "Plano, TX",
+      "url": "https://www.linkedin.com/jobs/view/test-automation-engineer-at-anblicks-4426386325",
       "source": "linkedin",
       "category": "remote_worldwide",
       "date_posted": "2026-06-24",
-      "scraped_at": "2026-06-24T07:05:18.460376",
+      "scraped_at": "2026-06-25T07:05:26.917687",
       "description": "",
       "type": "Remote Worldwide",
       "easy_apply": false,
@@ -624,255 +922,15 @@
       "scored_by": "title_fallback"
     },
     {
-      "id": "qa-automation-engineer-remote-at-archesys-inc-4432512447",
-      "title": "QA Automation Engineer (Remote)",
-      "company": "ArcheSys Inc",
-      "location": "Baltimore, MD",
-      "url": "https://www.linkedin.com/jobs/view/qa-automation-engineer-remote-at-archesys-inc-4432512447",
-      "source": "linkedin",
-      "category": "remote_worldwide",
-      "date_posted": "2026-06-24",
-      "scraped_at": "2026-06-24T07:05:18.525507",
-      "description": "",
-      "type": "Remote Worldwide",
-      "easy_apply": false,
-      "match_score": 65,
-      "match_reasons": [
-        "Job title matches QA/Testing domain",
-        "Mid-level position matches your profile"
-      ],
-      "missing_skills": [
-        "Cypress",
-        "Playwright",
-        "K6 performance testing"
-      ],
-      "nice_to_have_present": [],
-      "recommendation": "APPLY",
-      "recommendation_reason": "Title-based match",
-      "seniority_match": true,
-      "remote_type": "not_specified",
-      "scored_by": "title_fallback"
-    },
-    {
-      "id": "qa-automation-engineer-at-bright-vision-technologies-4432509097",
-      "title": "QA Automation Engineer",
-      "company": "Bright Vision Technologies",
-      "location": "San Jose, CA",
-      "url": "https://www.linkedin.com/jobs/view/qa-automation-engineer-at-bright-vision-technologies-4432509097",
-      "source": "linkedin",
-      "category": "remote_worldwide",
-      "date_posted": "2026-06-24",
-      "scraped_at": "2026-06-24T07:05:18.593786",
-      "description": "",
-      "type": "Remote Worldwide",
-      "easy_apply": false,
-      "match_score": 65,
-      "match_reasons": [
-        "Job title matches QA/Testing domain",
-        "Mid-level position matches your profile"
-      ],
-      "missing_skills": [
-        "Cypress",
-        "Playwright",
-        "K6 performance testing"
-      ],
-      "nice_to_have_present": [],
-      "recommendation": "APPLY",
-      "recommendation_reason": "Title-based match",
-      "seniority_match": true,
-      "remote_type": "not_specified",
-      "scored_by": "title_fallback"
-    },
-    {
-      "id": "100%25-remote-qa-automation-engineer-at-beacon-hill-4431289618",
-      "title": "100% Remote - QA Automation Engineer",
-      "company": "Beacon Hill",
-      "location": "Los Angeles County, CA",
-      "url": "https://www.linkedin.com/jobs/view/100%25-remote-qa-automation-engineer-at-beacon-hill-4431289618",
-      "source": "linkedin",
-      "category": "remote_worldwide",
-      "date_posted": "2026-06-23",
-      "scraped_at": "2026-06-24T07:05:18.659270",
-      "description": "",
-      "type": "Remote Worldwide",
-      "easy_apply": false,
-      "match_score": 65,
-      "match_reasons": [
-        "Job title matches QA/Testing domain",
-        "Mid-level position matches your profile"
-      ],
-      "missing_skills": [
-        "Cypress",
-        "Playwright",
-        "K6 performance testing"
-      ],
-      "nice_to_have_present": [],
-      "recommendation": "APPLY",
-      "recommendation_reason": "Title-based match",
-      "seniority_match": true,
-      "remote_type": "not_specified",
-      "scored_by": "title_fallback"
-    },
-    {
-      "id": "test-automation-engineer-remote-opportunity-at-vetsez-4431283001",
-      "title": "Test Automation Engineer (Remote Opportunity)",
-      "company": "VetsEZ",
+      "id": "data-test-engineer-at-achieve-4431868159",
+      "title": "Data Test Engineer",
+      "company": "Achieve",
       "location": "Dallas, TX",
-      "url": "https://www.linkedin.com/jobs/view/test-automation-engineer-remote-opportunity-at-vetsez-4431283001",
-      "source": "linkedin",
-      "category": "remote_worldwide",
-      "date_posted": "2026-06-23",
-      "scraped_at": "2026-06-24T07:05:18.727329",
-      "description": "",
-      "type": "Remote Worldwide",
-      "easy_apply": false,
-      "match_score": 65,
-      "match_reasons": [
-        "Job title matches QA/Testing domain",
-        "Mid-level position matches your profile"
-      ],
-      "missing_skills": [
-        "Cypress",
-        "Playwright",
-        "K6 performance testing"
-      ],
-      "nice_to_have_present": [],
-      "recommendation": "APPLY",
-      "recommendation_reason": "Title-based match",
-      "seniority_match": true,
-      "remote_type": "not_specified",
-      "scored_by": "title_fallback"
-    },
-    {
-      "id": "test-automation-engineer-remote-opportunity-at-vetsez-4431266933",
-      "title": "Test Automation Engineer (Remote Opportunity)",
-      "company": "VetsEZ",
-      "location": "Miami, FL",
-      "url": "https://www.linkedin.com/jobs/view/test-automation-engineer-remote-opportunity-at-vetsez-4431266933",
-      "source": "linkedin",
-      "category": "remote_worldwide",
-      "date_posted": "2026-06-23",
-      "scraped_at": "2026-06-24T07:05:18.792712",
-      "description": "",
-      "type": "Remote Worldwide",
-      "easy_apply": false,
-      "match_score": 65,
-      "match_reasons": [
-        "Job title matches QA/Testing domain",
-        "Mid-level position matches your profile"
-      ],
-      "missing_skills": [
-        "Cypress",
-        "Playwright",
-        "K6 performance testing"
-      ],
-      "nice_to_have_present": [],
-      "recommendation": "APPLY",
-      "recommendation_reason": "Title-based match",
-      "seniority_match": true,
-      "remote_type": "not_specified",
-      "scored_by": "title_fallback"
-    },
-    {
-      "id": "quality-assurance-automation-engineer-at-impiricus-4432431482",
-      "title": "Quality Assurance Automation Engineer",
-      "company": "Impiricus",
-      "location": "United States",
-      "url": "https://www.linkedin.com/jobs/view/quality-assurance-automation-engineer-at-impiricus-4432431482",
-      "source": "linkedin",
-      "category": "remote_worldwide",
-      "date_posted": "2026-06-23",
-      "scraped_at": "2026-06-24T07:05:18.859984",
-      "description": "",
-      "type": "Remote Worldwide",
-      "easy_apply": false,
-      "match_score": 65,
-      "match_reasons": [
-        "Job title matches QA/Testing domain",
-        "Mid-level position matches your profile"
-      ],
-      "missing_skills": [
-        "Cypress",
-        "Playwright",
-        "K6 performance testing"
-      ],
-      "nice_to_have_present": [],
-      "recommendation": "APPLY",
-      "recommendation_reason": "Title-based match",
-      "seniority_match": true,
-      "remote_type": "not_specified",
-      "scored_by": "title_fallback"
-    },
-    {
-      "id": "mobile-qa-automation-engineer-at-xoi-4422121198",
-      "title": "Mobile QA Automation Engineer",
-      "company": "XOi",
-      "location": "United States",
-      "url": "https://www.linkedin.com/jobs/view/mobile-qa-automation-engineer-at-xoi-4422121198",
-      "source": "linkedin",
-      "category": "remote_worldwide",
-      "date_posted": "2026-06-23",
-      "scraped_at": "2026-06-24T07:05:18.925760",
-      "description": "",
-      "type": "Remote Worldwide",
-      "easy_apply": false,
-      "match_score": 65,
-      "match_reasons": [
-        "Job title matches QA/Testing domain",
-        "Mid-level position matches your profile"
-      ],
-      "missing_skills": [
-        "Cypress",
-        "Playwright",
-        "K6 performance testing"
-      ],
-      "nice_to_have_present": [],
-      "recommendation": "APPLY",
-      "recommendation_reason": "Title-based match",
-      "seniority_match": true,
-      "remote_type": "not_specified",
-      "scored_by": "title_fallback"
-    },
-    {
-      "id": "quality-assurance-automation-engineer-at-prokatchers-llc-4432407377",
-      "title": "Quality Assurance Automation Engineer",
-      "company": "ProKatchers LLC",
-      "location": "United States",
-      "url": "https://www.linkedin.com/jobs/view/quality-assurance-automation-engineer-at-prokatchers-llc-4432407377",
-      "source": "linkedin",
-      "category": "remote_worldwide",
-      "date_posted": "2026-06-23",
-      "scraped_at": "2026-06-24T07:05:18.991322",
-      "description": "",
-      "type": "Remote Worldwide",
-      "easy_apply": false,
-      "match_score": 65,
-      "match_reasons": [
-        "Job title matches QA/Testing domain",
-        "Mid-level position matches your profile"
-      ],
-      "missing_skills": [
-        "Cypress",
-        "Playwright",
-        "K6 performance testing"
-      ],
-      "nice_to_have_present": [],
-      "recommendation": "APPLY",
-      "recommendation_reason": "Title-based match",
-      "seniority_match": true,
-      "remote_type": "not_specified",
-      "scored_by": "title_fallback"
-    },
-    {
-      "id": "qa-automation-engineer-at-bright-vision-technologies-4432511158",
-      "title": "QA Automation Engineer",
-      "company": "Bright Vision Technologies",
-      "location": "Floral Park, NY",
-      "url": "https://www.linkedin.com/jobs/view/qa-automation-engineer-at-bright-vision-technologies-4432511158",
+      "url": "https://www.linkedin.com/jobs/view/data-test-engineer-at-achieve-4431868159",
       "source": "linkedin",
       "category": "remote_worldwide",
       "date_posted": "2026-06-24",
-      "scraped_at": "2026-06-24T07:05:19.054464",
+      "scraped_at": "2026-06-25T07:05:26.980139",
       "description": "",
       "type": "Remote Worldwide",
       "easy_apply": false,
@@ -894,15 +952,15 @@
       "scored_by": "title_fallback"
     },
     {
-      "id": "sr-test-automation-engineer-at-symetra-4378384330",
-      "title": "Sr. Test Automation Engineer",
-      "company": "Symetra",
-      "location": "United States",
-      "url": "https://www.linkedin.com/jobs/view/sr-test-automation-engineer-at-symetra-4378384330",
+      "id": "software-automation-quality-assurance-engineer-at-chroniccareiq-4433011766",
+      "title": "Software Automation Quality Assurance Engineer",
+      "company": "ChronicCareIQ",
+      "location": "Alpharetta, GA",
+      "url": "https://www.linkedin.com/jobs/view/software-automation-quality-assurance-engineer-at-chroniccareiq-4433011766",
       "source": "linkedin",
       "category": "remote_worldwide",
-      "date_posted": "2026-06-23",
-      "scraped_at": "2026-06-24T07:05:42.717470",
+      "date_posted": "2026-06-25",
+      "scraped_at": "2026-06-25T07:05:27.044547",
       "description": "",
       "type": "Remote Worldwide",
       "easy_apply": false,
@@ -924,20 +982,321 @@
       "scored_by": "title_fallback"
     },
     {
-      "id": "shine_530347",
-      "title": "Junior QA Automation Engineer",
-      "company": "",
-      "location": "India (Remote)",
-      "url": "https://www.shine.com/jobs/junior-qa-automation-engineer/infosun-technology/19086143",
-      "description": "Junior QA Automation Engineer at . Remote/WFH QA role in India.",
-      "source": "shine",
+      "id": "sdet-ii-at-champ-4432868227",
+      "title": "SDET II",
+      "company": "CHAMP",
+      "location": "Cleveland, OH",
+      "url": "https://www.linkedin.com/jobs/view/sdet-ii-at-champ-4432868227",
+      "source": "linkedin",
+      "category": "remote_worldwide",
+      "date_posted": "2026-06-24",
+      "scraped_at": "2026-06-25T07:05:27.110634",
+      "description": "",
+      "type": "Remote Worldwide",
+      "easy_apply": false,
+      "match_score": 65,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "software-engineer-in-test-sdet-at-gtn-technical-staffing-4431870233",
+      "title": "Software Engineer in Test (SDET)",
+      "company": "GTN Technical Staffing",
+      "location": "Scottsdale, AZ",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-in-test-sdet-at-gtn-technical-staffing-4431870233",
+      "source": "linkedin",
+      "category": "remote_worldwide",
+      "date_posted": "2026-06-24",
+      "scraped_at": "2026-06-25T07:05:27.174517",
+      "description": "",
+      "type": "Remote Worldwide",
+      "easy_apply": false,
+      "match_score": 65,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "qa-automation-engineer-api-accessibility-testing-at-sgs-technologie-4432579919",
+      "title": "QA Automation Engineer (API & Accessibility Testing)",
+      "company": "SGS Technologie",
+      "location": "Atlanta, GA",
+      "url": "https://www.linkedin.com/jobs/view/qa-automation-engineer-api-accessibility-testing-at-sgs-technologie-4432579919",
+      "source": "linkedin",
+      "category": "remote_worldwide",
+      "date_posted": "2026-06-24",
+      "scraped_at": "2026-06-25T07:05:27.299914",
+      "description": "",
+      "type": "Remote Worldwide",
+      "easy_apply": false,
+      "match_score": 65,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "software-engineer-in-test-sdet-4431872335",
+      "title": "Software Engineer in Test (SDET)",
+      "company": "Request Technology",
+      "location": "Chicago, IL",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-in-test-sdet-4431872335",
+      "source": "linkedin",
+      "category": "remote_worldwide",
+      "date_posted": "2026-06-24",
+      "scraped_at": "2026-06-25T07:05:27.360788",
+      "description": "",
+      "type": "Remote Worldwide",
+      "easy_apply": false,
+      "match_score": 65,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "test-automation-engineer-at-techdoquest-4429881401",
+      "title": "Test Automation Engineer",
+      "company": "TechDoQuest",
+      "location": "Iselin, NJ",
+      "url": "https://www.linkedin.com/jobs/view/test-automation-engineer-at-techdoquest-4429881401",
+      "source": "linkedin",
+      "category": "remote_worldwide",
+      "date_posted": "2026-06-24",
+      "scraped_at": "2026-06-25T07:05:27.418248",
+      "description": "",
+      "type": "Remote Worldwide",
+      "easy_apply": false,
+      "match_score": 65,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "playwright-test-automation-engineer-at-morgan-mckinley-4431866800",
+      "title": "Playwright Test Automation Engineer",
+      "company": "Morgan McKinley",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/playwright-test-automation-engineer-at-morgan-mckinley-4431866800",
+      "source": "linkedin",
+      "category": "remote_worldwide",
+      "date_posted": "2026-06-24",
+      "scraped_at": "2026-06-25T07:05:38.652527",
+      "description": "",
+      "type": "Remote Worldwide",
+      "easy_apply": false,
+      "match_score": 65,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "playwright-test-automation-engineer-at-aegistech-4432853817",
+      "title": "Playwright Test Automation Engineer",
+      "company": "Aegistech",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/playwright-test-automation-engineer-at-aegistech-4432853817",
+      "source": "linkedin",
+      "category": "remote_worldwide",
+      "date_posted": "2026-06-24",
+      "scraped_at": "2026-06-25T07:05:38.716296",
+      "description": "",
+      "type": "Remote Worldwide",
+      "easy_apply": false,
+      "match_score": 65,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "qa-engineer-at-bonterra-4429897115",
+      "title": "QA Engineer",
+      "company": "Bonterra",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/qa-engineer-at-bonterra-4429897115",
+      "source": "linkedin",
+      "category": "remote_worldwide",
+      "date_posted": "2026-06-24",
+      "scraped_at": "2026-06-25T07:05:38.843452",
+      "description": "",
+      "type": "Remote Worldwide",
+      "easy_apply": false,
+      "match_score": 65,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "data-test-engineer-at-achieve-4431858293",
+      "title": "Data Test Engineer",
+      "company": "Achieve",
+      "location": "Orlando, FL",
+      "url": "https://www.linkedin.com/jobs/view/data-test-engineer-at-achieve-4431858293",
+      "source": "linkedin",
+      "category": "remote_worldwide",
+      "date_posted": "2026-06-24",
+      "scraped_at": "2026-06-25T07:05:39.110989",
+      "description": "",
+      "type": "Remote Worldwide",
+      "easy_apply": false,
+      "match_score": 65,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "quality-assurance-engineer-at-sundayy-4432554683",
+      "title": "Quality Assurance Engineer",
+      "company": "Sundayy",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/quality-assurance-engineer-at-sundayy-4432554683",
+      "source": "linkedin",
+      "category": "remote_worldwide",
+      "date_posted": "2026-06-24",
+      "scraped_at": "2026-06-25T07:05:52.699808",
+      "description": "",
+      "type": "Remote Worldwide",
+      "easy_apply": false,
+      "match_score": 65,
+      "match_reasons": [
+        "Job title matches QA/Testing domain",
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "APPLY",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "lead-software-development-engineer-in-test-ai-at-highlevel-4429859139",
+      "title": "Lead Software Development Engineer in Test - AI",
+      "company": "HighLevel",
+      "location": "India",
+      "url": "https://in.linkedin.com/jobs/view/lead-software-development-engineer-in-test-ai-at-highlevel-4429859139",
+      "source": "linkedin",
       "category": "india_remote",
-      "type": "India Remote",
       "date_posted": "2026-06-24",
-      "scraped_at": "2026-06-24T07:02:03.465509",
-      "match_score": 50,
+      "scraped_at": "2026-06-25T07:04:12.812278",
+      "description": "",
+      "type": "India Remote",
+      "easy_apply": false,
+      "match_score": 20,
       "match_reasons": [
-        "Job title matches QA/Testing domain"
+        "Seniority level matches your experience"
       ],
       "missing_skills": [
         "Cypress",
@@ -945,7 +1304,7 @@
         "K6 performance testing"
       ],
       "nice_to_have_present": [],
-      "recommendation": "APPLY",
+      "recommendation": "MAYBE",
       "recommendation_reason": "Title-based match",
       "seniority_match": true,
       "remote_type": "not_specified",
@@ -962,7 +1321,7 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-06-15T19:45:43+00:00",
-      "scraped_at": "2026-06-24T07:01:36.978760",
+      "scraped_at": "2026-06-25T07:01:36.032242",
       "match_score": 20,
       "match_reasons": [
         "Seniority level matches your experience"
@@ -990,7 +1349,7 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-06-12T16:29:57+00:00",
-      "scraped_at": "2026-06-24T07:01:36.980571",
+      "scraped_at": "2026-06-25T07:01:36.033795",
       "match_score": 20,
       "match_reasons": [
         "Seniority level matches your experience"
@@ -1018,7 +1377,7 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-06-11T13:56:38+00:00",
-      "scraped_at": "2026-06-24T07:01:36.983603",
+      "scraped_at": "2026-06-25T07:01:36.036280",
       "match_score": 20,
       "match_reasons": [
         "Seniority level matches your experience"
@@ -1046,7 +1405,7 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-06-10T17:29:13+00:00",
-      "scraped_at": "2026-06-24T07:01:36.986323",
+      "scraped_at": "2026-06-25T07:01:36.038661",
       "match_score": 20,
       "match_reasons": [
         "Seniority level matches your experience"
@@ -1074,7 +1433,7 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-06-09T10:52:57+00:00",
-      "scraped_at": "2026-06-24T07:01:36.991190",
+      "scraped_at": "2026-06-25T07:01:36.042789",
       "match_score": 20,
       "match_reasons": [
         "Seniority level matches your experience"
@@ -1102,7 +1461,7 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-05-27T11:47:43+00:00",
-      "scraped_at": "2026-06-24T07:01:36.996161",
+      "scraped_at": "2026-06-25T07:01:36.045372",
       "match_score": 20,
       "match_reasons": [
         "Seniority level matches your experience"
@@ -1120,17 +1479,18 @@
       "scored_by": "title_fallback"
     },
     {
-      "id": "shine_307269",
-      "title": "R&d Engineer",
-      "company": "",
-      "location": "India (Remote)",
-      "url": "https://www.shine.com/jobs/rd-engineer/mayvent-management-private-limited/19139171",
-      "description": "R&d Engineer at . Remote/WFH QA role in India.",
-      "source": "shine",
-      "category": "india_remote",
-      "type": "India Remote",
+      "id": "software-development-engineer-in-test-100%25-remote-at-clearcaptions-llc-4406592273",
+      "title": "Software Development Engineer in Test (100% Remote)",
+      "company": "ClearCaptions, LLC",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/software-development-engineer-in-test-100%25-remote-at-clearcaptions-llc-4406592273",
+      "source": "linkedin",
+      "category": "sponsorship_worldwide",
       "date_posted": "2026-06-24",
-      "scraped_at": "2026-06-24T07:02:12.584553",
+      "scraped_at": "2026-06-25T07:03:02.131213",
+      "description": "",
+      "type": "Outside India (Sponsorship)",
+      "easy_apply": false,
       "match_score": 15,
       "match_reasons": [
         "Mid-level position matches your profile"
@@ -1148,17 +1508,46 @@
       "scored_by": "title_fallback"
     },
     {
-      "id": "software-development-engineer-in-test-at-tandems-4432526436",
-      "title": "Software Development Engineer in Test",
-      "company": "Tandems",
-      "location": "India",
-      "url": "https://in.linkedin.com/jobs/view/software-development-engineer-in-test-at-tandems-4432526436",
+      "id": "software-engineer-in-test-at-irvine-technology-corporation-4431838685",
+      "title": "Software Engineer in Test",
+      "company": "Irvine Technology Corporation",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-in-test-at-irvine-technology-corporation-4431838685",
       "source": "linkedin",
-      "category": "india_remote",
+      "category": "sponsorship_worldwide",
       "date_posted": "2026-06-24",
-      "scraped_at": "2026-06-24T07:04:12.050673",
+      "scraped_at": "2026-06-25T07:03:02.197341",
       "description": "",
-      "type": "India Remote",
+      "type": "Outside India (Sponsorship)",
+      "easy_apply": false,
+      "match_score": 15,
+      "match_reasons": [
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "MAYBE",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "software-engineer-in-test-at-comrise-4431871480",
+      "title": "Software Engineer in Test",
+      "company": "Comrise",
+      "location": "Foster City, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-in-test-at-comrise-4431871480",
+      "source": "linkedin",
+      "category": "sponsorship_worldwide",
+      "date_posted": "2026-06-24",
+      "scraped_at": "2026-06-25T07:03:02.257401",
+      "description": "",
+      "type": "Outside India (Sponsorship)",
       "easy_apply": false,
       "match_score": 15,
       "match_reasons": [
@@ -1187,8 +1576,8 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "sponsorship": false,
-      "date_posted": "2026-06-24",
-      "scraped_at": "2026-06-24T07:01:23.430957",
+      "date_posted": "2026-06-25",
+      "scraped_at": "2026-06-25T07:01:23.275558",
       "match_score": 15,
       "match_reasons": [
         "Mid-level position matches your profile"
@@ -1216,35 +1605,7 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-06-10T17:28:59+00:00",
-      "scraped_at": "2026-06-24T07:01:27.792219",
-      "match_score": 15,
-      "match_reasons": [
-        "Mid-level position matches your profile"
-      ],
-      "missing_skills": [
-        "Cypress",
-        "Playwright",
-        "K6 performance testing"
-      ],
-      "nice_to_have_present": [],
-      "recommendation": "MAYBE",
-      "recommendation_reason": "Title-based match",
-      "seniority_match": true,
-      "remote_type": "not_specified",
-      "scored_by": "title_fallback"
-    },
-    {
-      "id": "jobicy_144487",
-      "title": "AI Product Analyst – Automation team",
-      "company": "MEDvidi",
-      "location": "Poland",
-      "url": "https://jobicy.com/jobs/144487-ai-product-analyst-automation-team",
-      "description": "Description At MEDvidi, the Automation team builds and operates a mix of AI and conventional product features that automate clinical and operational workflows - from AI-drafted medical documentation to automated resolution of patient issues, intake verification flows, provider tooling, and the backend pipelines behind them. We free clinicians and operations from manual work a machine can do reliably and safely, in a domain where mistakes have real clinical and compliance consequences. It's a full-stack product team, not an AI lab: we ship UI, backend workflows, integrations, and AI features side by side, and we measure them the same way. The team works closely with Product, Engineering, MedOps, Clinical people. We're hiring an Product Analyst to own analytics for the team end-to-end as our automated surface area grows. The role You'll be the Product Analyst for the team - across everything we ship, both classical product features and AI-powered ones. You'll turn the production behavior of our systems into evidence the team can act on: which parts work, where they fail silently, and what to fix next. The work blends product analytics, AI evaluation, and operational analysis. Responsibilities Own the full product analytics stack for features the team ships - discovery and sizing, experiment design and analysis, funnel and adoption analysis, post-release impact assessment - across both AI-powered and conventional product features. Analyze production behavior of AI and automation workflows across clinical and operational journeys. Investigate hallucinations, silent failures, and quality degradation in AI-generated output. Work directly with logs, transcripts, generated artifacts, and operational data to find patterns dashboards miss. Design evaluations for AI quality - both automated and human review - and close the loop into prompt and product changes. Build monitoring and dashboards for AI and automation health, and the operational metrics they roll up to. Measure business and operational impact of automation initiatives and surface the risks they introduce. Partner closely with Product, Engineering, Clinical, MedOps, and Legal to support fast decisions under ambiguity. Requirements 3+ years of experience in Product Analytics/Operational Analytics/Data Analytics, or analytics roles within complex production systems. Hands-on experience evaluating LLM or AI output - prompt iteration, eval frameworks and human review pipelines is a strong plus. Effective, structured written and verbal communication - able to turn analysis into crisp, decision-ready writeups that non-analysts can act on. Comfort in ambiguous, fast-changing environments where ground truth often has to be constructed. Strong product / operational analytics background, comfortable owning metrics end-to-end and writing SQL and Python code against messy production data. Fluent Russian; English level B2 or higher, Ability to work CET-overlapping hours. What we offer Work on a modern AI prod",
-      "source": "jobicy",
-      "category": "remote_worldwide",
-      "type": "Remote Worldwide",
-      "date_posted": "2026-06-23T02:41:47+00:00",
-      "scraped_at": "2026-06-24T07:01:36.967350",
+      "scraped_at": "2026-06-25T07:01:26.561270",
       "match_score": 15,
       "match_reasons": [
         "Mid-level position matches your profile"
@@ -1272,7 +1633,7 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-06-18T19:56:42+00:00",
-      "scraped_at": "2026-06-24T07:01:36.972493",
+      "scraped_at": "2026-06-25T07:01:36.025850",
       "match_score": 15,
       "match_reasons": [
         "Mid-level position matches your profile"
@@ -1300,7 +1661,65 @@
       "category": "remote_worldwide",
       "type": "Remote Worldwide",
       "date_posted": "2026-06-10T05:32:55+00:00",
-      "scraped_at": "2026-06-24T07:01:36.989179",
+      "scraped_at": "2026-06-25T07:01:36.041074",
+      "match_score": 15,
+      "match_reasons": [
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "MAYBE",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "software-engineer-in-test-at-confidential-4431864721",
+      "title": "Software Engineer in Test",
+      "company": "Confidential",
+      "location": "Scottsdale, AZ",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-in-test-at-confidential-4431864721",
+      "source": "linkedin",
+      "category": "remote_worldwide",
+      "date_posted": "2026-06-24",
+      "scraped_at": "2026-06-25T07:05:26.853211",
+      "description": "",
+      "type": "Remote Worldwide",
+      "easy_apply": false,
+      "match_score": 15,
+      "match_reasons": [
+        "Mid-level position matches your profile"
+      ],
+      "missing_skills": [
+        "Cypress",
+        "Playwright",
+        "K6 performance testing"
+      ],
+      "nice_to_have_present": [],
+      "recommendation": "MAYBE",
+      "recommendation_reason": "Title-based match",
+      "seniority_match": true,
+      "remote_type": "not_specified",
+      "scored_by": "title_fallback"
+    },
+    {
+      "id": "software-development-engineer-in-test-at-alteryx-4414736574",
+      "title": "Software Development Engineer in Test",
+      "company": "Alteryx",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/software-development-engineer-in-test-at-alteryx-4414736574",
+      "source": "linkedin",
+      "category": "remote_worldwide",
+      "date_posted": "2026-06-24",
+      "scraped_at": "2026-06-25T07:05:38.589678",
+      "description": "",
+      "type": "Remote Worldwide",
+      "easy_apply": false,
       "match_score": 15,
       "match_reasons": [
         "Mid-level position matches your profile"
@@ -1365,9 +1784,9 @@
   },
   "stats": {
     "excellent": 0,
-    "good": 31,
-    "india_remote": 9,
-    "sponsorship": 0,
-    "remote_worldwide": 36
+    "good": 43,
+    "india_remote": 10,
+    "sponsorship": 3,
+    "remote_worldwide": 46
   }
 }

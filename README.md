@@ -38,7 +38,7 @@ job-automation/
 │   └── resume_profile.json      # Auto-generated from your resume
 ├── scrapers/
 │   ├── linkedin_scraper.py      # LinkedIn jobs (Playwright)
-│   └── remote_scraper.py        # Remotive, WWR, Himalayas, Naukri, Relocate.me
+│   └── remote_scraper.py        # India and worldwide job-board sources
 ├── matcher/
 │   ├── resume_parser.py         # Parse resume → profile (Gemini)
 │   └── job_matcher.py           # Score jobs vs profile (Gemini)
@@ -81,9 +81,15 @@ nohup python scheduler/scheduler.py > logs/scheduler.log 2>&1 &
 - 🇮🇳 **India Remote** — Naukri, LinkedIn India Remote
 - 🌍 **Remote Worldwide** — Remotive, We Work Remotely, Himalayas
 
+## 🔎 Active Job Sources
+
+The bot searches LinkedIn, Instahyre, Himalayas, Jobicy, Arbeitnow, Remote OK,
+Shine, Remotive, Naukri, Foundit, and Indeed feeds. Availability can vary by
+source because some job boards restrict automated access.
+
 ## 📧 Daily Report Includes
 
 - Match score (0-100%) for each job with reasons
-- Direct apply links
-- Auto-applied job status
+- An **Apply Today** shortlist of up to 8 new jobs scoring 75% or above
+- Direct review/apply links (you submit every application yourself)
 - Skill gap analysis — what to learn next

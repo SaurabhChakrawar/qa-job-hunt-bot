@@ -281,6 +281,7 @@ def scrape_naukri() -> list:
             resp = requests.get(url, params=params, headers=headers, timeout=20)
 
             if resp.status_code != 200:
+                print(f"   ℹ️ Naukri API returned HTTP {resp.status_code} for '{query}'; trying web search fallback")
                 # Fallback: scrape HTML
                 html_url = f"https://www.naukri.com/{query.replace(' ', '-')}-jobs?jobAge=3&jobType=wfh"
                 resp2 = requests.get(html_url, headers=HEADERS, timeout=20)
@@ -308,9 +309,15 @@ def scrape_naukri() -> list:
                                 "date_posted": str(datetime.now().date()),
                                 "scraped_at": datetime.now().isoformat(),
                             })
+                else:
+                    print(f"   ℹ️ Naukri web search returned HTTP {resp2.status_code} for '{query}'")
                 continue
 
-            data = resp.json()
+            try:
+                data = resp.json()
+            except ValueError:
+                print(f"   ℹ️ Naukri returned a non-JSON response for '{query}'; skipping this query")
+                continue
             for job in data.get("jobDetails", []):
                 job_id = str(job.get("jobId", ""))
                 job_url = f"https://www.naukri.com/job-listings-{job_id}"
@@ -478,48 +485,165 @@ def scrape_foundit() -> list:
 
 
 def scrape_instahyre() -> list:
-    """Instahyre - startup-focused, good salaries, India remote."""
+    """Instahyre Selenium jobs via its current public browser page."""
     jobs = []
     seen = set()
 
     try:
-        searches = ["qa automation", "test automation", "sdet"]
-        for query in searches:
-            url = f"https://www.instahyre.com/api/v1/opportunity/?format=json&search={requests.utils.quote(query)}&work_from_home=true"
-            resp = requests.get(url, headers=HEADERS, timeout=20)
-            if resp.status_code != 200:
-                continue
+        from playwright.sync_api import sync_playwright
 
-            for job in resp.json().get("results", [])[:15]:
-                title = job.get("title", "")
-                if not is_qa_job(title):
+        # Instahyre retired its former /api/v1/opportunity endpoint. Its public
+        # Selenium page contains QA Automation and SDET listings, but is
+        # protected from plain HTTP requests.
+        with sync_playwright() as playwright:
+            browser = playwright.chromium.launch(headless=True)
+            page = browser.new_page(
+                user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                           "AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36",
+                viewport={"width": 1280, "height": 800},
+            )
+            page.goto("https://www.instahyre.com/selenium-jobs", wait_until="domcontentloaded", timeout=30000)
+            page.wait_for_timeout(2500)
+
+            for card in page.locator("a[href*='/job-']").all()[:30]:
+                job_url = card.get_attribute("href") or ""
+                raw_text = card.inner_text().strip()
+                if not job_url.startswith("http"):
+                    job_url = f"https://www.instahyre.com{job_url}"
+                if not job_url or job_url in seen or not raw_text:
                     continue
-                job_id = str(job.get("id", ""))
-                job_url = f"https://www.instahyre.com/job-{job_id}/"
-                if job_url in seen:
+
+                heading = raw_text.split("Job available in", 1)[0].strip()
+                company, separator, title = heading.partition(" - ")
+                title = title.strip() if separator else heading
+                if not is_qa_job(title, raw_text):
                     continue
+
+                location_text = raw_text.split("Job available in", 1)[-1]
+                # The rendered card places a font icon between the city and the
+                # company-size text. Remove the icon and following metadata.
+                location = re.sub(r"[\uf000-\uf8ff].*$", "", location_text).split("Founded", 1)[0].strip() or "India"
                 seen.add(job_url)
-                employer = job.get("employer", {})
                 jobs.append({
-                    "id": f"instahyre_{job_id}",
+                    "id": f"instahyre_{job_url.rsplit('/job-', 1)[-1].strip('/')}",
                     "title": title,
-                    "company": employer.get("name", ""),
-                    "location": "India (Remote)",
+                    "company": company.strip() if separator else "",
+                    "location": location,
                     "url": job_url,
-                    "description": clean_html(job.get("description", "")),
+                    "description": raw_text[:3000],
                     "source": "instahyre",
                     "category": "india_remote",
-                    "type": "India Remote",
-                    "salary": f"₹{job.get('min_salary','')} - ₹{job.get('max_salary','')} LPA" if job.get("min_salary") else "",
+                    "type": "India Jobs",
                     "date_posted": str(datetime.now().date()),
                     "scraped_at": datetime.now().isoformat(),
                 })
-            time.sleep(1)
+            browser.close()
 
     except Exception as e:
         print(f"   ⚠️ Instahyre: {e}")
 
     print(f"   ✅ Instahyre: {len(jobs)} India remote jobs")
+    return jobs
+
+
+def scrape_remoteok() -> list:
+    """Remote OK public API - no key required."""
+    jobs = []
+    seen = set()
+    try:
+        resp = requests.get("https://remoteok.com/api", headers=HEADERS, timeout=20)
+        if resp.status_code != 200:
+            print(f"   ℹ️ Remote OK API returned HTTP {resp.status_code}")
+            return jobs
+
+        data = resp.json()
+        # Remote OK includes a metadata object as the first array entry.
+        for job in data if isinstance(data, list) else []:
+            title = job.get("position", "")
+            description = clean_html(job.get("description", ""))
+            tags = " ".join(job.get("tags", []) or [])
+            if not title or not is_qa_job(title, f"{description} {tags}"):
+                continue
+
+            job_url = job.get("apply_url") or job.get("url", "")
+            if not job_url or job_url in seen:
+                continue
+            seen.add(job_url)
+            jobs.append({
+                "id": f"remoteok_{job.get('id') or job.get('slug', '')}",
+                "title": title,
+                "company": job.get("company", ""),
+                "location": job.get("location", "Remote"),
+                "url": job_url,
+                "description": description,
+                "source": "remoteok",
+                "category": "remote_worldwide",
+                "type": "Remote Worldwide",
+                "salary": job.get("salary", ""),
+                "date_posted": job.get("date", str(datetime.now().date())),
+                "scraped_at": datetime.now().isoformat(),
+            })
+    except Exception as e:
+        print(f"   ⚠️ Remote OK: {e}")
+
+    print(f"   ✅ Remote OK: {len(jobs)} QA jobs")
+    return jobs
+
+
+def scrape_himalayas() -> list:
+    """Himalayas public remote-jobs API - no key required."""
+    jobs = []
+    seen = set()
+    searches = ["qa automation", "test automation", "sdet", "selenium"]
+
+    for query in searches:
+        try:
+            resp = requests.get(
+                "https://himalayas.app/jobs/api/search",
+                params={"q": query, "worldwide": "true", "seniority": "Senior,Mid-level", "sort": "recent"},
+                # Himalayas' public API rejects the browser-spoofing header used
+                # for legacy HTML job boards. Identify this JSON client instead.
+                headers={**HEADERS, "User-Agent": "JobHuntBot/1.0"},
+                timeout=20,
+            )
+            if resp.status_code != 200:
+                print(f"   ℹ️ Himalayas API returned HTTP {resp.status_code} for '{query}'")
+                continue
+
+            data = resp.json()
+            for job in data.get("jobs", data.get("data", [])):
+                title = job.get("title", "")
+                description = clean_html(job.get("description", "") or job.get("excerpt", ""))
+                if not title or not is_qa_job(title, description):
+                    continue
+
+                job_url = job.get("applicationLink") or job.get("url", "")
+                if not job_url or job_url in seen:
+                    continue
+                seen.add(job_url)
+                jobs.append({
+                    # The public API does not always include an ID or slug. The
+                    # application URL is stable and prevents distinct jobs being
+                    # collapsed by the cross-run deduplication database.
+                    "id": f"himalayas_{job.get('id') or job.get('slug') or job_url}",
+                    "title": title,
+                    "company": job.get("companyName", ""),
+                    "location": ", ".join(job.get("locationRestrictions", []) or []) or "Remote",
+                    "url": job_url,
+                    "description": description,
+                    "source": "himalayas",
+                    "category": "remote_worldwide",
+                    "type": "Remote Worldwide",
+                    "salary": " ".join(str(v) for v in [job.get("minSalary"), job.get("maxSalary"), job.get("currency")] if v),
+                    "date_posted": job.get("pubDate", str(datetime.now().date())),
+                    "scraped_at": datetime.now().isoformat(),
+                })
+        except Exception as e:
+            print(f"   ⚠️ Himalayas '{query}': {e}")
+
+        time.sleep(1)
+
+    print(f"   ✅ Himalayas: {len(jobs)} QA jobs")
     return jobs
 
 
@@ -765,6 +889,12 @@ def scrape_all_remote_boards() -> dict:
 
     print("  📍 Jobicy...")
     results["remote_worldwide"].extend(scrape_jobicy())
+
+    print("  📍 Remote OK...")
+    results["remote_worldwide"].extend(scrape_remoteok())
+
+    print("  📍 Himalayas...")
+    results["remote_worldwide"].extend(scrape_himalayas())
 
     print("  📍 Indeed Worldwide (US/UK/AU/CA)...")
     for job in scrape_indeed_worldwide_rss():

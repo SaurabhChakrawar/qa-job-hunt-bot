@@ -24,11 +24,18 @@ def save_jobs_for_dashboard(matched_jobs: dict, skill_gap: dict, total_scraped: 
     # Sort by match score descending
     all_jobs.sort(key=lambda x: x.get("match_score", 0), reverse=True)
 
+    # A short review queue is safer and more useful than automatic submissions.
+    application_queue = [
+        job for job in all_jobs
+        if job.get("match_score", 0) >= 75 and job.get("recommendation") == "APPLY"
+    ][:8]
+
     output = {
         "generated_at": datetime.now().isoformat(),
         "total_scraped": total_scraped,
         "total_matched": len(all_jobs),
         "jobs": all_jobs,
+        "application_queue": application_queue,
         "skill_gap": skill_gap or {},
         "stats": {
             "excellent": len([j for j in all_jobs if j.get("match_score", 0) >= 80]),

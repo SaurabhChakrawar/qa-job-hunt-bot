@@ -91,6 +91,37 @@ def build_job_card(job):
 </div>"""
 
 
+def build_apply_today_html(jobs):
+    """Build a short, manually reviewable application queue for the daily email."""
+    if not jobs:
+        return ""
+
+    items = ""
+    for index, job in enumerate(jobs[:8], 1):
+        score = job.get("match_score", 0)
+        title = job.get("title", "N/A")
+        company = job.get("company", "N/A")
+        location = job.get("location", "")
+        url = job.get("url", "#")
+        items += f"""
+        <tr>
+          <td style="padding:12px 8px;border-bottom:1px solid #e5e7eb;color:#6b7280;font-weight:700;">{index}</td>
+          <td style="padding:12px 8px;border-bottom:1px solid #e5e7eb;">
+            <a href="{url}" style="font-weight:700;color:#1d4ed8;text-decoration:none;">{title}</a>
+            <div style="font-size:12px;color:#6b7280;margin-top:3px;">{company}{f' · {location}' if location else ''}</div>
+          </td>
+          <td style="padding:12px 8px;border-bottom:1px solid #e5e7eb;text-align:center;font-weight:800;color:#16a34a;">{score}%</td>
+          <td style="padding:12px 8px;border-bottom:1px solid #e5e7eb;text-align:right;"><a href="{url}" style="display:inline-block;background:#16a34a;color:#fff;padding:7px 10px;border-radius:7px;font-size:12px;font-weight:700;text-decoration:none;">Review →</a></td>
+        </tr>"""
+
+    return f"""
+    <div style="background:#ecfdf5;border:1px solid #86efac;border-radius:20px;padding:20px;margin-bottom:14px;">
+      <h2 style="margin:0 0 6px;font-size:18px;color:#166534;">🎯 Apply Today</h2>
+      <p style="margin:0 0 14px;color:#166534;font-size:13px;line-height:1.5;">Your top new matches (75%+). Open each role, review the details, and submit only if it is right for you.</p>
+      <table style="width:100%;border-collapse:collapse;font-size:13px;"><tbody>{items}</tbody></table>
+    </div>"""
+
+
 def build_skill_gap_html(skill_gap):
     if not skill_gap or "error" in skill_gap:
         return '<p style="color:#6b7280;font-size:14px;">Skill gap analysis unavailable today.</p>'
@@ -139,6 +170,11 @@ def generate_report(matched_jobs: dict, applied_results: list, skill_gap: dict, 
     total_matched = len(all_jobs)
     total_applied = len([r for r in applied_results if r.get("status") == "applied"])
     excellent = len([j for j in all_jobs if j.get("match_score", 0) >= 80])
+    apply_today = sorted(
+        [j for j in all_jobs if j.get("match_score", 0) >= 75 and j.get("recommendation") == "APPLY"],
+        key=lambda job: job.get("match_score", 0),
+        reverse=True,
+    )
 
     # Dashboard button
     dashboard_btn = ""
@@ -211,6 +247,9 @@ def generate_report(matched_jobs: dict, applied_results: list, skill_gap: dict, 
 
   <!-- Dashboard button -->
   {dashboard_btn}
+
+  <!-- Application shortlist -->
+  {build_apply_today_html(apply_today)}
 
   <!-- Jobs -->
   <div style="background:#fff;border-radius:20px;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,0.06);margin-bottom:14px;">

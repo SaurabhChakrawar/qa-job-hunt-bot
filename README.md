@@ -81,6 +81,11 @@ nohup python scheduler/scheduler.py > logs/scheduler.log 2>&1 &
 - 🇮🇳 **India Remote** — Naukri, LinkedIn India Remote
 - 🌍 **Remote Worldwide** — Remotive, We Work Remotely, Himalayas
 
+Jobs shown in the sponsorship category must contain an explicit positive
+sponsorship statement in the listing. Jobs merely returned by a visa-related
+search, or with no clear statement, are moved to Remote Worldwide and are not
+shown as sponsored.
+
 ## 🔎 Active Job Sources
 
 The bot searches LinkedIn, Instahyre, Himalayas, Jobicy, Arbeitnow, Remote OK,
@@ -93,3 +98,39 @@ source because some job boards restrict automated access.
 - An **Apply Today** shortlist of up to 8 new jobs scoring 75% or above
 - Direct review/apply links (you submit every application yourself)
 - Skill gap analysis — what to learn next
+
+## ⭐ Apply Today
+
+The dashboard's **Apply Today** view contains at most 10 jobs that are marked
+`APPLY`, score at least 75%, have a working application URL, and were posted in
+the last seven days. Each card explains why it was prioritized. Verified visa
+sponsorship and LinkedIn Easy Apply receive a small priority boost.
+
+## 📋 Dashboard Application Tracker
+
+The GitHub Pages dashboard lets you mark a job as **Saved**, **Applied**,
+**Interview**, or **Rejected**, and attach a short note. Tracker data is stored
+locally in your browser, so it remains available across daily dashboard updates
+without being committed to the repository.
+
+> GitHub Pages is public by default. Do not publish your resume, contact
+> information, application notes, or other sensitive data in `docs/`. Use an
+> access-controlled host if the dashboard itself needs to be private.
+
+## 👀 LinkedIn Easy Apply review mode
+
+For high-match LinkedIn Easy Apply jobs, local runs can prefill only safe
+fields (contact details and resume) and pause at the final Submit button for
+your review. Enable it only in your local `config/config.json`:
+
+```json
+"linkedin": {
+  "auto_apply": true,
+  "review_before_submit": true,
+  "max_apply_per_day": 5
+}
+```
+
+The browser remains visible. Review every answer, submit it yourself, then
+press Enter in the terminal so the bot can record the outcome. This does not
+run in GitHub Actions.

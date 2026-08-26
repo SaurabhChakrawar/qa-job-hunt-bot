@@ -50,6 +50,7 @@ jobs:
               "email": "${{ secrets.LINKEDIN_EMAIL }}",
               "password": "${{ secrets.LINKEDIN_PASSWORD }}",
               "auto_apply": false,
+              "review_before_submit": true,
               "max_apply_per_day": 0
             },
             "job_preferences": {
@@ -121,8 +122,10 @@ jobs:
         run: |
           git config user.name "QA Job Bot"
           git config user.email "qa-bot@users.noreply.github.com"
-          git add -f docs/jobs.json
-          if git status --porcelain | grep -q "docs/jobs.json"; then
+          # Persist the deduplication database so jobs previously shown are
+          # not re-scored as new on the next scheduled run.
+          git add -f docs/jobs.json data/jobs_db.json
+          if git status --porcelain | grep -Eq "(docs/jobs.json|data/jobs_db.json)"; then
             git commit -m "📊 Daily jobs $(date '+%Y-%m-%d') [skip ci]"
             git push origin HEAD:main
             echo "✅ Dashboard updated!"

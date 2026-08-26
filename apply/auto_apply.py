@@ -1,6 +1,6 @@
 """
 auto_apply.py
-Automatically applies to jobs via LinkedIn Easy Apply.
+Prepares LinkedIn Easy Apply forms for applicant review.
 Tracks all applications in applied_jobs.json.
 """
 
@@ -41,7 +41,29 @@ def save_applied_job(job_id: str, job: dict, status: str, method: str = "linkedi
         json.dump(applied, f, indent=2)
 
 
-async def apply_to_linkedin_job(page, job: dict, profile: dict, resume_path: str) -> str:
+async def _submission_confirmed(page) -> bool:
+    success_el = await page.query_selector(
+        "[aria-label*='submitted' i], .jobs-easy-apply-modal__content h3"
+    )
+    if not success_el:
+        return False
+    return any(word in (await success_el.inner_text()).lower() for word in ("submitted", "sent"))
+
+
+async def _wait_for_review(page, job: dict) -> str:
+    """Keep the browser open until the user reviews and submits the form."""
+    print(f"\n   👀 REVIEW REQUIRED: {job.get('title')} at {job.get('company')}")
+    print("      Check every answer in the visible LinkedIn window and click Submit yourself.")
+    response = await asyncio.to_thread(input, "      Press Enter after submitting, or type 'skip' to leave it for later: ")
+    if response.strip().lower() == "skip":
+        return "ready_for_review"
+    await page.wait_for_timeout(1000)
+    return "applied" if await _submission_confirmed(page) else "review_unconfirmed"
+
+
+async def apply_to_linkedin_job(
+    page, job: dict, profile: dict, resume_path: str, review_before_submit: bool = True
+) -> str:
     """
     Attempt LinkedIn Easy Apply. Returns status string.
     """
@@ -65,11 +87,8 @@ async def apply_to_linkedin_job(page, job: dict, profile: dict, resume_path: str
         max_steps = 8
         for step in range(max_steps):
             # Check if application is complete
-            success_el = await page.query_selector("[aria-label*='submitted'], .jobs-easy-apply-modal__content h3")
-            if success_el:
-                text = await success_el.inner_text()
-                if "submitted" in text.lower() or "sent" in text.lower():
-                    return "applied"
+            if await _submission_confirmed(page):
+                return "applied"
 
             # Handle phone field
             phone_field = await page.query_selector("input[id*='phone'], input[name*='phone']")
@@ -95,32 +114,12 @@ async def apply_to_linkedin_job(page, job: dict, profile: dict, resume_path: str
                 await resume_upload.set_input_files(resume_path)
                 await page.wait_for_timeout(1000)
 
-            # Handle Yes/No radio buttons (default to Yes for "Are you authorized to work?")
-            radio_yes = await page.query_selector("input[type='radio'][value='Yes'], label:has-text('Yes') input")
-            if radio_yes:
-                await radio_yes.check()
+            # Do not guess answers for radio buttons, dropdowns, or numeric
+            # fields. Those include legal, salary, demographic and screening
+            # questions that must be reviewed by the applicant.
 
-            # Handle select dropdowns
-            selects = await page.query_selector_all("select")
-            for select in selects:
-                options = await select.query_selector_all("option")
-                if len(options) > 1:
-                    # Select first non-empty option
-                    for opt in options[1:]:
-                        val = await opt.get_attribute("value")
-                        if val:
-                            await select.select_option(value=val)
-                            break
-
-            # Handle experience/year input fields (numeric)
-            number_inputs = await page.query_selector_all("input[type='text'][id*='year'], input[type='number']")
-            for inp in number_inputs:
-                val = await inp.input_value()
-                if not val:
-                    exp_years = str(profile.get("experience_years", 3))
-                    await inp.fill(exp_years)
-
-            # Click Next or Submit
+            # Click Next/Review; never submit without review unless explicitly
+            # opted into legacy automatic submission in local configuration.
             next_btn = await page.query_selector(
                 "button[aria-label='Continue to next step'], "
                 "button[aria-label='Review your application'], "
@@ -130,6 +129,8 @@ async def apply_to_linkedin_job(page, job: dict, profile: dict, resume_path: str
 
             if next_btn:
                 btn_text = await next_btn.inner_text()
+                if "submit" in btn_text.lower() and review_before_submit:
+                    return await _wait_for_review(page, job)
                 await next_btn.click()
                 await page.wait_for_timeout(2000)
 
@@ -139,7 +140,7 @@ async def apply_to_linkedin_job(page, job: dict, profile: dict, resume_path: str
                 # Can't find next button - may need manual intervention
                 return "skipped_manual_needed"
 
-        return "skipped_too_many_steps"
+        return "ready_for_review"
 
     except PlaywrightTimeout:
         return "failed_timeout"
@@ -163,6 +164,10 @@ async def auto_apply_batch(jobs: list, resume_path: str, max_applications: int =
         print("⚠️ Auto-apply is disabled in config. Set linkedin.auto_apply = true to enable.")
         return []
 
+    review_before_submit = config["linkedin"].get("review_before_submit", True)
+    if review_before_submit:
+        print("👀 Review-first mode: forms will pause before final submission.")
+
     applied_jobs = load_applied_jobs()
     results = []
     apply_count = 0
@@ -180,7 +185,8 @@ async def auto_apply_batch(jobs: list, resume_path: str, max_applications: int =
         print("   No eligible jobs for auto-apply today")
         return []
 
-    print(f"🚀 Auto-applying to {min(len(eligible), max_applications)} jobs...")
+    action = "Preparing Easy Apply forms" if review_before_submit else "Auto-applying"
+    print(f"🚀 {action} for {min(len(eligible), max_applications)} jobs...")
 
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=False)  # headless=False to handle CAPTCHAs
@@ -205,7 +211,9 @@ async def auto_apply_batch(jobs: list, resume_path: str, max_applications: int =
             job_id = job.get("id", "")
             print(f"   📝 Applying: {job['title']} at {job['company']}...")
 
-            status = await apply_to_linkedin_job(page, job, profile, resume_path)
+            status = await apply_to_linkedin_job(
+                page, job, profile, resume_path, review_before_submit=review_before_submit
+            )
             save_applied_job(job_id, job, status)
 
             result = {

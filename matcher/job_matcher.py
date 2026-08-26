@@ -47,7 +47,6 @@ def title_based_score(job: dict, profile: dict) -> dict:
     title = job.get("title", "").lower()
     score = 0
     reasons = []
-    missing = []
 
     if any(kw in title for kw in QA_TITLE_KEYWORDS):
         score += 50
@@ -71,15 +70,13 @@ def title_based_score(job: dict, profile: dict) -> dict:
             reasons.append(f"{skill} mentioned in title")
             break
 
-    skill_names = [s.lower() for s in profile_skills]
-    if "cypress" not in skill_names: missing.append("Cypress")
-    if "playwright" not in skill_names: missing.append("Playwright")
-    if "k6" not in skill_names: missing.append("K6 performance testing")
-
     return {
         "match_score": min(score, 85),
         "match_reasons": reasons or ["QA role matching your profile"],
-        "missing_skills": missing[:3],
+        # A title alone cannot establish a missing skill.  Showing generic
+        # tools here makes every sparse listing look like the same gap.
+        "missing_skills": [],
+        "skill_gap_status": "requirements_unavailable",
         "nice_to_have_present": [],
         "recommendation": "APPLY" if score >= 50 else "MAYBE",
         "recommendation_reason": "Title-based match",
@@ -117,13 +114,19 @@ Title: {job.get('title', 'N/A')}
 Company: {job.get('company', 'N/A')}
 Description: {description[:2000]}
 
-Rules: QA role + QA candidate = minimum score 50.
+Rules:
+- QA role + QA candidate = minimum score 50.
+- List a skill in missing_skills ONLY when it is explicitly required or
+  requested in the JOB description and is absent from the candidate profile.
+- Do not infer gaps from common QA tools, the job title, or market trends.
+- Return an empty missing_skills list when the description has no clear skill
+  requirements.
 
 Return ONLY JSON, no markdown:
 {{
   "match_score": 75,
   "match_reasons": ["Has Selenium", "Java matches"],
-  "missing_skills": ["Cypress", "K6"],
+  "missing_skills": ["A job-required skill absent from the profile"],
   "nice_to_have_present": ["JIRA"],
   "recommendation": "APPLY",
   "recommendation_reason": "Strong core match",
@@ -145,6 +148,7 @@ Return ONLY JSON, no markdown:
             "match_score": int(match_data.get("match_score", 0)),
             "match_reasons": match_data.get("match_reasons", []),
             "missing_skills": match_data.get("missing_skills", []),
+            "skill_gap_status": "evaluated",
             "nice_to_have_present": match_data.get("nice_to_have_present", []),
             "recommendation": match_data.get("recommendation", "MAYBE"),
             "recommendation_reason": match_data.get("recommendation_reason", ""),

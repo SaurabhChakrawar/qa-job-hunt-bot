@@ -76,6 +76,16 @@ def run_full_pipeline(resume_path: str = None):
     total_scraped = sum(len(j) for j in all_raw_jobs.values())
     print(f"\n📊 Total raw jobs scraped: {total_scraped}")
 
+    # A visa-related search query is not proof that the employer sponsors
+    # candidates. Keep the sponsorship category only for explicit evidence.
+    from matcher.sponsorship_verifier import verify_sponsorship_categories
+    all_raw_jobs, sponsorship_stats = verify_sponsorship_categories(all_raw_jobs)
+    print(
+        "✈️ Sponsorship verification: "
+        f"{sponsorship_stats['verified']} confirmed | "
+        f"{sponsorship_stats['downgraded']} unverified"
+    )
+
     # ── STEP 2: DEDUPLICATE ─────────────────────────────────────
     print("\n🔄 STEP 2: Deduplicating...")
     from data.jobs_db import filter_new_jobs
@@ -171,6 +181,7 @@ def main():
     parser.add_argument("--parse-resume", metavar="PATH")
     parser.add_argument("--test-email", action="store_true")
     parser.add_argument("--resume-path", default="")
+    parser.add_argument("--run-now", action="store_true", help="Run the full job-hunt pipeline now.")
     args = parser.parse_args()
 
     if args.parse_resume:

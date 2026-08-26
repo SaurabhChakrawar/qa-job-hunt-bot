@@ -15,16 +15,19 @@ GEMINI_MODEL = "gemini-2.0-flash"
 
 # Common questions with pattern-based answers
 COMMON_PATTERNS = {
-    r"(authorized|legally|eligible).*(work|employ)": "yes",
-    r"(require|need).*(sponsor|visa)": "no",
     r"(willing|open).*(relocat|move)": "yes",
     r"(willing|open).*(travel)": "yes",
-    r"(18|legal age|older)": "yes",
-    r"(background check|drug test)": "yes",
     r"(start|join|available).*(immediately|when|date)": "Immediately / 2 weeks notice",
-    r"(gender|pronoun)": None,  # Skip sensitive questions
-    r"(race|ethnic|disability|veteran)": None,  # Skip EEO questions
 }
+
+# Never infer answers to legal, work-authorisation, demographic, or screening
+# questions. The caller leaves these for the applicant to review.
+SENSITIVE_PATTERNS = [
+    r"(authorized|legally|eligible).*(work|employ)",
+    r"(require|need).*(sponsor|visa)",
+    r"(gender|pronoun)", r"(race|ethnic|disability|veteran)",
+    r"(18|legal age|older)", r"background check", r"drug test",
+]
 
 
 def answer_common_question(question_text: str, profile: dict) -> str | None:
@@ -33,6 +36,9 @@ def answer_common_question(question_text: str, profile: dict) -> str | None:
     Returns None if the question isn't a common pattern.
     """
     q = question_text.lower().strip()
+
+    if any(re.search(pattern, q) for pattern in SENSITIVE_PATTERNS):
+        return None
 
     # Pattern matching for yes/no questions
     for pattern, answer in COMMON_PATTERNS.items():
@@ -143,6 +149,9 @@ def answer_question(question_text: str, profile: dict, api_key: str = "") -> str
     """
     if not question_text or len(question_text.strip()) < 3:
         return ""
+
+    if any(re.search(pattern, question_text.lower()) for pattern in SENSITIVE_PATTERNS):
+        return None
 
     # Try common patterns first (free, fast)
     common = answer_common_question(question_text, profile)

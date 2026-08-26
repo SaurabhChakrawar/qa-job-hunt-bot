@@ -57,6 +57,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-s
 .results-bar { max-width: 1200px; margin: 0 auto 12px; padding: 0 16px; }
 .results-count { font-size: 14px; color: #6b7280; }
 .saved-panel { position: fixed; bottom: 20px; right: 20px; background: #1d4ed8; color: #fff; padding: 12px 20px; border-radius: 50px; font-size: 13px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 12px rgba(29,78,216,0.4); display: none; z-index: 100; }
+.tracker { max-width: 1200px; margin: 0 auto 16px; padding: 0 16px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.tracker-stat { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 12px 14px; font-size: 12px; color: #6b7280; }
+.tracker-stat strong { display: block; color: #1f2937; font-size: 22px; margin-top: 2px; }
+.status-select { flex: 1; min-width: 0; padding: 8px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 12px; background: #fff; color: #374151; }
+.notes-btn { padding: 9px 11px; border: 1px solid #e5e7eb; border-radius: 8px; font-size: 12px; cursor: pointer; background: #fff; color: #374151; }
 .empty { text-align: center; padding: 80px 20px; }
 .empty-icon { font-size: 60px; margin-bottom: 16px; }
 .empty h2 { font-size: 20px; color: #374151; margin-bottom: 8px; }
@@ -66,57 +71,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-s
 @keyframes spin { to { transform: rotate(360deg); } }
 @media (max-width: 600px) { .jobs-grid { grid-template-columns: 1fr; } .header h1 { font-size: 18px; } }
 
-/* PIN */
-.pin-overlay { position: fixed; inset: 0; background: linear-gradient(135deg, #1e40af, #6d28d9); display: flex; align-items: center; justify-content: center; z-index: 9999; }
-.pin-box { background: #fff; border-radius: 24px; padding: 40px 36px; text-align: center; width: 340px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
-.pin-icon { font-size: 48px; margin-bottom: 12px; }
-.pin-title { font-size: 22px; font-weight: 800; color: #1f2937; margin-bottom: 4px; }
-.pin-subtitle { font-size: 13px; color: #9ca3af; margin-bottom: 28px; }
-.pin-dots { display: flex; justify-content: center; gap: 14px; margin-bottom: 28px; }
-.pin-dot { width: 16px; height: 16px; border-radius: 50%; background: #e5e7eb; transition: all 0.2s; }
-.pin-dot.filled { background: #1d4ed8; transform: scale(1.1); }
-.pin-dot.error { background: #ef4444; }
-.pin-keypad { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-.pin-key { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 14px; padding: 18px; font-size: 20px; font-weight: 700; cursor: pointer; transition: all 0.15s; color: #1f2937; }
-.pin-key:hover { background: #eff6ff; border-color: #93c5fd; color: #1d4ed8; }
-.pin-key:active { transform: scale(0.95); background: #dbeafe; }
-.pin-key.del { font-size: 16px; color: #6b7280; }
-.pin-error { color: #ef4444; font-size: 13px; font-weight: 600; margin-top: 16px; min-height: 20px; }
-.pin-hint { font-size: 11px; color: #d1d5db; margin-top: 16px; }
+@media (max-width: 600px) { .tracker { grid-template-columns: repeat(2, 1fr); } }
 </style>
 </head>
 <body>
-
-<!-- PIN Overlay — MUST be first in body -->
-<div class="pin-overlay" id="pin-overlay">
-  <div class="pin-box">
-    <div class="pin-icon">🔐</div>
-    <div class="pin-title">Job Hunt Dashboard</div>
-    <div class="pin-subtitle">Enter your 4-digit PIN</div>
-    <div class="pin-dots">
-      <div class="pin-dot" id="dot-0"></div>
-      <div class="pin-dot" id="dot-1"></div>
-      <div class="pin-dot" id="dot-2"></div>
-      <div class="pin-dot" id="dot-3"></div>
-    </div>
-    <div class="pin-keypad">
-      <button class="pin-key" onclick="pinPress('1')">1</button>
-      <button class="pin-key" onclick="pinPress('2')">2</button>
-      <button class="pin-key" onclick="pinPress('3')">3</button>
-      <button class="pin-key" onclick="pinPress('4')">4</button>
-      <button class="pin-key" onclick="pinPress('5')">5</button>
-      <button class="pin-key" onclick="pinPress('6')">6</button>
-      <button class="pin-key" onclick="pinPress('7')">7</button>
-      <button class="pin-key" onclick="pinPress('8')">8</button>
-      <button class="pin-key" onclick="pinPress('9')">9</button>
-      <button class="pin-key" onclick="pinPress('')"></button>
-      <button class="pin-key" onclick="pinPress('0')">0</button>
-      <button class="pin-key del" onclick="pinDelete()">⌫</button>
-    </div>
-    <div class="pin-error" id="pin-error"></div>
-    <div class="pin-hint">Hint: last 4 digits of your phone</div>
-  </div>
-</div>
 
 <!-- Header -->
 <div class="header">
@@ -142,14 +100,29 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-s
 <div class="filters">
   <input class="search-box" id="search" type="text" placeholder="🔍 Search by title, company, skill...">
   <button class="filter-btn active" onclick="setFilter('all', this)">All Jobs</button>
+  <button class="filter-btn" onclick="setFilter('apply_today', this)">⭐ Apply Today</button>
   <button class="filter-btn" onclick="setFilter('india_remote', this)">🇮🇳 India Remote</button>
   <button class="filter-btn" onclick="setFilter('remote_worldwide', this)">🌍 Remote Worldwide</button>
   <button class="filter-btn" onclick="setFilter('sponsorship_worldwide', this)">✈️ Sponsorship</button>
+  <select class="sort-select" id="status-filter" onchange="renderJobs()" aria-label="Application status">
+    <option value="all">All statuses</option>
+    <option value="saved">Saved</option>
+    <option value="applied">Applied</option>
+    <option value="interview">Interview</option>
+    <option value="rejected">Rejected</option>
+  </select>
   <select class="sort-select" id="sort-select" onchange="renderJobs()">
     <option value="score">Sort: Best Match</option>
     <option value="date">Sort: Newest</option>
     <option value="company">Sort: Company A-Z</option>
   </select>
+</div>
+
+<div class="tracker" aria-label="Application tracker">
+  <div class="tracker-stat">Saved<strong id="track-saved">0</strong></div>
+  <div class="tracker-stat">Applied<strong id="track-applied">0</strong></div>
+  <div class="tracker-stat">Interviews<strong id="track-interview">0</strong></div>
+  <div class="tracker-stat">Rejected<strong id="track-rejected">0</strong></div>
 </div>
 
 <div class="results-bar">
@@ -170,15 +143,20 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-s
 <div class="saved-panel" id="saved-panel" onclick="showSaved()">⭐ <span id="saved-count">0</span> Saved</div>
 
 <script>
+const STATUS_OPTIONS = ['saved', 'applied', 'interview', 'rejected'];
 let allJobs = [];
 let currentFilter = 'all';
+let applyTodayKeys = new Set();
 let savedJobs = JSON.parse(localStorage.getItem('savedQAJobs') || '[]');
+let applications = JSON.parse(localStorage.getItem('qaApplications') || '{}');
 
-function decodeHTML(str) {
-  if (!str) return '';
-  const txt = document.createElement('textarea');
-  txt.innerHTML = str;
-  return txt.value;
+function jobKey(job) { return String(job.id || job.url || `${job.company || ''}-${job.title || ''}`); }
+function escapeHTML(value) { const el = document.createElement('div'); el.textContent = String(value || ''); return el.innerHTML; }
+function safeUrl(value) { try { const url = new URL(value, location.href); return ['http:', 'https:'].includes(url.protocol) ? url.href : '#'; } catch (_) { return '#'; } }
+function saveTracker() { localStorage.setItem('qaApplications', JSON.stringify(applications)); }
+function isFreshApplyTodayJob(job) {
+  const posted = new Date(job.date_posted || '');
+  return !Number.isNaN(posted.getTime()) && Date.now() - posted.getTime() <= 7 * 24 * 60 * 60 * 1000;
 }
 
 async function loadJobs() {
@@ -187,167 +165,73 @@ async function loadJobs() {
     const resp = await fetch('jobs.json?t=' + Date.now());
     if (!resp.ok) throw new Error('Not found');
     const data = await resp.json();
-    allJobs = data.jobs || [];
+    const queue = (Array.isArray(data.application_queue) ? data.application_queue : []).filter(isFreshApplyTodayJob);
+    const queueDetails = new Map(queue.map(job => [jobKey(job), job]));
+    allJobs = (Array.isArray(data.jobs) ? data.jobs : []).map(job => ({...job, ...queueDetails.get(jobKey(job))}));
+    applyTodayKeys = new Set(queue.map(jobKey));
     document.getElementById('last-updated').textContent = '🕐 ' + (data.generated_at ? new Date(data.generated_at).toLocaleString('en-IN', {timeZone:'Asia/Kolkata'}) + ' IST' : 'Today');
     document.getElementById('subtitle').textContent = `${allJobs.length} jobs matched • QA Automation Engineer • Worldwide`;
-    updateStats();
-    renderJobs();
-    document.getElementById('loading').style.display = 'none';
-  } catch(e) {
+    updateStats(); renderJobs(); document.getElementById('loading').style.display = 'none';
+  } catch (_) {
     document.getElementById('loading').innerHTML = '<div class="empty"><div class="empty-icon">📭</div><h2>No job data yet</h2><p>Run the workflow first, then refresh.</p></div>';
   }
 }
-
 function updateStats() {
   document.getElementById('stat-total').textContent = allJobs.length;
   document.getElementById('stat-excellent').textContent = allJobs.filter(j => j.match_score >= 80).length;
   document.getElementById('stat-good').textContent = allJobs.filter(j => j.match_score >= 60 && j.match_score < 80).length;
   document.getElementById('stat-india').textContent = allJobs.filter(j => j.category === 'india_remote').length;
-  document.getElementById('stat-sponsor').textContent = allJobs.filter(j => j.category === 'sponsorship_worldwide').length;
+  document.getElementById('stat-sponsor').textContent = allJobs.filter(j => j.category === 'sponsorship_worldwide' && j.sponsorship_verified === true).length;
 }
-
-function setFilter(f, btn) {
-  currentFilter = f;
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  renderJobs();
+function updateTracker() {
+  const savedCount = new Set([...savedJobs, ...Object.entries(applications).filter(([, a]) => a.status === 'saved').map(([key]) => key)]).size;
+  for (const status of STATUS_OPTIONS) document.getElementById(`track-${status}`).textContent = status === 'saved' ? savedCount : Object.values(applications).filter(a => a.status === status).length;
+  document.getElementById('saved-count').textContent = savedCount;
+  document.getElementById('saved-panel').style.display = savedCount ? 'block' : 'none';
 }
-
+function setFilter(filter, button) { currentFilter = filter; document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active')); button.classList.add('active'); renderJobs(); }
 function renderJobs() {
   const query = document.getElementById('search').value.toLowerCase();
+  const statusFilter = document.getElementById('status-filter').value;
   const sort = document.getElementById('sort-select').value;
-  let jobs = allJobs.filter(j => {
-    const mf = currentFilter === 'all' || j.category === currentFilter;
-    const ms = !query || (j.title||'').toLowerCase().includes(query) || (j.company||'').toLowerCase().includes(query) || (j.match_reasons||[]).join(' ').toLowerCase().includes(query);
-    return mf && ms;
+  let jobs = allJobs.filter(job => {
+    const key = jobKey(job), status = applications[key]?.status || (savedJobs.includes(key) ? 'saved' : '');
+    const categoryMatches = (currentFilter === 'all' || job.category === currentFilter || (currentFilter === 'apply_today' && applyTodayKeys.has(key))) && (currentFilter !== 'sponsorship_worldwide' || job.sponsorship_verified === true);
+    const text = [job.title, job.company, job.location, ...(job.match_reasons || [])].join(' ').toLowerCase();
+    return categoryMatches && (!query || text.includes(query)) && (statusFilter === 'all' || status === statusFilter);
   });
-  if (sort === 'score') jobs.sort((a,b) => (b.match_score||0)-(a.match_score||0));
-  else if (sort === 'date') jobs.sort((a,b) => (b.date_posted||'').localeCompare(a.date_posted||''));
-  else if (sort === 'company') jobs.sort((a,b) => (a.company||'').localeCompare(b.company||''));
-
+  if (sort === 'score') jobs.sort((a,b) => (b.match_score || 0) - (a.match_score || 0));
+  else if (sort === 'date') jobs.sort((a,b) => String(b.date_posted || '').localeCompare(String(a.date_posted || '')));
+  else jobs.sort((a,b) => String(a.company || '').localeCompare(String(b.company || '')));
   document.getElementById('results-count').textContent = `${jobs.length} jobs found`;
-  const grid = document.getElementById('jobs-grid');
-  const noJobs = document.getElementById('no-jobs');
-  if (jobs.length === 0) { grid.style.display='none'; noJobs.style.display='block'; }
-  else { noJobs.style.display='none'; grid.style.display='grid'; grid.innerHTML = jobs.map(buildCard).join(''); }
-  updateSavedPanel();
+  const grid = document.getElementById('jobs-grid'), noJobs = document.getElementById('no-jobs');
+  grid.replaceChildren();
+  if (!jobs.length) { grid.style.display = 'none'; noJobs.style.display = 'block'; }
+  else { noJobs.style.display = 'none'; grid.style.display = 'grid'; jobs.forEach(job => grid.appendChild(buildCard(job))); }
+  updateTracker();
 }
-
 function buildCard(job) {
-  const score = job.match_score || 0;
-  const isSaved = savedJobs.includes(job.id);
-  const sc = score>=80?'score-excellent':score>=60?'score-good':'score-fair';
-  const sl = score>=80?'🔥 Top':score>=60?'👍 Good':'💡 Fair';
-  const catBadge = {'india_remote':'<span class="badge badge-india">🇮🇳 India</span>','sponsorship_worldwide':'<span class="badge badge-sponsor">✈️ Sponsor</span>','remote_worldwide':'<span class="badge badge-remote">🌍 Remote</span>'}[job.category]||'';
-  const srcBadge = job.source?`<span class="badge badge-source">${job.source.toUpperCase()}</span>`:'';
-  const reasons = (job.match_reasons||[]).slice(0,3).map(r=>`<li>✅ ${r}</li>`).join('');
-  const missing = (job.missing_skills||[]).slice(0,2).map(m=>`<li>❌ ${m}</li>`).join('');
-  const title = decodeHTML(job.title||'N/A');
-  const company = decodeHTML(job.company||'N/A');
-  return `<div class="job-card">
-    <div class="card-top">
-      <a class="job-title" href="${job.url||'#'}" target="_blank">${title}</a>
-      <div class="score-badge ${sc}"><div class="score-num">${score}%</div><div class="score-label">${sl}</div></div>
-    </div>
-    <div class="company-info">
-      <span class="company-name">🏢 ${company}</span>
-      ${job.location?`<span>📍 ${job.location}</span>`:''}
-    </div>
-    <div class="badges">${catBadge}${srcBadge}</div>
-    ${reasons||missing?`<div class="match-section">
-      ${reasons?`<div class="match-title">Why You Match</div><ul class="match-list">${reasons}</ul>`:''}
-      ${missing?`<div class="match-title" style="margin-top:8px">Skill Gaps</div><ul class="match-list">${missing}</ul>`:''}
-    </div>`:''}
-    <div class="card-footer">
-      <a class="apply-btn" href="${job.url||'#'}" target="_blank">Apply Now →</a>
-      <button class="save-btn ${isSaved?'saved':''}" onclick="toggleSave('${job.id}',this)">${isSaved?'⭐ Saved':'☆ Save'}</button>
-    </div>
-  </div>`;
+  const key = jobKey(job), record = applications[key] || {}, score = Number(job.match_score) || 0;
+  const scoreClass = score >= 80 ? 'score-excellent' : score >= 60 ? 'score-good' : 'score-fair';
+  const scoreLabel = score >= 80 ? '🔥 Top' : score >= 60 ? '👍 Good' : '💡 Fair';
+  const category = job.category === 'sponsorship_worldwide' && job.sponsorship_verified === true ? ['badge-sponsor','✈️ Sponsor verified'] : {india_remote:['badge-india','🇮🇳 India'], remote_worldwide:['badge-remote','🌍 Remote']}[job.category];
+  const reasons = (job.match_reasons || []).slice(0, 3).map(r => `<li>✅ ${escapeHTML(r)}</li>`).join('');
+  // Older dashboard files do not have skill_gap_status. Their title-only
+  // fallback scores used generic gaps, so hide those legacy values as well.
+  const requirementsUnavailable = job.skill_gap_status === 'requirements_unavailable' || job.scored_by === 'title_fallback';
+  const missing = requirementsUnavailable ? '' : (job.missing_skills || []).slice(0, 2).map(s => `<li>❌ ${escapeHTML(s)}</li>`).join('');
+  const sponsorshipEvidence = job.sponsorship_verified === true && job.sponsorship_evidence ? `<div class="match-title" style="margin-top:8px">Sponsorship Evidence</div><div style="font-size:12px;color:#166534">✓ ${escapeHTML(job.sponsorship_evidence)}</div>` : '';
+  const priorityReasons = (job.priority_reasons || []).map(reason => `<li>⭐ ${escapeHTML(reason)}</li>`).join('');
+  const card = document.createElement('article'); card.className = 'job-card';
+  card.innerHTML = `<div class="card-top"><a class="job-title" href="${escapeHTML(safeUrl(job.url))}" target="_blank" rel="noopener noreferrer">${escapeHTML(job.title || 'N/A')}</a><div class="score-badge ${scoreClass}"><div class="score-num">${score}%</div><div class="score-label">${scoreLabel}</div></div></div><div class="company-info"><span class="company-name">🏢 ${escapeHTML(job.company || 'N/A')}</span>${job.location ? `<span>📍 ${escapeHTML(job.location)}</span>` : ''}</div><div class="badges">${category ? `<span class="badge ${category[0]}">${category[1]}</span>` : ''}${job.source ? `<span class="badge badge-source">${escapeHTML(String(job.source).toUpperCase())}</span>` : ''}</div>${reasons || missing || requirementsUnavailable || sponsorshipEvidence || priorityReasons ? `<div class="match-section">${priorityReasons ? `<div class="match-title">Why Apply Today</div><ul class="match-list">${priorityReasons}</ul>` : ''}${reasons ? `<div class="match-title" style="margin-top:8px">Why You Match</div><ul class="match-list">${reasons}</ul>` : ''}${missing ? `<div class="match-title" style="margin-top:8px">Skill Gaps</div><ul class="match-list">${missing}</ul>` : ''}${requirementsUnavailable ? '<div class="match-title" style="margin-top:8px">Skill Requirements</div><div style="font-size:12px;color:#6b7280">Not available from this listing.</div>' : ''}${sponsorshipEvidence}</div>` : ''}<div class="card-footer"><a class="apply-btn" href="${escapeHTML(safeUrl(job.url))}" target="_blank" rel="noopener noreferrer">Apply Now →</a><select class="status-select" aria-label="Application status"><option value="">Track status…</option>${STATUS_OPTIONS.map(s => `<option value="${s}" ${record.status === s ? 'selected' : ''}>${s[0].toUpperCase() + s.slice(1)}</option>`).join('')}</select><button class="notes-btn" type="button">Notes</button></div>`;
+  const select = card.querySelector('.status-select');
+  select.addEventListener('change', () => { if (select.value) applications[key] = {...record, status: select.value, updatedAt: new Date().toISOString()}; else delete applications[key]; saveTracker(); renderJobs(); });
+  card.querySelector('.notes-btn').addEventListener('click', () => { const note = prompt('Application notes:', record.note || ''); if (note !== null) { applications[key] = {...record, status: record.status || 'saved', note: note.trim(), updatedAt: new Date().toISOString()}; saveTracker(); renderJobs(); } });
+  return card;
 }
-
-function toggleSave(id, btn) {
-  savedJobs = savedJobs.includes(id) ? savedJobs.filter(x=>x!==id) : [...savedJobs, id];
-  btn.textContent = savedJobs.includes(id) ? '⭐ Saved' : '☆ Save';
-  btn.classList.toggle('saved', savedJobs.includes(id));
-  localStorage.setItem('savedQAJobs', JSON.stringify(savedJobs));
-  updateSavedPanel();
-}
-
-function updateSavedPanel() {
-  document.getElementById('saved-count').textContent = savedJobs.length;
-  document.getElementById('saved-panel').style.display = savedJobs.length > 0 ? 'block' : 'none';
-}
-
-function showSaved() {
-  const grid = document.getElementById('jobs-grid');
-  const filtered = allJobs.filter(j => savedJobs.includes(j.id));
-  grid.innerHTML = filtered.map(buildCard).join('');
-  document.getElementById('results-count').textContent = `${filtered.length} saved jobs`;
-}
-
-let searchTimer;
-document.getElementById('search').addEventListener('input', () => { clearTimeout(searchTimer); searchTimer = setTimeout(renderJobs, 300); });
-
-// ── PIN ──
-const CORRECT_PIN = '9356';
-const SESSION_KEY = 'qa_unlocked';
-const SESSION_DURATION = 8 * 60 * 60 * 1000;
-let pinInput = '';
-
-function checkSession() {
-  const ok = sessionStorage.getItem(SESSION_KEY) === 'true';
-  const at = parseInt(sessionStorage.getItem(SESSION_KEY+'_at')||'0');
-  if (ok && Date.now()-at < SESSION_DURATION) {
-    document.getElementById('pin-overlay').style.display = 'none';
-    return true;
-  }
-  return false;
-}
-
-function pinPress(d) {
-  if (!d || pinInput.length >= 4) return;
-  pinInput += d;
-  updateDots();
-  if (pinInput.length === 4) setTimeout(checkPin, 150);
-}
-
-function pinDelete() {
-  pinInput = pinInput.slice(0,-1);
-  updateDots();
-  document.getElementById('pin-error').textContent = '';
-  document.querySelectorAll('.pin-dot').forEach(d=>d.classList.remove('error'));
-}
-
-function updateDots() {
-  for (let i=0;i<4;i++) {
-    const d = document.getElementById('dot-'+i);
-    d.classList.toggle('filled', i < pinInput.length);
-    d.classList.remove('error');
-  }
-}
-
-function checkPin() {
-  if (pinInput === CORRECT_PIN) {
-    sessionStorage.setItem(SESSION_KEY,'true');
-    sessionStorage.setItem(SESSION_KEY+'_at', Date.now().toString());
-    const ov = document.getElementById('pin-overlay');
-    ov.style.transition = 'opacity 0.3s';
-    ov.style.opacity = '0';
-    setTimeout(()=>{ ov.style.display='none'; loadJobs(); }, 300);
-  } else {
-    document.querySelectorAll('.pin-dot').forEach(d=>d.classList.add('error'));
-    document.getElementById('pin-error').textContent = '❌ Wrong PIN. Try again.';
-    setTimeout(()=>{ pinInput=''; updateDots(); document.getElementById('pin-error').textContent=''; }, 1200);
-  }
-}
-
-document.addEventListener('keydown', e => {
-  if (document.getElementById('pin-overlay').style.display === 'none') return;
-  if (e.key >= '0' && e.key <= '9') pinPress(e.key);
-  if (e.key === 'Backspace') pinDelete();
-});
-
-if (checkSession()) loadJobs();
+function showSaved() { document.getElementById('status-filter').value = 'saved'; renderJobs(); }
+let searchTimer; document.getElementById('search').addEventListener('input', () => { clearTimeout(searchTimer); searchTimer = setTimeout(renderJobs, 250); });
+loadJobs();
 </script>
 </body>
 </html>

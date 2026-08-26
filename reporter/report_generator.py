@@ -49,7 +49,7 @@ def build_job_card(job):
     source = job.get("source", "").upper()
     salary = job.get("salary", "") or ""
     category = job.get("category", "")
-    sponsorship = job.get("sponsorship", False) or category == "sponsorship_worldwide"
+    sponsorship = job.get("sponsorship_verified") is True
 
     badges = ""
     if sponsorship:

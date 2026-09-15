@@ -69,7 +69,7 @@
     "instahyre_16894-sdet-backend-at-thinkify-2-bangalore": {
       "title": "SDET - Backend",
       "company": "thinkify.io",
-      "seen_at": "2026-09-09T08:26:37.676648",
+      "seen_at": "2026-09-15T09:00:29.230987",
       "category": "india_remote"
     },
     "instahyre_422475-sdet-at-spare-gurgaon": {
@@ -4083,7 +4083,7 @@
     "jobicy_142074": {
       "title": "Enterprise Sales Engineer - Toronto",
       "company": "Samsara",
-      "seen_at": "2026-08-31T10:07:34.504134",
+      "seen_at": "2026-09-15T09:00:29.243989",
       "category": "remote_worldwide"
     },
     "jobicy_147984": {
@@ -11559,7 +11559,7 @@
     "senior-qa-automation-engineer-at-cvs-health-4466413433": {
       "title": "Senior QA Automation Engineer",
       "company": "CVS Health",
-      "seen_at": "2026-09-12T08:11:12.849430",
+      "seen_at": "2026-09-15T09:00:29.275817",
       "category": "remote_worldwide"
     },
     "sr-software-development-engineer-in-test-ai-first-development-at-las-vegas-sands-corp-4430187391": {
@@ -13139,7 +13139,721 @@
       "company": "HENSOLDT",
       "seen_at": "2026-09-14T09:18:11.399206",
       "category": "remote_worldwide"
+    },
+    "instahyre_442710-senior-qa-engineer-at-birla-pivot-bangalore": {
+      "title": "Senior QA Engineer",
+      "company": "Birla Pivot",
+      "seen_at": "2026-09-15T09:00:29.230992",
+      "category": "india_remote"
+    },
+    "instahyre_442999-test-automation-engineer-at-dynatrace-bangalore": {
+      "title": "Test Automation Engineer",
+      "company": "Dynatrace",
+      "seen_at": "2026-09-15T09:00:29.230995",
+      "category": "india_remote"
+    },
+    "instahyre_334348-senior-qa-automation-engineer-at-idfc-first-bank-bangalore-mumbai": {
+      "title": "Senior QA Automation Engineer",
+      "company": "IDFC FIRST Bank",
+      "seen_at": "2026-09-15T09:00:29.230997",
+      "category": "india_remote"
+    },
+    "shine_112471": {
+      "title": "Qa Automation Engineer",
+      "company": "",
+      "seen_at": "2026-09-15T09:00:29.231003",
+      "category": "india_remote"
+    },
+    "shine_208926": {
+      "title": "Mobile Automation Test Engineer (Appium) | 5PlusYrs  Pune Bangalore",
+      "company": "",
+      "seen_at": "2026-09-15T09:00:29.231005",
+      "category": "india_remote"
+    },
+    "shine_629346": {
+      "title": "Software Development Engineer - Backend (Node.js & JavaScript)",
+      "company": "",
+      "seen_at": "2026-09-15T09:00:29.231007",
+      "category": "india_remote"
+    },
+    "automation-test-engineer-fully-remote-%E2%80%93-top-us-mnc-enterprise-software-at-skillscapital-4464780903": {
+      "title": "Automation Test Engineer (Fully Remote) \u2013 Top US MNC (Enterprise Software)",
+      "company": "SkillsCapital",
+      "seen_at": "2026-09-15T09:00:29.231009",
+      "category": "india_remote"
+    },
+    "senior-automation-qa-javascript-engineer-at-jobgether-4466181249": {
+      "title": "Senior Automation QA (JavaScript) Engineer",
+      "company": "Jobgether",
+      "seen_at": "2026-09-15T09:00:29.231011",
+      "category": "india_remote"
+    },
+    "automation-test-engineer-qa-remote-at-quik-hire-staffing-4467451033": {
+      "title": "Automation Test Engineer - QA (Remote)",
+      "company": "Quik Hire Staffing",
+      "seen_at": "2026-09-15T09:00:29.231013",
+      "category": "india_remote"
+    },
+    "sde-ii-qa-engineer-at-jobgether-4466156329": {
+      "title": "SDE- II QA Engineer",
+      "company": "Jobgether",
+      "seen_at": "2026-09-15T09:00:29.231014",
+      "category": "india_remote"
+    },
+    "sr-qa-automation-java-playwright-at-relq-technologies-4467216659": {
+      "title": "Sr QA Automation (Java-Playwright)",
+      "company": "RELQ TECHNOLOGIES",
+      "seen_at": "2026-09-15T09:00:29.231016",
+      "category": "india_remote"
+    },
+    "modern-qa-lead-ai-automation-python-rag-playwright-at-squash-apps-4466182466": {
+      "title": "Modern QA Lead - AI & Automation - Python,Rag,Playwright",
+      "company": "Squash Apps",
+      "seen_at": "2026-09-15T09:00:29.231018",
+      "category": "india_remote"
+    },
+    "qa-cloud-and-data-at-aviato-consulting-4465521439": {
+      "title": "QA Cloud and Data",
+      "company": "Aviato Consulting",
+      "seen_at": "2026-09-15T09:00:29.231020",
+      "category": "india_remote"
+    },
+    "automation-engineer-at-flexiple-4467413165": {
+      "title": "Automation Engineer",
+      "company": "Flexiple",
+      "seen_at": "2026-09-15T09:00:29.231022",
+      "category": "india_remote"
+    },
+    "lead-qa-engineer-playwright-appium-%2B-webdriver-at-careerbloc-%7E-4466503011": {
+      "title": "Lead QA Engineer (playwright & appium + webdriver)",
+      "company": "CAREERBLOC ~",
+      "seen_at": "2026-09-15T09:00:29.231024",
+      "category": "india_remote"
+    },
+    "qa-engineer-remote-at-quik-hire-staffing-4467437949": {
+      "title": "QA Engineer (Remote)",
+      "company": "Quik Hire Staffing",
+      "seen_at": "2026-09-15T09:00:29.231026",
+      "category": "india_remote"
+    },
+    "software-development-engineer-in-test-ii-oracle-fusion-financials-at-jobgether-4466176181": {
+      "title": "Software Development Engineer in Test II - Oracle Fusion Financials",
+      "company": "Jobgether",
+      "seen_at": "2026-09-15T09:00:29.231028",
+      "category": "india_remote"
+    },
+    "senior-firmware-test-automation-engineer-at-jobgether-4466186162": {
+      "title": "Senior Firmware Test Automation Engineer",
+      "company": "Jobgether",
+      "seen_at": "2026-09-15T09:00:29.231030",
+      "category": "india_remote"
+    },
+    "arbeitnow_remote-senior-product-manager-all-genders-b2c-348479": {
+      "title": "Senior Product Manager (all genders) | B2C",
+      "company": "Real Digital",
+      "seen_at": "2026-09-15T09:00:29.243908",
+      "category": "remote_worldwide"
+    },
+    "arbeitnow_remote-senior-full-stack-engineer-all-genders-backend-or-frontend-focus-38682": {
+      "title": "Senior Full-Stack Engineer (all genders) | Backend or Frontend Focus",
+      "company": "Real Digital",
+      "seen_at": "2026-09-15T09:00:29.243913",
+      "category": "remote_worldwide"
+    },
+    "arbeitnow_remote-senior-devops-engineer-all-genders-data-platform-245703": {
+      "title": "Senior DevOps Engineer (all genders) | Data Platform",
+      "company": "Real Digital",
+      "seen_at": "2026-09-15T09:00:29.243916",
+      "category": "remote_worldwide"
+    },
+    "arbeitnow_remote-senior-ux-researcher-all-genders-220192": {
+      "title": "(Senior) UX Researcher (all genders)",
+      "company": "Real Digital",
+      "seen_at": "2026-09-15T09:00:29.243918",
+      "category": "remote_worldwide"
+    },
+    "arbeitnow_senior-software-development-engineer-in-test-sdet-429752": {
+      "title": "Senior Software Development Engineer in Test (SDET)",
+      "company": "capco",
+      "seen_at": "2026-09-15T09:00:29.243920",
+      "category": "remote_worldwide"
+    },
+    "arbeitnow_principal-software-development-engineer-in-test-sdet-122900": {
+      "title": "Principal Software Development Engineer in Test (SDET)",
+      "company": "capco",
+      "seen_at": "2026-09-15T09:00:29.243922",
+      "category": "remote_worldwide"
+    },
+    "arbeitnow_software-engineer-quality-engineering-bristol-318238": {
+      "title": "Software Engineer, Quality Engineering",
+      "company": "sonyinteractiveentertainmentglobal",
+      "seen_at": "2026-09-15T09:00:29.243924",
+      "category": "remote_worldwide"
+    },
+    "jobicy_150763": {
+      "title": "Agentic AI Technical Mentor - Independent Contractor (US Canada, Europe, MENA, APAC)",
+      "company": "Udacity",
+      "seen_at": "2026-09-15T09:00:29.243927",
+      "category": "remote_worldwide"
+    },
+    "jobicy_150754": {
+      "title": "Business Development Manager",
+      "company": "Thoughtworks",
+      "seen_at": "2026-09-15T09:00:29.243929",
+      "category": "remote_worldwide"
+    },
+    "jobicy_150807": {
+      "title": "Partner Success Manager - In Market, Southern CA",
+      "company": "Side",
+      "seen_at": "2026-09-15T09:00:29.243931",
+      "category": "remote_worldwide"
+    },
+    "jobicy_150798": {
+      "title": "(Senior) Product Director, Local Growth",
+      "company": "OKX",
+      "seen_at": "2026-09-15T09:00:29.243932",
+      "category": "remote_worldwide"
+    },
+    "jobicy_150669": {
+      "title": "Senior Clinical Applications Associate - Cadence/Hello World/MyChart",
+      "company": "Baylor College of Medicine",
+      "seen_at": "2026-09-15T09:00:29.243934",
+      "category": "remote_worldwide"
+    },
+    "jobicy_150723": {
+      "title": "HR Technology Consultant (Contract)",
+      "company": "livingHR",
+      "seen_at": "2026-09-15T09:00:29.243936",
+      "category": "remote_worldwide"
+    },
+    "jobicy_149258": {
+      "title": "Senior Statistician",
+      "company": "Worldwide Clinical Trials",
+      "seen_at": "2026-09-15T09:00:29.243938",
+      "category": "remote_worldwide"
+    },
+    "jobicy_153297": {
+      "title": "Senior Frontend Software Engineer (AI Receptionist)",
+      "company": "Cresta",
+      "seen_at": "2026-09-15T09:00:29.243939",
+      "category": "remote_worldwide"
+    },
+    "jobicy_153263": {
+      "title": "Analytics Engineer II",
+      "company": "Affirm",
+      "seen_at": "2026-09-15T09:00:29.243941",
+      "category": "remote_worldwide"
+    },
+    "jobicy_153266": {
+      "title": "Analytics Lead, Full Stack",
+      "company": "Affirm",
+      "seen_at": "2026-09-15T09:00:29.243942",
+      "category": "remote_worldwide"
+    },
+    "jobicy_153264": {
+      "title": "Senior Affiliate Manager (Full Remote - Cyprus)",
+      "company": "EverAI",
+      "seen_at": "2026-09-15T09:00:29.243944",
+      "category": "remote_worldwide"
+    },
+    "jobicy_153259": {
+      "title": "Senior Affiliate Manager (Full Remote - Italy)",
+      "company": "EverAI",
+      "seen_at": "2026-09-15T09:00:29.243945",
+      "category": "remote_worldwide"
+    },
+    "jobicy_153261": {
+      "title": "Senior Affiliate Manager (Full Remote - Greece)",
+      "company": "EverAI",
+      "seen_at": "2026-09-15T09:00:29.243947",
+      "category": "remote_worldwide"
+    },
+    "jobicy_153250": {
+      "title": "Backend Engineer",
+      "company": "Catawiki",
+      "seen_at": "2026-09-15T09:00:29.243948",
+      "category": "remote_worldwide"
+    },
+    "jobicy_153256": {
+      "title": "Senior Affiliate Manager (Full Remote - Spain)",
+      "company": "EverAI",
+      "seen_at": "2026-09-15T09:00:29.243950",
+      "category": "remote_worldwide"
+    },
+    "jobicy_153252": {
+      "title": "Senior Performance Marketer (Full Remote - UK)",
+      "company": "EverAI",
+      "seen_at": "2026-09-15T09:00:29.243951",
+      "category": "remote_worldwide"
+    },
+    "jobicy_153253": {
+      "title": "Campaigns & Activations Specialist - Category Marketing",
+      "company": "Catawiki",
+      "seen_at": "2026-09-15T09:00:29.243953",
+      "category": "remote_worldwide"
+    },
+    "jobicy_153251": {
+      "title": "Senior Performance Marketer (Full Remote - Spain)",
+      "company": "EverAI",
+      "seen_at": "2026-09-15T09:00:29.243955",
+      "category": "remote_worldwide"
+    },
+    "jobicy_153254": {
+      "title": "Senior Affiliate Manager (Full Remote - Portugal)",
+      "company": "EverAI",
+      "seen_at": "2026-09-15T09:00:29.243956",
+      "category": "remote_worldwide"
+    },
+    "jobicy_153232": {
+      "title": "Senior Integration Engineer",
+      "company": "Playson",
+      "seen_at": "2026-09-15T09:00:29.243958",
+      "category": "remote_worldwide"
+    },
+    "jobicy_150813": {
+      "title": "Business Development Representative, B2B",
+      "company": "Quince",
+      "seen_at": "2026-09-15T09:00:29.243991",
+      "category": "remote_worldwide"
+    },
+    "jobicy_150820": {
+      "title": "Director, Platform and AI Sales",
+      "company": "League",
+      "seen_at": "2026-09-15T09:00:29.243993",
+      "category": "remote_worldwide"
+    },
+    "jobicy_150818": {
+      "title": "Director, Growth Marketing",
+      "company": "League",
+      "seen_at": "2026-09-15T09:00:29.243995",
+      "category": "remote_worldwide"
+    },
+    "jobicy_150748": {
+      "title": "IT Administrator",
+      "company": "Kalshi",
+      "seen_at": "2026-09-15T09:00:29.243997",
+      "category": "remote_worldwide"
+    },
+    "jobicy_150760": {
+      "title": "Growth Marketing Manager",
+      "company": "infisical",
+      "seen_at": "2026-09-15T09:00:29.243998",
+      "category": "remote_worldwide"
+    },
+    "jobicy_150787": {
+      "title": "Account-Based Marketing Manager",
+      "company": "Fresh Prints",
+      "seen_at": "2026-09-15T09:00:29.244000",
+      "category": "remote_worldwide"
+    },
+    "jobicy_150687": {
+      "title": "Engineering Manager - EU",
+      "company": "Ashby",
+      "seen_at": "2026-09-15T09:00:29.244001",
+      "category": "remote_worldwide"
+    },
+    "jobicy_150713": {
+      "title": "Account Executive, New Business (Mid-Market)",
+      "company": "Apollo.io",
+      "seen_at": "2026-09-15T09:00:29.244003",
+      "category": "remote_worldwide"
+    },
+    "jobicy_150671": {
+      "title": "Account Executive - Essex/Middlesex, MA Region (Entry Level)",
+      "company": "Quadient",
+      "seen_at": "2026-09-15T09:00:29.244005",
+      "category": "remote_worldwide"
+    },
+    "jobicy_149262": {
+      "title": "Head of AI",
+      "company": "AssetWatch",
+      "seen_at": "2026-09-15T09:00:29.244007",
+      "category": "remote_worldwide"
+    },
+    "jobicy_150650": {
+      "title": "Enterprise Customer Success Manager",
+      "company": "Elation Health",
+      "seen_at": "2026-09-15T09:00:29.244009",
+      "category": "remote_worldwide"
+    },
+    "jobicy_153291": {
+      "title": "Senior Product Manager, AI Receptionist",
+      "company": "Boulevard",
+      "seen_at": "2026-09-15T09:00:29.244011",
+      "category": "remote_worldwide"
+    },
+    "jobicy_153295": {
+      "title": "Manager, Administrative Coordinator Program",
+      "company": "Stripe",
+      "seen_at": "2026-09-15T09:00:29.244012",
+      "category": "remote_worldwide"
+    },
+    "jobicy_153296": {
+      "title": "Executive Assistant, Marketing",
+      "company": "Deepgram",
+      "seen_at": "2026-09-15T09:00:29.244014",
+      "category": "remote_worldwide"
+    },
+    "jobicy_153282": {
+      "title": "Director, Client Services- APAC",
+      "company": "StackAdapt",
+      "seen_at": "2026-09-15T09:00:29.244016",
+      "category": "remote_worldwide"
+    },
+    "jobicy_153270": {
+      "title": "Chief Information Security Officer",
+      "company": "UpGuard",
+      "seen_at": "2026-09-15T09:00:29.244017",
+      "category": "remote_worldwide"
+    },
+    "jobicy_153275": {
+      "title": "Manager, GTM Engineering",
+      "company": "UpGuard",
+      "seen_at": "2026-09-15T09:00:29.244019",
+      "category": "remote_worldwide"
+    },
+    "jobicy_153272": {
+      "title": "Senior Systems Engineer",
+      "company": "UpGuard",
+      "seen_at": "2026-09-15T09:00:29.244020",
+      "category": "remote_worldwide"
+    },
+    "jobicy_153258": {
+      "title": "Analyst II, Full Stack (Revenue Analytics)",
+      "company": "Affirm",
+      "seen_at": "2026-09-15T09:00:29.244022",
+      "category": "remote_worldwide"
+    },
+    "jobicy_153262": {
+      "title": "Technical Account Manager, Europe",
+      "company": "Socket",
+      "seen_at": "2026-09-15T09:00:29.244023",
+      "category": "remote_worldwide"
+    },
+    "jobicy_153248": {
+      "title": "Customer Solutions Consultant, Ada Accelerate",
+      "company": "Ada",
+      "seen_at": "2026-09-15T09:00:29.244025",
+      "category": "remote_worldwide"
+    },
+    "jobicy_153239": {
+      "title": "Commercial Account Executive UKI",
+      "company": "1Password",
+      "seen_at": "2026-09-15T09:00:29.244026",
+      "category": "remote_worldwide"
+    },
+    "jobicy_153244": {
+      "title": "Sr Manager Sales Acceleration",
+      "company": "1Password",
+      "seen_at": "2026-09-15T09:00:29.244028",
+      "category": "remote_worldwide"
+    },
+    "jobicy_153242": {
+      "title": "Principal ML Platform Engineer",
+      "company": "Synthesia",
+      "seen_at": "2026-09-15T09:00:29.244029",
+      "category": "remote_worldwide"
+    },
+    "jobicy_153226": {
+      "title": "Senior Performance Marketing Manager",
+      "company": "Tines",
+      "seen_at": "2026-09-15T09:00:29.244031",
+      "category": "remote_worldwide"
+    },
+    "selenium-automation-engineer-at-tata-consultancy-services-4466140015": {
+      "title": "Selenium Automation Engineer",
+      "company": "Tata Consultancy Services",
+      "seen_at": "2026-09-15T09:00:29.275786",
+      "category": "remote_worldwide"
+    },
+    "software-development-engineer-in-test-sdet-at-air-4447989612": {
+      "title": "Software Development Engineer in Test (SDET)",
+      "company": "Air",
+      "seen_at": "2026-09-15T09:00:29.275800",
+      "category": "remote_worldwide"
+    },
+    "automation-tester-at-ntt-data-north-america-4467214506": {
+      "title": "Automation Tester",
+      "company": "NTT DATA North America",
+      "seen_at": "2026-09-15T09:00:29.275802",
+      "category": "remote_worldwide"
+    },
+    "test-automation-engineer-at-ethos-group-4466117661": {
+      "title": "Test Automation Engineer",
+      "company": "Ethos Group",
+      "seen_at": "2026-09-15T09:00:29.275804",
+      "category": "remote_worldwide"
+    },
+    "senior-quality-assurance-automation-engineer-at-amtex-systems-inc-4467216260": {
+      "title": "Senior Quality Assurance Automation Engineer",
+      "company": "Amtex Systems Inc",
+      "seen_at": "2026-09-15T09:00:29.275806",
+      "category": "remote_worldwide"
+    },
+    "enterprise-test-engineer-aws-cypress-javascript-at-erias-ventures-4467242766": {
+      "title": "Enterprise - Test Engineer - AWS, Cypress, JavaScript",
+      "company": "Erias Ventures",
+      "seen_at": "2026-09-15T09:00:29.275809",
+      "category": "remote_worldwide"
+    },
+    "software-test-automation-engineer-at-sabre-systems-llc-4466121647": {
+      "title": "Software Test Automation Engineer",
+      "company": "Sabre Systems, LLC",
+      "seen_at": "2026-09-15T09:00:29.275810",
+      "category": "remote_worldwide"
+    },
+    "automation-engineer-at-niyam-it-4466111028": {
+      "title": "Automation Engineer",
+      "company": "Niyam IT",
+      "seen_at": "2026-09-15T09:00:29.275812",
+      "category": "remote_worldwide"
+    },
+    "salesforce-automation-engineer-at-tata-consultancy-services-4466119887": {
+      "title": "Salesforce Automation Engineer",
+      "company": "Tata Consultancy Services",
+      "seen_at": "2026-09-15T09:00:29.275814",
+      "category": "remote_worldwide"
+    },
+    "software-engineer-ii-backend-test-infra-at-affirm-4438348547": {
+      "title": "Software Engineer II, Backend (Test Infra)",
+      "company": "Affirm",
+      "seen_at": "2026-09-15T09:00:29.275819",
+      "category": "remote_worldwide"
+    },
+    "test-engineer-at-haystack-4467081222": {
+      "title": "Test Engineer",
+      "company": "Haystack",
+      "seen_at": "2026-09-15T09:00:29.275822",
+      "category": "remote_worldwide"
+    },
+    "software-engineer-ii-backend-test-infra-at-affirm-4438346645": {
+      "title": "Software Engineer II, Backend (Test Infra)",
+      "company": "Affirm",
+      "seen_at": "2026-09-15T09:00:29.275826",
+      "category": "remote_worldwide"
+    },
+    "senior-software-qa-automation-engineer-i-at-talenthop-4465508563": {
+      "title": "Senior Software QA Automation Engineer I",
+      "company": "TalentHop",
+      "seen_at": "2026-09-15T09:00:29.275830",
+      "category": "remote_worldwide"
+    },
+    "software-development-engineer-in-test-sdet-at-talenthop-4465519462": {
+      "title": "Software Development Engineer in Test (SDET)",
+      "company": "TalentHop",
+      "seen_at": "2026-09-15T09:00:29.275834",
+      "category": "remote_worldwide"
+    },
+    "sr-qa-automation-programmer-developer-at-talent-software-services-4465225406": {
+      "title": "Sr. QA Automation Programmer/Developer",
+      "company": "TALENT Software Services",
+      "seen_at": "2026-09-15T09:00:29.275836",
+      "category": "remote_worldwide"
+    },
+    "quality-engineer-at-jobgether-4466172079": {
+      "title": "Quality Engineer",
+      "company": "Jobgether",
+      "seen_at": "2026-09-15T09:00:29.275838",
+      "category": "remote_worldwide"
+    },
+    "javascript-engineer-at-focus-school-software-4467250555": {
+      "title": "Javascript Engineer",
+      "company": "Focus School Software",
+      "seen_at": "2026-09-15T09:00:29.275840",
+      "category": "remote_worldwide"
+    },
+    "qe-platform-engineer-at-ladders-4464789252": {
+      "title": "QE Platform Engineer",
+      "company": "Ladders",
+      "seen_at": "2026-09-15T09:00:29.275842",
+      "category": "remote_worldwide"
+    },
+    "senior-quality-assurance-engineer-at-ad-hoc-llc-4466108129": {
+      "title": "Senior Quality Assurance Engineer",
+      "company": "Ad Hoc LLC",
+      "seen_at": "2026-09-15T09:00:29.275844",
+      "category": "remote_worldwide"
+    },
+    "software-test-engineer-at-visa-4467463430": {
+      "title": "Software Test Engineer",
+      "company": "Visa",
+      "seen_at": "2026-09-15T09:00:29.275846",
+      "category": "remote_worldwide"
+    },
+    "adas-hil-automation-developer-at-ford-motor-company-4419539670": {
+      "title": "ADAS HiL Automation Developer",
+      "company": "Ford Motor Company",
+      "seen_at": "2026-09-15T09:00:29.275848",
+      "category": "remote_worldwide"
+    },
+    "senior-integration-and-test-software-engineer-long-range-platform-at-zipline-4439593147": {
+      "title": "Senior Integration and Test Software Engineer - Long Range Platform",
+      "company": "Zipline",
+      "seen_at": "2026-09-15T09:00:29.275849",
+      "category": "remote_worldwide"
+    },
+    "senior-systems-test-engineer-cloud-at-dark-wolf-4467256480": {
+      "title": "Senior Systems Test Engineer (Cloud)",
+      "company": "Dark Wolf",
+      "seen_at": "2026-09-15T09:00:29.275851",
+      "category": "remote_worldwide"
+    },
+    "senior-software-developer-test-framework-at-general-motors-4421252048": {
+      "title": "Senior Software Developer - Test Framework",
+      "company": "General Motors",
+      "seen_at": "2026-09-15T09:00:29.275853",
+      "category": "remote_worldwide"
+    },
+    "junior-automation-test-engineer-at-skyward-4467251133": {
+      "title": "Junior Automation Test Engineer",
+      "company": "Skyward",
+      "seen_at": "2026-09-15T09:00:29.275855",
+      "category": "remote_worldwide"
+    },
+    "senior-qa-automation-engineer-%E2%80%93-robot-framework-at-techgene-solutions-4465763819": {
+      "title": "Senior QA Automation Engineer \u2013 Robot Framework",
+      "company": "Techgene Solutions",
+      "seen_at": "2026-09-15T09:00:29.275856",
+      "category": "remote_worldwide"
+    },
+    "software-engineer-in-test-at-pmg-global-4467213229": {
+      "title": "Software Engineer in Test",
+      "company": "PMG GLOBAL",
+      "seen_at": "2026-09-15T09:00:29.275858",
+      "category": "remote_worldwide"
+    },
+    "qa-tester-with-playwright-berkeley-heights-nj-alpharetta-ga-at-envision-technology-solutions-4467216240": {
+      "title": "QA Tester with Playwright || Berkeley Heights, NJ/Alpharetta, GA",
+      "company": "Envision Technology Solutions",
+      "seen_at": "2026-09-15T09:00:29.275860",
+      "category": "remote_worldwide"
+    },
+    "hybrid-tx-lead-software-engineer-test-engineer-at-state-farm-4461645989": {
+      "title": "(Hybrid TX) LEAD SOFTWARE ENGINEER (TEST ENGINEER)",
+      "company": "State Farm",
+      "seen_at": "2026-09-15T09:00:29.275862",
+      "category": "remote_worldwide"
+    },
+    "software-engineer-quality-engineering-at-sony-interactive-entertainment-4465225696": {
+      "title": "Software Engineer, Quality Engineering",
+      "company": "Sony Interactive Entertainment",
+      "seen_at": "2026-09-15T09:00:29.275863",
+      "category": "remote_worldwide"
+    },
+    "automation-engineer-at-stealth-it-consulting-4465519465": {
+      "title": "Automation Engineer",
+      "company": "Stealth iT Consulting",
+      "seen_at": "2026-09-15T09:00:29.275864",
+      "category": "remote_worldwide"
+    },
+    "senior-test-engineer-hybrid-%E2%80%93-london-at-alphasights-4360846131": {
+      "title": "Senior Test Engineer (Hybrid) \u2013 London",
+      "company": "AlphaSights",
+      "seen_at": "2026-09-15T09:00:29.275866",
+      "category": "remote_worldwide"
+    },
+    "quality-assurance-engineer-at-virtuetech-recruitment-group-4465518404": {
+      "title": "Quality Assurance Engineer",
+      "company": "VirtueTech Recruitment Group",
+      "seen_at": "2026-09-15T09:00:29.275867",
+      "category": "remote_worldwide"
+    },
+    "senior-software-qa-engineer-birmingham-python-automation-at-mayflower-recruitment-ltd-4465516068": {
+      "title": "Senior Software QA Engineer - Birmingham (Python/Automation)",
+      "company": "Mayflower Recruitment Ltd",
+      "seen_at": "2026-09-15T09:00:29.275869",
+      "category": "remote_worldwide"
+    },
+    "pos-test-engineer-at-river-island-4467496132": {
+      "title": "POS Test Engineer",
+      "company": "River Island",
+      "seen_at": "2026-09-15T09:00:29.275871",
+      "category": "remote_worldwide"
+    },
+    "senior-test-automation-engineer-teamcity-at-jobgether-4465766554": {
+      "title": "Senior Test Automation Engineer (TeamCity)",
+      "company": "Jobgether",
+      "seen_at": "2026-09-15T09:00:29.275872",
+      "category": "remote_worldwide"
+    },
+    "test-engineer-at-bestman-solutions-4465763960": {
+      "title": "Test Engineer",
+      "company": "Bestman Solutions",
+      "seen_at": "2026-09-15T09:00:29.275874",
+      "category": "remote_worldwide"
+    },
+    "system-tester-at-objectway-4467058729": {
+      "title": "System Tester",
+      "company": "Objectway",
+      "seen_at": "2026-09-15T09:00:29.275876",
+      "category": "remote_worldwide"
+    },
+    "associate-sdet-at-blueoptima-4464791640": {
+      "title": "Associate SDET",
+      "company": "BlueOptima",
+      "seen_at": "2026-09-15T09:00:29.275879",
+      "category": "remote_worldwide"
+    },
+    "test-automation-engineer-canoe-m-w-d-at-mamgo-talente-%F0%9F%94%97-jobs-4467453301": {
+      "title": "Test Automation Engineer CANoe (m/w/d)",
+      "company": "mamgo | Talente \ud83d\udd17 Jobs",
+      "seen_at": "2026-09-15T09:00:29.275881",
+      "category": "remote_worldwide"
+    },
+    "software-test-engineer-f-m-d-at-straumann-group-4465255954": {
+      "title": "Software Test Engineer (f/m/d)",
+      "company": "Straumann Group",
+      "seen_at": "2026-09-15T09:00:29.275882",
+      "category": "remote_worldwide"
+    },
+    "software-development-test-engineer-w-m-d-at-brunel-4467229530": {
+      "title": "Software Development & Test Engineer (w/m/d)",
+      "company": "Brunel",
+      "seen_at": "2026-09-15T09:00:29.275884",
+      "category": "remote_worldwide"
+    },
+    "senior-software-entwickler-tester-at-biotronik-4448122005": {
+      "title": "Senior Software Entwickler / Tester",
+      "company": "BIOTRONIK",
+      "seen_at": "2026-09-15T09:00:29.275886",
+      "category": "remote_worldwide"
+    },
+    "automation-engineer-m-w-d-at-endios-gmbh-4465227463": {
+      "title": "Automation Engineer (m/w/d)",
+      "company": "endios GmbH",
+      "seen_at": "2026-09-15T09:00:29.275887",
+      "category": "remote_worldwide"
+    },
+    "senior-software-engineer-m-w-d-verification-at-newtec-gmbh-4466108062": {
+      "title": "Senior Software Engineer (m/w/d) Verification",
+      "company": "NewTec GmbH",
+      "seen_at": "2026-09-15T09:00:29.275889",
+      "category": "remote_worldwide"
+    },
+    "senior-test-automation-engineer-teamcity-at-jobgether-4465769621": {
+      "title": "Senior Test Automation Engineer (TeamCity)",
+      "company": "Jobgether",
+      "seen_at": "2026-09-15T09:00:29.275891",
+      "category": "remote_worldwide"
+    },
+    "software-test-engineer-w-m-d-at-hensoldt-4467474321": {
+      "title": "Software Test Engineer (w/m/d)",
+      "company": "HENSOLDT",
+      "seen_at": "2026-09-15T09:00:29.275892",
+      "category": "remote_worldwide"
+    },
+    "test-automation-engineer-ai-m-w-d-at-fincon-reply-gmbh-4464779947": {
+      "title": "Test Automation Engineer AI (m/w/d)",
+      "company": "Fincon Reply GmbH",
+      "seen_at": "2026-09-15T09:00:29.275894",
+      "category": "remote_worldwide"
+    },
+    "automation-engineer-at-haystack-4466179148": {
+      "title": "Automation Engineer",
+      "company": "Haystack",
+      "seen_at": "2026-09-15T09:00:29.275896",
+      "category": "remote_worldwide"
     }
   },
-  "last_updated": "2026-09-14T09:18:11.399208"
+  "last_updated": "2026-09-15T09:00:29.275898"
 }
